@@ -1,10 +1,9 @@
 import "./App.css";
+import Ui from "./UI/ui";
 
 function App() {
   return (
-    <div>
-      <header></header>
-    </div>
+    <Ui/>
   );
 }
 
