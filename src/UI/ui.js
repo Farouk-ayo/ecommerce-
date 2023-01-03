@@ -1,8 +1,15 @@
-import classes from "./ui.module.css"
+import classes from "./ui.module.css";
+import Header from "./Header";
+import Body from "./Body";
+import React from "react";
 
 const Ui = () => {
-  return <body className={classes.body}></body>;
+  return (
+    <React.Fragment className={classes.body}>
+      <Header />
+      <Body />
+    </React.Fragment>
+  );
 };
 
-
-export default Ui
+export default Ui;
