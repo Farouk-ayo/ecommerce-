@@ -2,20 +2,64 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding-top: 2rem;
   padding-bottom: 2rem;
+  background-color: #ffffff;
+}
+.contactDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b3445;
+  padding: 0rem 5rem;
+}
+
+.contact {
+  display: flex;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.contact a {
+  text-decoration: none;
+  color: white;
+}
+
+.contact > * {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  gap: 1rem;
+}
+.details {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.details li {
+  display: flex;
+  gap: 2rem;
+}
+.details li > * {
+  display: flex;
+  gap: 0.2rem;
+  color: white;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0rem 5rem;
 }
 
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0rem 5rem;
 }
 
 .navBar {
