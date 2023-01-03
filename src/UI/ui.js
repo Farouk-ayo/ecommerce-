@@ -5,7 +5,7 @@ import React from "react";
 
 const Ui = () => {
   return (
-    <React.Fragment className={classes.body}>
+    <React.Fragment>
       <Header />
       <Body />
     </React.Fragment>
