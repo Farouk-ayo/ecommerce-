@@ -27,10 +27,9 @@
 .eachNav {
   display: flex;
   gap: 0.3rem;
-
   align-items: center;
 }
 
 .eachNav img {
-  transform: rotateY("120");
+  transform: rotate(90deg);
 }
