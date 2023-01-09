@@ -4,20 +4,21 @@ import classes from "./Main.module.css";
 const Main = () => {
   return (
     <main className={classes.main}>
-      <section>
-        <div>
+      <section className={classes.collection}>
+        <div className={classes.mainText}>
           <h3>lifestyle collection</h3>
           <h1>men</h1>
-          <h2>sale up to 30% off</h2>
+          <h2>
+            sale up to <span className={classes.reddie}>30% off</span>{" "}
+          </h2>
           <p>Get Free Shipping on orders over $99.00</p>
-          <button>Shop Now</button>
+          <button className={classes.shopNow}>Shop Now</button>
+          <input type="checkbox" name="" id="" />
+          <input type="checkbox" name="" id="" />
         </div>
         <img src={mainImage} alt="" />
-
-        <input type="checkbox" name="" id="" />
-        <input type="checkbox" name="" id="" />
       </section>
-      <section>
+      <section className={classes.arrivals}>
         <div>
           <span>
             <h3>new arrivals</h3>
@@ -29,7 +30,7 @@ const Main = () => {
         </div>
         <img src="" alt="" />
       </section>
-      <section>
+      <section className={classes.gaming}>
         <div>
           <span>
             <h3>gamming 4K</h3>
