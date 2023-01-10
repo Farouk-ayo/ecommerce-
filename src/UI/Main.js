@@ -13,22 +13,20 @@ const Main = () => {
           </h2>
           <p>Get Free Shipping on orders over $99.00</p>
           <button className={classes.shopNow}>Shop Now</button>
-          <input type="checkbox" name="" id="" />
-          <input type="checkbox" name="" id="" />
         </div>
-        <img src={mainImage} alt="" />
+        <img className={classes.mainImage} src={mainImage} alt="" />
       </section>
       <section className={classes.arrivals}>
-        <div>
-          <span>
-            <h3>new arrivals</h3>
-            <h1>
-              summer <br /> sale 20% off
-            </h1>
-          </span>
+        <div className={classes.arrivalText}>
+          <h3>new arrivals</h3>
+          <h1>
+            summer <br /> sale 20% off
+          </h1>
           <link rel="stylesheet" href="" />
+          shop now
+          <link />
         </div>
-        <img src="" alt="" />
+        <img src={} alt="" />
       </section>
       <section className={classes.gaming}>
         <div>
@@ -42,6 +40,10 @@ const Main = () => {
         </div>
         <img src="" alt="" />
       </section>
+      <div className={classes.checkbox}>
+        <input type="checkbox" name="" id="" />
+        <input type="checkbox" name="" id="" />
+      </div>
     </main>
   );
 };
