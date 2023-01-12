@@ -152,3 +152,7 @@
 .bottomText p {
   color: #7d879c;
 }
+
+.products {
+  display: flex;
+}
