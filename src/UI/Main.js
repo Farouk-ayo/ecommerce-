@@ -3,10 +3,6 @@ import bus from "../assets/bus.png";
 import money from "../assets/money.png";
 import time from "../assets/time.png";
 import payment from "../assets/payment.png";
-import camera from "../assets/camera.png";
-// import fashion from "../assets/fashion.png";
-// import furniture from "../assets/furniture.png";
-// use the remove bg to get the image cut off of background
 
 import classes from "./Main.module.css";
 
@@ -87,7 +83,7 @@ const Main = () => {
       </main>
       <section className={classes.products}>
         <div>
-          <img src={camera} alt="" />
+          <img src="" alt="" />
           <h4>Toys</h4>
         </div>
         <div>
