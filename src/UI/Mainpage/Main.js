@@ -1,8 +1,8 @@
-import mainImage from "../assets/w11.png";
-import bus from "../assets/bus.png";
-import money from "../assets/money.png";
-import time from "../assets/time.png";
-import payment from "../assets/payment.png";
+import mainImage from "../../assets/w11.png";
+import bus from "../../assets/bus.png";
+import money from "../../assets/money.png";
+import time from "../../assets/time.png";
+import payment from "../../assets/payment.png";
 
 import classes from "./Main.module.css";
 

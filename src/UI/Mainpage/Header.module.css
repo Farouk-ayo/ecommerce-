@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #2b3445;
-  padding: 1.5rem 5rem;
+  padding: 0.6rem 5rem;
 }
 
 .contact {
@@ -48,6 +48,36 @@
   align-items: center;
 }
 
+.loginDetails {
+  display: flex;
+  gap: 1rem;
+}
+.searchMenu {
+  position: relative;
+}
+.searchMenu input {
+  height: 2.5rem;
+  width: 40rem;
+  border-radius: 2rem;
+  outline: none;
+  font-size: 1rem;
+  border: 0.2rem solid rgb(138, 122, 122);
+  padding: 0.2rem 0.5rem;
+  color: black;
+}
+.suggestion {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 0.5rem;
+  background-color: red;
+  width: 100%;
+  z-index: 10;
+}
+.suggestion li {
+  padding: 0.5rem 2rem;
+}
 .header {
   display: flex;
   justify-content: space-between;

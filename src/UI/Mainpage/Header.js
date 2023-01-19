@@ -1,13 +1,21 @@
-import logo from "../assets/logo.png";
-import arrowDown from "../assets/arrowDown.png";
-import smallArrowDown from "../assets/smallArrowDown.png";
-import person from "../assets/person.png";
-import cart from "../assets/cart.png";
-import call from "../assets/call.png";
-import mail from "../assets/mail.png";
+import logo from "../../assets/logo.png";
+import arrowDown from "../../assets/arrowDown.png";
+import smallArrowDown from "../../assets/smallArrowDown.png";
+import person from "../../assets/person.png";
+import cart from "../../assets/cart.png";
+import call from "../../assets/call.png";
+import mail from "../../assets/mail.png";
 import classes from "./Header.module.css";
+import { useState } from "react";
 
 const Header = () => {
+  const [searchValue, setSearchValue] = useState();
+  const [suggestion, setSuggestion] = useState();
+
+  const changeSuggestion = (e) => {
+    setSearchValue(e.target.value);
+  };
+
   return (
     <section className={classes.headerSection}>
       <div className={classes.contactDetails}>
@@ -26,7 +34,8 @@ const Header = () => {
             <p>Theme FAQ's</p>
             <p>Need Help?</p>
             <div>
-              <p>EN</p> <img className={classes.rotateDown} src={smallArrowDown} alt="" />
+              <p>EN</p>{" "}
+              <img className={classes.rotateDown} src={smallArrowDown} alt="" />
             </div>
             <div>
               <p>USD </p>
@@ -38,8 +47,31 @@ const Header = () => {
 
       <div className={classes.header}>
         <img src={logo} alt="" />
-        <input type="search" name="" id="" />
-        <div>
+        <div className={classes.searchMenu}>
+          <input
+            type="text"
+            value={searchValue}
+            onChange={changeSuggestion}
+            placeholder=" I'm shopping for "
+            name=""
+            id=""
+          />
+          <button>
+            search
+            <span>
+              <img src="" alt="" />
+            </span>
+          </button>
+          <ul className={classes.suggestion}>
+            <li>garri</li>
+            <li>garri</li>
+            <li>garri</li>
+            <li>garri</li>
+            <li>garri</li>
+          </ul>
+        </div>
+
+        <div className={classes.loginDetails}>
           <img src={person} alt="" />
           <img src={cart} alt="" />
         </div>
