@@ -6,11 +6,15 @@ import cart from "../../assets/cart.png";
 import call from "../../assets/call.png";
 import mail from "../../assets/mail.png";
 import classes from "./Header.module.css";
+
+// import { BiSearch } from "react-icons/BiSearch";
+import { AiOutlineSearch } from "react-icons/ai";
+
 import { useState } from "react";
 
 const Header = () => {
   const [searchValue, setSearchValue] = useState();
-  const [suggestion, setSuggestion] = useState();
+  // const [suggestion, setSuggestion] = useState();
 
   const changeSuggestion = (e) => {
     setSearchValue(e.target.value);
@@ -58,9 +62,7 @@ const Header = () => {
           />
           <button>
             search
-            <span>
-              <img src="" alt="" />
-            </span>
+            <AiOutlineSearch />
           </button>
           <ul className={classes.suggestion}>
             <li>garri</li>
