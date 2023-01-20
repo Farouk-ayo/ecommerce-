@@ -1,4 +1,3 @@
-import logo from "../../assets/logo.png";
 import { RiArrowDropDownFill } from "react-icons/ri";
 import { IoPerson } from "react-icons/io5";
 import { AiOutlineShoppingCart } from "react-icons/ai";
@@ -48,7 +47,7 @@ const Header = () => {
       </div>
 
       <div className={classes.header}>
-        <img src={logo} alt="" />
+        <h1 className={classes.logo}>FrK</h1>
         <div className={classes.searchMenu}>
           <input
             type="text"
@@ -59,7 +58,7 @@ const Header = () => {
             id=""
           />
           <button>
-            <AiOutlineSearch />
+            <AiOutlineSearch color="#212a2f" />
           </button>
           <ul className={classes.suggestion}>
             <li>garri</li>
@@ -71,35 +70,31 @@ const Header = () => {
         </div>
 
         <div className={classes.loginDetails}>
-          <IoPerson />
-          <AiOutlineShoppingCart />
+          <IoPerson size="2rem" color="#212a2f" />
+          <AiOutlineShoppingCart size="2rem" color="#212a2f" />
         </div>
       </div>
       <div className={classes.menu}>
-        <input type="search" name="" id="" />
+        <div className={classes.categories}>
+          <button>
+            Categories <RiArrowDropDownFill />
+          </button>
+        </div>
         <nav className={classes.navBar}>
           <div className={classes.eachNav}>
-            Home
+            Men
             <RiArrowDropDownFill />
           </div>
           <div className={classes.eachNav}>
-            Mega Menu
+            Women
             <RiArrowDropDownFill />
           </div>
           <div className={classes.eachNav}>
-            Full Screen Menu
+            Kids
             <RiArrowDropDownFill />
           </div>
           <div className={classes.eachNav}>
-            Pages
-            <RiArrowDropDownFill />
-          </div>
-          <div className={classes.eachNav}>
-            .User Account
-            <RiArrowDropDownFill />
-          </div>
-          <div className={classes.eachNav}>
-            Vendor Account
+            User Account
             <RiArrowDropDownFill />
           </div>
         </nav>
