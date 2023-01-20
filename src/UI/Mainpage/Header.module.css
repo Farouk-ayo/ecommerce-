@@ -55,13 +55,38 @@
 .searchMenu {
   position: relative;
 }
+
+.searchMenu button {
+  position: absolute;
+  right: 0.1rem;
+  border-radius: 2rem;
+  width: 5rem;
+  border: none;
+  outline: none;
+  color: #4444;
+  height: 3rem;
+  margin-top: 0.05rem;
+  padding: auto;
+  z-index: 20;
+  font-size: 1.5rem;
+}
+.searchMenu button > * {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .searchMenu input {
+  position: relative;
+  z-index: 20;
   height: 2.5rem;
   width: 40rem;
   border-radius: 2rem;
   outline: none;
   font-size: 1rem;
-  border: 0.2rem solid rgb(138, 122, 122);
+  border: 0.1rem solid rgb(165, 165, 165);
   padding: 0.2rem 0.5rem;
   color: black;
 }
@@ -71,9 +96,14 @@
   flex-direction: column;
   list-style: none;
   gap: 0.5rem;
-  background-color: red;
+  background-color: rgb(228, 226, 226);
   width: 100%;
   z-index: 10;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  margin-top: -1rem;
+  padding-top: 1rem;
+  display: none;
 }
 .suggestion li {
   padding: 0.5rem 2rem;

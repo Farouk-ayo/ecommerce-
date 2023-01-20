@@ -1,14 +1,13 @@
 import logo from "../../assets/logo.png";
-import arrowDown from "../../assets/arrowDown.png";
-import smallArrowDown from "../../assets/smallArrowDown.png";
-import person from "../../assets/person.png";
-import cart from "../../assets/cart.png";
-import call from "../../assets/call.png";
-import mail from "../../assets/mail.png";
-import classes from "./Header.module.css";
+import { RiArrowDropDownFill } from "react-icons/ri";
+import { IoPerson } from "react-icons/io5";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { MdCall } from "react-icons/md";
+import { AiOutlineMail } from "react-icons/ai";
 
-// import { BiSearch } from "react-icons/BiSearch";
 import { AiOutlineSearch } from "react-icons/ai";
+
+import classes from "./Header.module.css";
 
 import { useState } from "react";
 
@@ -25,11 +24,11 @@ const Header = () => {
       <div className={classes.contactDetails}>
         <div className={classes.contact}>
           <div className={classes.call}>
-            <img src={call} alt="" />
+            <MdCall />
             <a href={+2348073946451}>+2348073946451</a>
           </div>
           <div className={classes.mail}>
-            <img src={mail} alt="" />
+            <AiOutlineMail />
             <a href={+2348073946451}>Mustaphafarouk41@gmail.com</a>
           </div>
         </div>
@@ -38,12 +37,11 @@ const Header = () => {
             <p>Theme FAQ's</p>
             <p>Need Help?</p>
             <div>
-              <p>EN</p>{" "}
-              <img className={classes.rotateDown} src={smallArrowDown} alt="" />
+              <p>EN</p> <RiArrowDropDownFill />
             </div>
             <div>
               <p>USD </p>
-              <img className={classes.rotateDown} src={smallArrowDown} alt="" />
+              <RiArrowDropDownFill />
             </div>
           </li>
         </ul>
@@ -61,7 +59,6 @@ const Header = () => {
             id=""
           />
           <button>
-            search
             <AiOutlineSearch />
           </button>
           <ul className={classes.suggestion}>
@@ -74,8 +71,8 @@ const Header = () => {
         </div>
 
         <div className={classes.loginDetails}>
-          <img src={person} alt="" />
-          <img src={cart} alt="" />
+          <IoPerson />
+          <AiOutlineShoppingCart />
         </div>
       </div>
       <div className={classes.menu}>
@@ -83,27 +80,27 @@ const Header = () => {
         <nav className={classes.navBar}>
           <div className={classes.eachNav}>
             Home
-            <img src={arrowDown} alt="" />
+            <RiArrowDropDownFill />
           </div>
           <div className={classes.eachNav}>
             Mega Menu
-            <img src={arrowDown} alt="" />
+            <RiArrowDropDownFill />
           </div>
           <div className={classes.eachNav}>
             Full Screen Menu
-            <img src={arrowDown} alt="" />
+            <RiArrowDropDownFill />
           </div>
           <div className={classes.eachNav}>
             Pages
-            <img src={arrowDown} alt="" />
+            <RiArrowDropDownFill />
           </div>
           <div className={classes.eachNav}>
             .User Account
-            <img src={arrowDown} alt="" />
+            <RiArrowDropDownFill />
           </div>
           <div className={classes.eachNav}>
             Vendor Account
-            <img src={arrowDown} alt="" />
+            <RiArrowDropDownFill />
           </div>
         </nav>
       </div>
