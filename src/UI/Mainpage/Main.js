@@ -9,8 +9,8 @@ import Sliders from "./SliderMain";
 const Main = () => {
   return (
     <body className={classes.body}>
-      <Sliders />
       <main className={classes.main}>
+        <Sliders />
         <section className={classes.arrivals}>
           <div className={classes.arrivalText}>
             <h3>new arrivals</h3>
