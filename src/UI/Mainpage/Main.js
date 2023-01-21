@@ -1,27 +1,16 @@
-import mainImage from "../../assets/w11.png";
 import bus from "../../assets/bus.png";
 import money from "../../assets/money.png";
 import time from "../../assets/time.png";
 import payment from "../../assets/payment.png";
 
 import classes from "./Main.module.css";
+import Sliders from "./SliderMain";
 
 const Main = () => {
   return (
     <body className={classes.body}>
       <main className={classes.main}>
-        <section className={classes.collection}>
-          <div className={classes.mainText}>
-            <h3>lifestyle collection</h3>
-            <h1>men</h1>
-            <h2>
-              sale up to <span className={classes.reddie}>30% off</span>{" "}
-            </h2>
-            <p>Get Free Shipping on orders over $99.00</p>
-            <button className={classes.shopNow}>Shop Now</button>
-          </div>
-          <img className={classes.mainImage} src={mainImage} alt="" />
-        </section>
+        <Sliders />
         <section className={classes.arrivals}>
           <div className={classes.arrivalText}>
             <h3>new arrivals</h3>
@@ -46,10 +35,6 @@ const Main = () => {
           </div>
           <img src="" alt="" />
         </section>
-        <div className={classes.checkbox}>
-          <input type="checkbox" name="" id="" />
-          <input type="checkbox" name="" id="" />
-        </div>
       </main>
       <main className={classes.mainBottom}>
         <div className={classes.eachBottom}>
