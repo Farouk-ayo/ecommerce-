@@ -1,15 +1,6 @@
-import mainImage from "../../assets/w11.png";
-import men from "../../assets/men.png";
-import kids from "../../assets/kidslll.png";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
-// import { EffectFade } from "swiper";
-// import { EffectCube } from "swiper";
-// import { EffectFlip } from "swiper";
-// import { EffectCoverflow } from "swiper";
-// import { EffectCards } from "swiper";
-// import { EffectCreative } from "swiper";
+import slidesData from "./slidestore";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -31,48 +22,25 @@ const Sliders = () => {
         clickable: true,
       }}
     >
-      <SwiperSlide>
-        <section className={classes.collection}>
-          <div className={classes.mainText}>
-            <h3>lifestyle collection</h3>
-            <h1>men</h1>
-            <h2>
-              sale up to <span className={classes.reddie}>30% off</span>
-            </h2>
-            <p>Get Free Shipping on orders over $99.00</p>
-            <button className={classes.shopNow}>Shop Now</button>
-          </div>
-          <img className={classes.mainImage} src={men} alt="" />
-        </section>
-      </SwiperSlide>
-      <SwiperSlide>
-        <section className={classes.collection}>
-          <div className={classes.mainText}>
-            <h3>lifestyle collection</h3>
-            <h1>men</h1>
-            <h2>
-              sale up to <span className={classes.reddie}>30% off</span>{" "}
-            </h2>
-            <p>Get Free Shipping on orders over $99.00</p>
-            <button className={classes.shopNow}>Shop Now</button>
-          </div>
-          <img className={classes.mainImage} src={mainImage} alt="" />
-        </section>
-      </SwiperSlide>
-      <SwiperSlide>
-        <section className={classes.collection}>
-          <div className={classes.mainText}>
-            <h3>lifestyle collection</h3>
-            <h1>men</h1>
-            <h2>
-              sale up to <span className={classes.reddie}>30% off</span>{" "}
-            </h2>
-            <p>Get Free Shipping on orders over $99.00</p>
-            <button className={classes.shopNow}>Shop Now</button>
-          </div>
-          <img className={classes.mainImage} src={kids} alt="" />
-        </section>
-      </SwiperSlide>
+      {slidesData.map((value) => {
+        return (
+          <SwiperSlide key={value.key}>
+            <section className={classes.collection}>
+              <div className={classes.mainText}>
+                <h3>lifestyle collection</h3>
+                <h1>{value.Gender}</h1>
+                <h2>
+                  sale up to{" "}
+                  <span className={classes.reddie}>{value.salesDiscount}</span>
+                </h2>
+                <p>{value.shipping}</p>
+                <button className={classes.shopNow}>Shop Now</button>
+              </div>
+              <img className={classes.mainImage} src={value.image} alt="" />
+            </section>
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 };
