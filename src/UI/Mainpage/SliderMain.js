@@ -1,6 +1,6 @@
 import mainImage from "../../assets/w11.png";
 import men from "../../assets/men.png";
-import kids from "../../assets/kidsl.png";
+import kids from "../../assets/kidslll.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
@@ -26,8 +26,7 @@ const Sliders = () => {
       modules={[Navigation, Pagination, Autoplay]}
       slidesPerView={1}
       navigation={({ prevEl: ".none" }, { nextEl: ".none" })}
-      autoplay={{ delay: 5000 }}
-      speed="500"
+      autoplay={{ delay: 3000 }}
       pagination={{
         clickable: true,
       }}

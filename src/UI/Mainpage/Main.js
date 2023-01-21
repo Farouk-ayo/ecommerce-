@@ -10,7 +10,10 @@ const Main = () => {
   return (
     <body className={classes.body}>
       <main className={classes.main}>
-        <Sliders />
+        <section className={classes.collection}>
+          <Sliders />
+        </section>
+
         <section className={classes.arrivals}>
           <div className={classes.arrivalText}>
             <h3>new arrivals</h3>
@@ -36,6 +39,7 @@ const Main = () => {
           <img src="" alt="" />
         </section>
       </main>
+
       <main className={classes.mainBottom}>
         <div className={classes.eachBottom}>
           <img src={bus} alt="" />
