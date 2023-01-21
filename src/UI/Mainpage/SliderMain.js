@@ -1,11 +1,11 @@
 import mainImage from "../../assets/w11.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+// import "swiper/css/scrollbar";
 import "swiper/css/a11y";
 import "swiper/css/autoplay";
 
@@ -14,13 +14,13 @@ import classes from "./SliderMain.module.css";
 const Sliders = () => {
   return (
     <Swiper
-      modules={[Navigation, Pagination, Scrollbar, Autoplay]}
-      slidesPerView={3}
+      modules={[Navigation, Pagination, Autoplay]}
+      slidesPerView={1}
       navigation
+      autoplay={{ delay: 3000 }}
       pagination={{ clickable: true }}
     >
       <SwiperSlide>
-        {" "}
         <section className={classes.collection}>
           <div className={classes.mainText}>
             <h3>lifestyle collection</h3>
@@ -35,7 +35,6 @@ const Sliders = () => {
         </section>
       </SwiperSlide>
       <SwiperSlide>
-        {" "}
         <section className={classes.collection}>
           <div className={classes.mainText}>
             <h3>lifestyle collection</h3>
@@ -50,7 +49,6 @@ const Sliders = () => {
         </section>
       </SwiperSlide>
       <SwiperSlide>
-        {" "}
         <section className={classes.collection}>
           <div className={classes.mainText}>
             <h3>lifestyle collection</h3>
