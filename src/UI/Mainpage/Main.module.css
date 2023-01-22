@@ -21,10 +21,20 @@
   grid-column: 7/9;
   grid-row: 1/2;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   padding-left: 1rem;
   background-color: #ececec;
+  gap: 0.5rem;
+  width: 100%;
+  position: relative;
+}
+.arrivalText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  width: 40%;
 }
 
 .arrivalText h3,
@@ -37,20 +47,29 @@
 }
 
 .arrivalText h1 {
-  font-weight: 400;
-  font-size: 1.4rem;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 .gaming {
   grid-column: 7/9;
   grid-row: 2/3;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
   padding-left: 1rem;
   background-color: #d7e9b986;
 }
 
+.gamingText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  width: 40%;
+}
 .gamingText h3,
 .gamingText h1 {
   text-transform: uppercase;
@@ -61,8 +80,8 @@
 }
 
 .gamingText h1 {
-  font-weight: 400;
-  font-size: 1.4rem;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 .arrivalText link {
   font-size: 1rem;
@@ -107,4 +126,12 @@
 .products {
   display: flex;
   gap: 1rem;
+}
+
+.ImgContainer {
+  width: 60%;
+  align-self: flex-end;
+}
+.sectionImg {
+  width: 100%;
 }

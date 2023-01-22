@@ -2,6 +2,8 @@ import bus from "../../assets/bus.png";
 import money from "../../assets/money.png";
 import time from "../../assets/time.png";
 import payment from "../../assets/payment.png";
+import shoe from "../../assets/shoe1.png";
+import computer from "../../assets/computer.png";
 
 import classes from "./Main.module.css";
 import Sliders from "./SliderMain";
@@ -24,7 +26,9 @@ const Main = () => {
             shop now
             <link />
           </div>
-          <img src="" alt="" />
+          <div className={classes.ImgContainer}>
+            <img className={classes.sectionImg} src={shoe} alt="" />
+          </div>
         </section>
         <section className={classes.gaming}>
           <div className={classes.gamingText}>
@@ -36,7 +40,9 @@ const Main = () => {
             shop now
             <link />
           </div>
-          <img src="" alt="" />
+          <div className={classes.ImgContainer}>
+            <img className={classes.sectionImg} src={computer} alt="" />
+          </div>
         </section>
       </main>
 

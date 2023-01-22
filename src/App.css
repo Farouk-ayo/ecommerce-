@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .none {
   display: none;
 }
@@ -5,8 +11,3 @@
 .swiper-pagination-bullet-active {
   background-color: #414f39 !important;
 }
-
-/* .swiper-fixed-width-300 {
-  width: 20% !important;
-  height: 20% !important;
-} */
