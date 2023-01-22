@@ -1,8 +1,8 @@
 // import classes from "./ui.module.css";
-import Header from "./Mainpage/Header";
+import Header from "./Header/Header";
 import Body from "./Body/Body";
 import React from "react";
-import Main from "./Mainpage/Main";
+import Main from "./Main/Main";
 
 const Ui = () => {
   return (

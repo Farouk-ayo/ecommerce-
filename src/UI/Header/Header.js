@@ -58,7 +58,7 @@ const Header = () => {
             id=""
           />
           <button>
-            <AiOutlineSearch color="#212a2f" />
+            <AiOutlineSearch color="" />
           </button>
           <ul className={classes.suggestion}>
             <li>garri</li>
@@ -70,7 +70,7 @@ const Header = () => {
         </div>
 
         <div className={classes.loginDetails}>
-          <IoPerson size="2rem" color="#212a2f" />
+          <IoPerson size="2rem" color="" />
           <AiOutlineShoppingCart size="2rem" color="#212a2f" />
         </div>
       </div>

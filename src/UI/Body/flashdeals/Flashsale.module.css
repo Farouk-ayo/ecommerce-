@@ -1,0 +1,19 @@
+.flashsale {
+  padding: 1rem 5rem;
+  background-color: #f6f6f6;
+}
+
+.flashHead {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 3rem;
+}
+
+.flashsale h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.flashcontainer {
+  display: flex;
+}
