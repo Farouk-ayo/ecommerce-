@@ -1,9 +1,7 @@
-const Body=()=>{
+import Catalogue from "./catalogue/Catalogue";
 
+const Body = () => {
+  return <Catalogue />;
+};
 
-    return <div>
-        
-    </div>
-}
-
-export default Body
+export default Body;

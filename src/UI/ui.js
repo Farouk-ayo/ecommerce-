@@ -8,8 +8,8 @@ const Ui = () => {
   return (
     <React.Fragment>
       <Header />
-      <Body />
       <Main />
+      <Body />
     </React.Fragment>
   );
 };

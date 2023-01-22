@@ -76,32 +76,6 @@ const Main = () => {
           </div>
         </div>
       </main>
-      <section className={classes.products}>
-        <div>
-          <img src="" alt="" />
-          <h4>Toys</h4>
-        </div>
-        <div>
-          <img src="" alt="" />
-          <h4>Sports</h4>
-        </div>
-        <div>
-          <img src="" alt="" />
-          <h4>Gaming</h4>
-        </div>
-        <div>
-          <img src="" alt="" />
-          <h4>Furniture</h4>
-        </div>
-        <div>
-          <img src="" alt="" />
-          <h4>Fashion</h4>
-        </div>
-        <div>
-          <img src="" alt="" />
-          <h4>Camera</h4>
-        </div>
-      </section>
     </body>
   );
 };
