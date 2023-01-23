@@ -17,3 +17,13 @@
 .flashcontainer {
   display: flex;
 }
+
+.addcart {
+  color: #f55353;
+  background-color: white;
+  border-radius: 0.4rem;
+  border: 0.4rem solid #f6f6f6;
+}
+.addcart h1 {
+  font-size: 1.4rem;
+}

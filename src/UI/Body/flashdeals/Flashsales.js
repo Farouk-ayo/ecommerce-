@@ -21,13 +21,28 @@ const Flashsale = () => {
         modules={[Navigation, Pagination]}
         slidesPerView={4}
         pagination={{
-            clickable:true
+          clickable: true,
         }}
       >
         {SlidesFlashStore.map((value) => {
           return (
             <SwiperSlide>
-              <div className={classes.flashcontainer}></div>
+              <div className={classes.flashcontainer}>
+                <h5>{value.percentOff}</h5>
+                <div>
+                  <img src={value.productImage} alt="" />
+                </div>
+                <div>
+                  <div>
+                    <h3>{value.product}</h3>
+                    {value.ratings}* {value.ratingNum}
+                    <p> {value.price}</p>
+                  </div>
+                  <div className={classes.addcart}>
+                    <h1>+</h1>
+                  </div>
+                </div>
+              </div>
             </SwiperSlide>
           );
         })}

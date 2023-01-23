@@ -1,11 +1,12 @@
-import shoeFlash from "../../../assets/shoeFlash.png";
+import shoeFlash from "../../../assets/shoeflash.png";
 import iphoneFlash from "../../../assets/iphone.png";
 import Necklace from "../../../assets/necklace.png";
 import smartwatchFlash from "../../../assets/smartwatch.png";
 import dellFlash from "../../../assets/dell.png";
-import laptopBagFlash from "../../../assets/laptopbag.png";
+import laptopBagFlash from "../../../assets/laptopBag.png";
 import hoodieFlash from "../../../assets/hoodie.png";
 import cameraFlash from "../../../assets/camera.png";
+import { AiFillStar } from "react-icons/ai";
 
 const SlidesFlashStore = [
   {
@@ -13,7 +14,8 @@ const SlidesFlashStore = [
     product: "Shoe",
     productImage: shoeFlash,
     percentOff: "50% off",
-    ratings: "5",
+    ratings: <AiFillStar />,
+    ratingNum: 5,
     price: "$20.00",
   },
   {
@@ -21,15 +23,17 @@ const SlidesFlashStore = [
     product: "Iphone",
     productImage: iphoneFlash,
     percentOff: "30% off",
-    ratings: "5",
+    ratings: AiFillStar,
+    ratingNum: 5,
     price: "$320.00",
   },
   {
     key: 3,
     product: "Necklace",
-    productImage: watchFlash,
+    productImage: Necklace,
     percentOff: "10% off",
-    ratings: "4",
+    ratings: AiFillStar,
+    ratingNum: 4,
     price: "$50.00",
   },
   {
@@ -37,7 +41,8 @@ const SlidesFlashStore = [
     product: "SmartWatch",
     productImage: smartwatchFlash,
     percentOff: "50% off",
-    ratings: "5",
+    ratings: AiFillStar,
+    ratingNum: 5,
     price: "$20.00",
   },
   {
@@ -45,7 +50,8 @@ const SlidesFlashStore = [
     product: "Laptop Dell-XPS",
     productImage: dellFlash,
     percentOff: "25% off",
-    ratings: "5",
+    ratings: AiFillStar,
+    ratingNum: 5,
     price: "$520.00",
   },
   {
@@ -53,7 +59,8 @@ const SlidesFlashStore = [
     product: "Laptop Bag",
     productImage: laptopBagFlash,
     percentOff: "5% off",
-    ratings: "4",
+    ratings: AiFillStar,
+    ratingNum: 3,
     price: "$20.00",
   },
   {
@@ -61,7 +68,8 @@ const SlidesFlashStore = [
     product: "Hoodie",
     productImage: hoodieFlash,
     percentOff: "15% off",
-    ratings: "3",
+    ratings: AiFillStar,
+    ratingNum: 3,
     price: "$30.00",
   },
   {
@@ -69,7 +77,8 @@ const SlidesFlashStore = [
     product: "Camera",
     productImage: cameraFlash,
     percentOff: "10% off",
-    ratings: "5",
+    ratings: AiFillStar,
+    ratingNum: 5,
     price: "$120.00",
   },
 ];
