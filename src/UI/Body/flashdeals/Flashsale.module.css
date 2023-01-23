@@ -6,7 +6,7 @@
 .flashHead {
   display: flex;
   gap: 0.5rem;
-  padding: 0 3rem;
+  padding: 2rem 3rem;
 }
 
 .flashsale h2 {
@@ -16,14 +16,68 @@
 
 .flashcontainer {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: white;
+  padding: 1.5rem;
+  margin-right: 1rem;
+  gap: 1rem;
+  border-radius: 0.5rem;
+}
+
+.image {
+  align-self: center;
+  height: 10rem;
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+}
+
+.details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.productDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.productDetail h6 {
+  font-size: 1.3rem;
+  font-weight: lighter;
+}
+
+.productDetail p {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #f55353;
+}
+
+.flashcontainer h5 {
+  background-color: #f55353;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
 }
 
 .addcart {
-  color: #f55353;
   background-color: white;
   border-radius: 0.4rem;
-  border: 0.4rem solid #f6f6f6;
+  color: #f55353;
+  font-size: 2rem;
+  font-weight: bolder;
+  border: 0.3rem solid #f6f6f6;
+
+  padding: 0 0.5rem;
 }
-.addcart h1 {
-  font-size: 1.4rem;
+
+.allstars {
+  display: flex;
+  gap: 0.5rem;
 }

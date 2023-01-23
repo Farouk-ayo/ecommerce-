@@ -6,7 +6,7 @@ import dellFlash from "../../../assets/dell.png";
 import laptopBagFlash from "../../../assets/laptopBag.png";
 import hoodieFlash from "../../../assets/hoodie.png";
 import cameraFlash from "../../../assets/camera.png";
-import { AiFillStar } from "react-icons/ai";
+
 
 const SlidesFlashStore = [
   {
@@ -14,7 +14,7 @@ const SlidesFlashStore = [
     product: "Shoe",
     productImage: shoeFlash,
     percentOff: "50% off",
-    ratings: <AiFillStar />,
+
     ratingNum: 5,
     price: "$20.00",
   },
@@ -23,7 +23,6 @@ const SlidesFlashStore = [
     product: "Iphone",
     productImage: iphoneFlash,
     percentOff: "30% off",
-    ratings: AiFillStar,
     ratingNum: 5,
     price: "$320.00",
   },
@@ -32,7 +31,6 @@ const SlidesFlashStore = [
     product: "Necklace",
     productImage: Necklace,
     percentOff: "10% off",
-    ratings: AiFillStar,
     ratingNum: 4,
     price: "$50.00",
   },
@@ -41,7 +39,6 @@ const SlidesFlashStore = [
     product: "SmartWatch",
     productImage: smartwatchFlash,
     percentOff: "50% off",
-    ratings: AiFillStar,
     ratingNum: 5,
     price: "$20.00",
   },
@@ -50,7 +47,6 @@ const SlidesFlashStore = [
     product: "Laptop Dell-XPS",
     productImage: dellFlash,
     percentOff: "25% off",
-    ratings: AiFillStar,
     ratingNum: 5,
     price: "$520.00",
   },
@@ -59,7 +55,6 @@ const SlidesFlashStore = [
     product: "Laptop Bag",
     productImage: laptopBagFlash,
     percentOff: "5% off",
-    ratings: AiFillStar,
     ratingNum: 3,
     price: "$20.00",
   },
@@ -68,7 +63,6 @@ const SlidesFlashStore = [
     product: "Hoodie",
     productImage: hoodieFlash,
     percentOff: "15% off",
-    ratings: AiFillStar,
     ratingNum: 3,
     price: "$30.00",
   },
@@ -77,7 +71,6 @@ const SlidesFlashStore = [
     product: "Camera",
     productImage: cameraFlash,
     percentOff: "10% off",
-    ratings: AiFillStar,
     ratingNum: 5,
     price: "$120.00",
   },
