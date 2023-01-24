@@ -1,7 +1,5 @@
 const WomenProducts = () => {
-  return (
-   
-  )
+  return <section></section>;
 };
 
 export default WomenProducts;

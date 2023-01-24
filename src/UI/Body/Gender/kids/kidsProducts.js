@@ -1,6 +1,6 @@
 const KidsProduct=()=>{
 
 
-    return
+    return <section></section>
 }
 export default KidsProduct

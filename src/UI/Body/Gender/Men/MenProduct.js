@@ -1,7 +1,5 @@
 const MenProducts = () => {
-  return (
-   
-  );
+  return <section></section>;
 };
 
-export default MenProducts
+export default MenProducts;
