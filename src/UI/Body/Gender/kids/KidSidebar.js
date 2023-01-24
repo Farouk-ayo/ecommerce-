@@ -1,5 +1,3 @@
-import classes from "./KidsProduct.module.css";
-
 const KidSidebar = () => {
   return (
     <section className={classes.sidebar}>
