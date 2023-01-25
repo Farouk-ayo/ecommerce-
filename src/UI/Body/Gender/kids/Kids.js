@@ -3,12 +3,11 @@ import KidsProduct from "./KidsProducts";
 
 const Kids = () => {
   return (
-    <section className={}>
+    <section>
       <KidSidebar />
       <KidsProduct />
     </section>
   );
 };
-
 
 export default Kids;

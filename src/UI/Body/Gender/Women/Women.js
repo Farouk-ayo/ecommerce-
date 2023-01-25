@@ -1,18 +1,13 @@
-import { Fragment } from "react";
 import WomenProducts from "./WomenProduct";
 import WomenSidebar from "./WomenSidebar";
 
 const Women = () => {
-  return <section>
-    <WomenSidebar/>
-<WomenProducts/>
-  </section>
+  return (
+    <section>
+      <WomenSidebar />
+      <WomenProducts />
+    </section>
+  );
+};
 
-
-  
-    
-}
-
-export default Women
-
-
+export default Women;

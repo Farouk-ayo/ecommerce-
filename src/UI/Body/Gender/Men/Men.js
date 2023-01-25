@@ -1,10 +1,11 @@
-import { Fragment } from "react";
+
 import MenProducts from "./MenProduct";
 import MenSidebar from "./MenSidebar";
+import classes from "../Store.module.css"
 
 const Men = () => {
   return (
-    <section>
+    <section className={classes.section}>
       <MenSidebar />
       <MenProducts />
     </section>

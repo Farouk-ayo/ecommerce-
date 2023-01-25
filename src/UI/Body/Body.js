@@ -12,7 +12,7 @@ const Body = () => {
       <Flashsale />
       <Men />
       <Women />
-      <Kids/>
+      <Kids />
     </Fragment>
   );
 };

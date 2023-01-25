@@ -1,15 +1,13 @@
+import { Store } from "../Store";
+import classes from "../Store.module.css";
+
 const WomenSidebar = () => {
   return (
-    <section>
-<div>
-    <h4>Women Fashion</h4>
-</div>
-
-      <div>
-      <div>Clothes</div>
-      <div>Jewelry</div>
-      <div>Shoes</div>
-      </div>
+    <section className={classes.sidebar}>
+      <h4>{Store.women.Fashion}</h4>
+      {Store.women.sections.map((eachSec) => {
+        return <p>{eachSec}</p>;
+      })}
     </section>
   );
 };
