@@ -5,9 +5,11 @@ const WomenSidebar = () => {
   return (
     <section className={classes.sidebar}>
       <h4>{Store.women.Fashion}</h4>
-      {Store.women.sections.map((eachSec) => {
-        return <p>{eachSec}</p>;
-      })}
+      <div className={classes.sec}>
+        {Store.women.sections.map((eachSec) => {
+          return <p className={classes.eachSec}>{eachSec}</p>;
+        })}
+      </div>
     </section>
   );
 };

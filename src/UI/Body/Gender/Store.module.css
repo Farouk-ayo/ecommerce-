@@ -1,14 +1,25 @@
-.section{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    
+.section {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 2rem 5rem;
+  background-color: #f6f6f6;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding: 1rem 2rem;
   background-color: white;
-  padding: 3rem 5rem;
+  width: 15rem;
+  height: 17rem;
+}
+.sec {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.eachSec {
+  font-size: 1rem;
 }

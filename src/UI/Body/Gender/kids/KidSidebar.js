@@ -5,9 +5,11 @@ const KidSidebar = () => {
   return (
     <section className={classes.sidebar}>
       <h4>{Store.kids.Fashion}</h4>
-      {Store.kids.sections.map((eachSec) => {
-        return <p>{eachSec}</p>;
-      })}
+      <div className={classes.sec}>
+        {Store.kids.sections.map((eachSec) => {
+          return <p className={classes.eachSec}>{eachSec}</p>;
+        })}
+      </div>
     </section>
   );
 };

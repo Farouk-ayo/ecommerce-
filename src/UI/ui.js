@@ -3,6 +3,7 @@ import Header from "./Header/Header";
 import Body from "./Body/Body";
 import React from "react";
 import Main from "./Main/Main";
+import Footer from "./Footer/Footer";
 
 const Ui = () => {
   return (
@@ -10,6 +11,7 @@ const Ui = () => {
       <Header />
       <Main />
       <Body />
+      <Footer />
     </React.Fragment>
   );
 };

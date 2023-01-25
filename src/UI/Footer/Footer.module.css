@@ -1,0 +1,46 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  background-color: #143f6b;
+  padding: 3rem 5rem;
+}
+
+.footer > * {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: calc(100% / 4);
+}
+
+.logo {
+  font-size: 2rem;
+  font-family: cursive;
+  color: #f55353;
+}
+.footer > * h2 {
+  color: white;
+}
+
+.footer > * ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #f6f6f6b7;
+  list-style: none;
+  text-decoration: none;
+}
+
+.brand article {
+  color: #f6f6f6b7;
+}
+.stores button {
+  color: white;
+  background-color: #0f3051;
+}
+
+.socialLogo {
+  display: flex;
+  justify-content: space-between;
+}
