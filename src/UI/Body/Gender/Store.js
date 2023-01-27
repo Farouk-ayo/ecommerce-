@@ -1,10 +1,53 @@
+import GreyBrownShirt from "../../../assets/men/GreyBrownShirt.png";
+import GreyRusticLinen from "../../../assets/men/GreyRusticLinen.png";
+import GreyTShirt from "../../../assets/men/GreyTShirt.png";
+import longsleevedTshirt from "../../../assets/men/longsleevedTshirt.png";
+import RedPlainLong from "../../../assets/men/RedPlainLong.png";
+import sepiaBrownSuit from "../../../assets/men/sepiaBrownSuit.png";
+import whiteHoodie from "../../../assets/men/whiteHoodie.png";
+import BlackHoodie from "../../../assets/men/BlackHoodie.png";
+import BlueLongsleeveTshirt from "../../../assets/men/BlueLongsleeveTshirt.png";
+
+import Bedroom from "../../../assets/men/Bedroom.png";
+import BarberChair from "../../../assets/men/BarberChair.png";
+import chair from "../../../assets/men/chair.png";
+import Dinningtable from "../../../assets/men/Dinningtable.png";
+
+import digitalclock from "../../../assets/men/digitalclock.png";
+import DjSpeaker from "../../../assets/men/DjSpeaker.png";
+import GameController from "../../../assets/men/GameController.png";
+import Headphone from "../../../assets/men/Headphone.png";
+import Loudspeaker from "../../../assets/men/Loudspeaker.png";
+
+import sneakers from "../../../assets/men/sneakers.png";
+import timberland from "../../../assets/men/timberland.png";
+import shoe1 from "../../../assets/shoe1.png";
+import shoeflash from "../../../assets/shoeflash.png";
+
 export const Store = {
   men: {
     Fashion: "Men Fashion",
-    sections: ["Clothes", "Furniture", "Jewelry", "Shoes"],
-    clothes: [],
-    Jewelry: [],
-    shoe: [],
+    sections: ["Clothes", "Furniture", "Electronics", "Shoes"],
+    clothes: [
+      GreyBrownShirt,
+      GreyRusticLinen,
+      GreyTShirt,
+      longsleevedTshirt,
+      RedPlainLong,
+      sepiaBrownSuit,
+      whiteHoodie,
+      BlackHoodie,
+      BlueLongsleeveTshirt,
+    ],
+    furniture: [Bedroom, BarberChair, chair, Dinningtable],
+    electronics: [
+      digitalclock,
+      DjSpeaker,
+      GameController,
+      Headphone,
+      Loudspeaker,
+    ],
+    shoe: [sneakers, timberland, shoe1, shoeflash],
   },
   women: {
     Fashion: "Women Fashion",
