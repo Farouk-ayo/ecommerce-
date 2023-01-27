@@ -1,3 +1,5 @@
+// MEN DRESS
+
 import GreyBrownShirt from "../../../assets/men/GreyBrownShirt.png";
 import GreyRusticLinen from "../../../assets/men/GreyRusticLinen.png";
 import GreyTShirt from "../../../assets/men/GreyTShirt.png";
@@ -24,12 +26,35 @@ import timberland from "../../../assets/men/timberland.png";
 import shoe1 from "../../../assets/shoe1.png";
 import shoeflash from "../../../assets/shoeflash.png";
 
+// WOMEN DRESS
+
+import Navyandwhite from "../../../assets/women/Navyandwhite.png";
+import wnavyBlue from "../../../assets/women/wnavyBlue.png";
+import wnavysuit from "../../../assets/women/wnavysuit.png";
+import skirt from "../../../assets/women/skirt.png";
+import wpolo from "../../../assets/women/wnavyBlue.png";
+
+import blackDior from "../../../assets/women/blackDior.png";
+import cartierBag from "../../../assets/women/cartierBag.png";
+import nikeGym from "../../../assets/women/nikeGym.png";
+import shoulderbag from "../../../assets/women/shoulderbag.png";
+import sunMountain from "../../../assets/women/sunMountain.png";
+import whitebag from "../../../assets/women/whitebag.png";
+
+import silverware from "../../../assets/women/silverware.png";
+
+import blackShoe from "../../../assets/women/blackShoe.png";
+import candycane from "../../../assets/women/candycane.png";
+import livewireride from "../../../assets/women/livewireride.png";
+import TonyBiancoBrazen from "../../../assets/women/TonyBiancoBrazen.png";
+import winterFashion from "../../../assets/women/winterFashion.png";
+
 export const Store = {
   men: {
     Fashion: "Men Fashion",
     sections: ["Clothes", "Furniture", "Electronics", "Shoes"],
-    clothes: [
-      GreyBrownShirt,
+    Clothes: [
+      [GreyBrownShirt, ""],
       GreyRusticLinen,
       GreyTShirt,
       longsleevedTshirt,
@@ -39,56 +64,63 @@ export const Store = {
       BlackHoodie,
       BlueLongsleeveTshirt,
     ],
-    furniture: [Bedroom, BarberChair, chair, Dinningtable],
-    electronics: [
+    Furniture: [Bedroom, BarberChair, chair, Dinningtable],
+    Electronics: [
       digitalclock,
       DjSpeaker,
       GameController,
       Headphone,
       Loudspeaker,
     ],
-    shoe: [sneakers, timberland, shoe1, shoeflash],
+    Shoes: [sneakers, timberland, shoe1, shoeflash],
   },
   women: {
     Fashion: "Women Fashion",
-    sections: ["Clothes", "Jewelry", "Shoes"],
-    clothes: [],
-    Jewelry: [],
-    shoe: [],
+    sections: ["Clothes", "Bags", "Shoes", "Jewelry"],
+    Clothes: [Navyandwhite, wnavyBlue, wnavysuit, skirt, wpolo],
+    Bags: [sunMountain, blackDior, cartierBag, whitebag, shoulderbag, nikeGym],
+    Shoes: [
+      blackShoe,
+      candycane,
+      livewireride,
+      TonyBiancoBrazen,
+      winterFashion,
+    ],
+    Jewelry: [silverware],
   },
 
   kids: {
     Fashion: "Kids Fashion",
     sections: ["Clothes", "Furniture", "Toys", "shoes"],
-    clothes: [],
+    Clothes: [],
     Jewelry: [],
-    shoe: [],
+    Shoe: [],
   },
 };
 
-export const allRandomWomen = [
-  Store.women.clothes[Math.random() * Store.women.clothes.length + 1],
-  Store.women.Jewelry[Math.random() * Store.women.Jewelry.length + 1],
-  Store.women.shoe[Math.random() * Store.women.shoe.length + 1],
-  Store.women.clothes[Math.random() * Store.women.clothes.length + 1],
-  Store.women.Jewelry[Math.random() * Store.women.Jewelry.length + 1],
-  Store.women.shoe[Math.random() * Store.women.shoe.length + 1],
+export const allRandomMen = [
+  Store.men.Clothes[Math.random() * Store.men.Clothes.length + 1],
+  Store.men.Furniture[Math.random() * Store.men.Furniture.length + 1],
+  Store.men.Shoes[Math.random() * Store.men.Shoes.length + 1],
+  Store.men.Clothes[Math.random() * Store.men.Clothes.length + 1],
+  Store.men.Electronics[Math.random() * Store.men.Electronics.length + 1],
+  Store.men.Shoes[Math.random() * Store.men.Shoes.length + 1],
 ];
 
-export const allRandomMen = [
-  Store.men.clothes[Math.random() * Store.men.clothes.length + 1],
-  Store.men.Jewelry[Math.random() * Store.men.Jewelry.length + 1],
-  Store.men.shoe[Math.random() * Store.men.shoe.length + 1],
-  Store.men.clothes[Math.random() * Store.men.clothes.length + 1],
-  Store.men.Jewelry[Math.random() * Store.men.Jewelry.length + 1],
-  Store.men.shoe[Math.random() * Store.men.shoe.length + 1],
+export const allRandomWomen = [
+  Store.women.Clothes[Math.random() * Store.women.Clothes.length + 1],
+  Store.women.Jewelry[Math.random() * Store.women.Jewelry.length + 1],
+  Store.women.Bags[Math.random() * Store.women.Bags.length + 1],
+  Store.women.Clothes[Math.random() * Store.women.Clothes.length + 1],
+  Store.women.Shoes[Math.random() * Store.women.Shoes.length + 1],
+  Store.women.Bags[Math.random() * Store.women.Bags.length + 1],
 ];
 
 export const allRandomKids = [
-  Store.kids.clothes[Math.random() * Store.kids.clothes.length + 1],
+  Store.kids.Clothes[Math.random() * Store.kids.Clothes.length + 1],
   Store.kids.Jewelry[Math.random() * Store.kids.Jewelry.length + 1],
-  Store.kids.shoe[Math.random() * Store.kids.shoe.length + 1],
-  Store.kids.clothes[Math.random() * Store.kids.clothes.length + 1],
+  Store.kids.Shoes[Math.random() * Store.kids.Shoes.length + 1],
+  Store.kids.Clothes[Math.random() * Store.kids.Clothes.length + 1],
   Store.kids.Jewelry[Math.random() * Store.kids.Jewelry.length + 1],
-  Store.kids.shoe[Math.random() * Store.kids.shoe.length + 1],
+  Store.kids.Shoes[Math.random() * Store.kids.Shoes.length + 1],
 ];
