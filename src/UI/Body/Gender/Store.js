@@ -135,28 +135,26 @@ export const Store = {
 };
 
 export const allRandomMen = [
-  Store.men.Clothes[Math.random() * Store.men.Clothes.length + 1],
-  Store.men.Furniture[Math.random() * Store.men.Furniture.length + 1],
-  Store.men.Shoes[Math.random() * Store.men.Shoes.length + 1],
-  Store.men.Clothes[Math.random() * Store.men.Clothes.length + 1],
-  Store.men.Electronics[Math.random() * Store.men.Electronics.length + 1],
-  Store.men.Shoes[Math.random() * Store.men.Shoes.length + 1],
+  Store.men.Clothes[Math.ceil(Math.random() * Store.men.Clothes.length)],
+  Store.men.Furniture[Math.ceil(Math.random() * Store.men.Furniture.length)],
+
+  Store.men.Electronics[
+    Math.ceil(Math.random() * Store.men.Electronics.length)
+  ],
+  Store.men.Shoes[Math.ceil(Math.random() * Store.men.Shoes.length)],
 ];
 
 export const allRandomWomen = [
-  Store.women.Clothes[Math.random() * Store.women.Clothes.length + 1],
-  Store.women.Jewelry[Math.random() * Store.women.Jewelry.length + 1],
-  Store.women.Bags[Math.random() * Store.women.Bags.length + 1],
-  Store.women.Clothes[Math.random() * Store.women.Clothes.length + 1],
-  Store.women.Shoes[Math.random() * Store.women.Shoes.length + 1],
-  Store.women.Bags[Math.random() * Store.women.Bags.length + 1],
+  Store.women.Clothes[Math.ceil(Math.random() * Store.women.Clothes.length)],
+  Store.women.Jewelry[Math.ceil(Math.random() * Store.women.Jewelry.length)],
+  Store.women.Bags[Math.ceil(Math.random() * Store.women.Bags.length)],
+
+  Store.women.Shoes[Math.ceil(Math.random() * Store.women.Shoes.length)],
 ];
 
 export const allRandomKids = [
-  Store.kids.Clothes[Math.random() * Store.kids.Clothes.length + 1],
-  Store.kids.Jewelry[Math.random() * Store.kids.Jewelry.length + 1],
-  Store.kids.Shoes[Math.random() * Store.kids.Shoes.length + 1],
-  Store.kids.Clothes[Math.random() * Store.kids.Clothes.length + 1],
-  Store.kids.Jewelry[Math.random() * Store.kids.Jewelry.length + 1],
-  Store.kids.Shoes[Math.random() * Store.kids.Shoes.length + 1],
+  Store.kids.Clothes[Math.ceil(Math.random() * Store.kids.Clothes.length)],
+  Store.kids.Toys[Math.ceil(Math.random() * Store.kids.Toys.length)],
 ];
+
+console.log(Math.ceil(Math.random() * Store.kids.Clothes.length));

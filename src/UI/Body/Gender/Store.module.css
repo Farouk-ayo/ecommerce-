@@ -23,3 +23,21 @@
 .eachSec {
   font-size: 1rem;
 }
+
+.products {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.imageContainer {
+  height: 10rem;
+  width: calc(100 / 3);
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+}
