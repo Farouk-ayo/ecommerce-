@@ -116,43 +116,43 @@ export const Store = {
     Bags: [
       [sunMountain, "Sun Mountain", "$45.00", "16"],
       [blackDior, "Black Dior", "$55.00", "34"],
-      [cartierBag, "Cartier Bag"],
-      whitebag,
-      shoulderbag,
-      nikeGym,
+      [cartierBag, "Cartier Bag", "$45.00", "23"],
+      [whitebag, "White Bag", "$35.00", "15"],
+      [shoulderbag, "Shoulder", "$25.00", "7"],
+      [nikeGym, "Nike GymBag", "$50.00", "15"],
     ],
     Shoes: [
-      blackShoe,
-      candycane,
-      livewireride,
-      TonyBiancoBrazen,
-      winterFashion,
+      [blackShoe, "Black Shoe", "$15.00", "10"],
+      [candycane, "Candy Cane", "$24.00", "13"],
+      [livewireride, "LiveWire Ride", "$23.00", "12"],
+      [TonyBiancoBrazen, "Tony Bianco", "$55.00", "34"],
+      [winterFashion, "Winter Fashion", "$45.00", "15"],
     ],
-    Jewelry: [silverware],
+    Jewelry: [[silverware, "SilverWare", "$15.00", "12"]],
   },
 
   kids: {
     Fashion: "Kids Fashion",
     sections: ["Clothes", "Toys"],
     Clothes: [
-      Blackgown,
-      DreamSleepSuit,
-      LikeABossCamouflage,
-      ny,
-      rompersuit,
-      cartoon,
+      [Blackgown, "Black Gown", "$18.00", "5"],
+      [DreamSleepSuit, "Dream Sleep Suit", "$7.00", "15"],
+      [LikeABossCamouflage, "Boss Camouflage", "$22.00", "20"],
+      [ny, "Newyork", "$10.00", "10"],
+      [rompersuit, "RomperSuit", "$20.00", "14"],
+      [cartoon, "Cartoon", "$45.00", "9"],
     ],
     Toys: [
-      assortmentkidstoys,
-      babytoy,
-      fishercornpopper,
-      girafeehead,
-      leapfrogspin,
-      playingtoys,
-      polyTurtle,
-      toysTop,
-      toytrain,
-      toyvector,
+      [assortmentkidstoys, "Assortment Toys", "$100.00", "14"],
+      [babytoy, "Baby Toy", "$30.00", "14"],
+      [fishercornpopper, "Corn Popper", "$45.00", "10"],
+      [girafeehead, "Girafee Head", "$19.00", "18"],
+      [leapfrogspin, "Leap Frog Spin", "$60.00", "19"],
+      [playingtoys, "Playing Toys", "$45.00", "22"],
+      [polyTurtle, "Poly Turtle", "$20.00", "10"],
+      [toysTop, "Toys Top", "$120.00", "11"],
+      [toytrain, "Train", "$230.00", "20"],
+      [toyvector, "Toys Vector", "$110.00", "33"],
     ],
   },
 };
@@ -170,12 +170,13 @@ const menShoes =
   Store.men.Shoes[Math.ceil(Math.random() * Store.men.Shoes.length)];
 
 export const allRandomMen = [
-  [menClothes[0], menClothes[1]],
-  [menFurniture[0], menFurniture[1]],
-  [menElectronics[0], menElectronics[1]],
-  [menShoes[0], menShoes[1]],
+  [menClothes[0], menClothes[1], menClothes[2], menClothes[3]],
+  [menFurniture[0], menFurniture[1], menFurniture[2], menFurniture[3]],
+  [menElectronics[0], menElectronics[1], menElectronics[2], menElectronics[3]],
+  [menShoes[0], menShoes[1], menShoes[2], menShoes[3]],
 ];
 
+// console.log(menClothes[2]);
 // women random clothes
 
 const womenClothes =
@@ -190,11 +191,11 @@ const womenShoes =
   Store.women.Shoes[Math.ceil(Math.random() * Store.women.Shoes.length)];
 
 export const allRandomWomen = [
-  [womenClothes[0], womenClothes[1]],
-  [womenJewelry[0], womenJewelry[1]],
-  [womenBags[0], womenBags[1]],
+  [womenClothes[0], womenClothes[1], womenClothes[2], womenClothes[3]],
+  [womenJewelry[0], womenJewelry[1], womenJewelry[2], womenJewelry[3]],
+  [womenBags[0], womenBags[1], womenBags[2], womenBags[3]],
 
-  [womenShoes[0], womenShoes[1]],
+  [womenShoes[0], womenShoes[1], womenShoes[2], womenShoes[3]],
 ];
 
 // kids random
@@ -204,6 +205,6 @@ const kidsToys =
   Store.kids.Toys[Math.ceil(Math.random() * Store.kids.Toys.length)];
 
 export const allRandomKids = [
-  [kidsClothes[0], kidsClothes[1]],
-  [kidsToys[0], kidsToys[1]],
+  [kidsClothes[0], kidsClothes[1], kidsClothes[2], kidsClothes[3]],
+  [kidsToys[0], kidsToys[1], kidsToys[2], kidsToys[3]],
 ];
