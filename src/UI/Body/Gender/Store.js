@@ -41,13 +41,32 @@ import shoulderbag from "../../../assets/women/shoulderbag.png";
 import sunMountain from "../../../assets/women/sunMountain.png";
 import whitebag from "../../../assets/women/whitebag.png";
 
-import silverware from "../../../assets/women/silverware.png";
-
 import blackShoe from "../../../assets/women/blackShoe.png";
 import candycane from "../../../assets/women/candycane.png";
 import livewireride from "../../../assets/women/livewireride.png";
 import TonyBiancoBrazen from "../../../assets/women/TonyBiancoBrazen.png";
 import winterFashion from "../../../assets/women/winterFashion.png";
+
+import silverware from "../../../assets/women/silverware.png";
+
+//KIDS
+import Blackgown from "../../../assets/kids/Blackgown.png";
+import DreamSleepSuit from "../../../assets/kids/DreamSleepSuit.png";
+import LikeABossCamouflage from "../../../assets/kids/LikeABossCamouflage.png";
+import ny from "../../../assets/kids/ny.png";
+import rompersuit from "../../../assets/kids/rompersuit.png";
+import cartoon from "../../../assets/kids/cartoon.png";
+
+import assortmentkidstoys from "../../../assets/kids/assortmentkidstoys.png";
+import babytoy from "../../../assets/kids/babytoy.png";
+import fishercornpopper from "../../../assets/kids/fishercornpopper.png";
+import girafeehead from "../../../assets/kids/girafeehead.png";
+import leapfrogspin from "../../../assets/kids/Blackgown.png";
+import playingtoys from "../../../assets/kids/playingtoys.png";
+import polyTurtle from "../../../assets/kids/polyTurtle.png";
+import toysTop from "../../../assets/kids/toysTop.png";
+import toytrain from "../../../assets/kids/toytrain.png";
+import toyvector from "../../../assets/kids/toyvector.png";
 
 export const Store = {
   men: {
@@ -91,10 +110,27 @@ export const Store = {
 
   kids: {
     Fashion: "Kids Fashion",
-    sections: ["Clothes", "Furniture", "Toys", "shoes"],
-    Clothes: [],
-    Jewelry: [],
-    Shoe: [],
+    sections: ["Clothes", "Toys"],
+    Clothes: [
+      Blackgown,
+      DreamSleepSuit,
+      LikeABossCamouflage,
+      ny,
+      rompersuit,
+      cartoon,
+    ],
+    Toys: [
+      assortmentkidstoys,
+      babytoy,
+      fishercornpopper,
+      girafeehead,
+      leapfrogspin,
+      playingtoys,
+      polyTurtle,
+      toysTop,
+      toytrain,
+      toyvector,
+    ],
   },
 };
 
