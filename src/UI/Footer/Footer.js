@@ -1,4 +1,6 @@
 import classes from "./Footer.module.css";
+import { IoLogoGooglePlaystore } from "react-icons/io5";
+import { FaAppStoreIos } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -12,14 +14,14 @@ const Footer = () => {
         </article>
         <div className={classes.stores}>
           <button>
-            <img src="" alt="" />
+            <IoLogoGooglePlaystore />
             <span>
               <p>Get it on </p>
               <h2>Google play</h2>
             </span>
           </button>
           <button>
-            <img src="" alt="" />
+            <FaAppStoreIos />
             <span>
               <p>Download on the </p>
               <h2>App store</h2>
