@@ -7,7 +7,7 @@ const KidsProduct = () => {
       {allRandomKids.map((random) => {
         return (
           <div className={classes.imageContainer}>
-            <img className={classes.image} src={random} alt="" />
+            <img className={classes.image} src={random[0]} alt="" />
           </div>
         );
       })}

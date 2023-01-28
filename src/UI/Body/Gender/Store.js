@@ -73,31 +73,54 @@ export const Store = {
     Fashion: "Men Fashion",
     sections: ["Clothes", "Furniture", "Electronics", "Shoes"],
     Clothes: [
-      [GreyBrownShirt, ""],
-      GreyRusticLinen,
-      GreyTShirt,
-      longsleevedTshirt,
-      RedPlainLong,
-      sepiaBrownSuit,
-      whiteHoodie,
-      BlackHoodie,
-      BlueLongsleeveTshirt,
+      [GreyBrownShirt, "Grey Brown Shirt", "$20.00", "12"],
+      [GreyRusticLinen, "Grey Rustic Linen", "$40.00", "10"],
+      [GreyTShirt, "Grey Tshirt"],
+      [longsleevedTshirt, "Long Sleeved Tshirt", "$75.00", "5"],
+      [RedPlainLong, "Red Plain Long", "$50.00", "11"],
+      [sepiaBrownSuit, "Sepia Brown Suit", "$65.00", "7"],
+      [whiteHoodie, "White Hoodie", "$10.00", "8"],
+      [BlackHoodie, "Black Hoodie", "$58.00", "10"],
+      [BlueLongsleeveTshirt, "Blue Longsleeve", "$90.00", "45"],
     ],
-    Furniture: [Bedroom, BarberChair, chair, Dinningtable],
+    Furniture: [
+      [Bedroom, "Bedroom", "$120:00", "15"],
+      [BarberChair, "Barber Chair", "$10.00", "24"],
+      [chair, "Chair", "$10.00", "12"],
+      [Dinningtable, "Dinning Table", "$100.00", "25"],
+    ],
     Electronics: [
-      digitalclock,
-      DjSpeaker,
-      GameController,
-      Headphone,
-      Loudspeaker,
+      [digitalclock, "Digital Clock", "$100.00", "10"],
+      [DjSpeaker, "Dj Speaker", "$45.00", "9"],
+      [GameController, "Game Controller", "$23.00", "12"],
+      [Headphone, "Headphone", "$12.00", "19"],
+      [Loudspeaker, "LoudSpeaker", "$35.00", "30"],
     ],
-    Shoes: [sneakers, timberland, shoe1, shoeflash],
+    Shoes: [
+      [sneakers, "Sneakers", "$45.00", "15"],
+      [timberland, "Timberland", "$34.00", "7"],
+      [shoe1, "Shoe", "$45.00", "12"],
+      [shoeflash, "Shoe sleek", "$34.00", "23"],
+    ],
   },
   women: {
     Fashion: "Women Fashion",
     sections: ["Clothes", "Bags", "Shoes", "Jewelry"],
-    Clothes: [Navyandwhite, wnavyBlue, wnavysuit, skirt, wpolo],
-    Bags: [sunMountain, blackDior, cartierBag, whitebag, shoulderbag, nikeGym],
+    Clothes: [
+      [Navyandwhite, "Navy and White", "$40.00", "14"],
+      [wnavyBlue, "Navy Blue", "$55.00", "10"],
+      [wnavysuit, "Navy Suit", "$47.00", "24"],
+      [skirt, "Skirt", "$12.00", "14"],
+      [wpolo, "Polo", "$32.00"],
+    ],
+    Bags: [
+      [sunMountain, "Sun Mountain", "$45.00", "16"],
+      [blackDior, "Black Dior", "$55.00", "34"],
+      [cartierBag, "Cartier Bag"],
+      whitebag,
+      shoulderbag,
+      nikeGym,
+    ],
     Shoes: [
       blackShoe,
       candycane,
@@ -134,27 +157,53 @@ export const Store = {
   },
 };
 
-export const allRandomMen = [
-  Store.men.Clothes[Math.ceil(Math.random() * Store.men.Clothes.length)],
-  Store.men.Furniture[Math.ceil(Math.random() * Store.men.Furniture.length)],
-
+// Men random clothes
+const menClothes =
+  Store.men.Clothes[Math.ceil(Math.random() * Store.men.Clothes.length)];
+const menFurniture =
+  Store.men.Furniture[Math.ceil(Math.random() * Store.men.Furniture.length)];
+const menElectronics =
   Store.men.Electronics[
     Math.ceil(Math.random() * Store.men.Electronics.length)
-  ],
-  Store.men.Shoes[Math.ceil(Math.random() * Store.men.Shoes.length)],
+  ];
+const menShoes =
+  Store.men.Shoes[Math.ceil(Math.random() * Store.men.Shoes.length)];
+
+export const allRandomMen = [
+  [menClothes[0], menClothes[1]],
+  [menFurniture[0], menFurniture[1]],
+  [menElectronics[0], menElectronics[1]],
+  [menShoes[0], menShoes[1]],
 ];
+
+// women random clothes
+
+const womenClothes =
+  Store.women.Clothes[Math.ceil(Math.random() * Store.women.Clothes.length)];
+const womenJewelry =
+  Store.women.Jewelry[Math.ceil(Math.random() * Store.women.Jewelry.length)];
+
+const womenBags =
+  Store.women.Bags[Math.ceil(Math.random() * Store.women.Bags.length)];
+
+const womenShoes =
+  Store.women.Shoes[Math.ceil(Math.random() * Store.women.Shoes.length)];
 
 export const allRandomWomen = [
-  Store.women.Clothes[Math.ceil(Math.random() * Store.women.Clothes.length)],
-  Store.women.Jewelry[Math.ceil(Math.random() * Store.women.Jewelry.length)],
-  Store.women.Bags[Math.ceil(Math.random() * Store.women.Bags.length)],
+  [womenClothes[0], womenClothes[1]],
+  [womenJewelry[0], womenJewelry[1]],
+  [womenBags[0], womenBags[1]],
 
-  Store.women.Shoes[Math.ceil(Math.random() * Store.women.Shoes.length)],
+  [womenShoes[0], womenShoes[1]],
 ];
+
+// kids random
+const kidsClothes =
+  Store.kids.Clothes[Math.ceil(Math.random() * Store.kids.Clothes.length)];
+const kidsToys =
+  Store.kids.Toys[Math.ceil(Math.random() * Store.kids.Toys.length)];
 
 export const allRandomKids = [
-  Store.kids.Clothes[Math.ceil(Math.random() * Store.kids.Clothes.length)],
-  Store.kids.Toys[Math.ceil(Math.random() * Store.kids.Toys.length)],
+  [kidsClothes[0], kidsClothes[1]],
+  [kidsToys[0], kidsToys[1]],
 ];
-
-console.log(Math.ceil(Math.random() * Store.kids.Clothes.length));

@@ -7,15 +7,13 @@ import laptopBagFlash from "../../../assets/laptopBag.png";
 import hoodieFlash from "../../../assets/hoodie.png";
 import cameraFlash from "../../../assets/camera.png";
 
-
 const SlidesFlashStore = [
   {
     key: 1,
     product: "Shoe",
     productImage: shoeFlash,
     percentOff: "50% off",
-
-    ratingNum: 5,
+    // ratingNum: 5,
     price: "$20.00",
   },
   {
@@ -23,7 +21,7 @@ const SlidesFlashStore = [
     product: "Iphone",
     productImage: iphoneFlash,
     percentOff: "30% off",
-    ratingNum: 5,
+    // ratingNum: 5,
     price: "$320.00",
   },
   {
@@ -39,7 +37,7 @@ const SlidesFlashStore = [
     product: "SmartWatch",
     productImage: smartwatchFlash,
     percentOff: "50% off",
-    ratingNum: 5,
+    // ratingNum: 5,
     price: "$20.00",
   },
   {
@@ -47,7 +45,7 @@ const SlidesFlashStore = [
     product: "Laptop Dell-XPS",
     productImage: dellFlash,
     percentOff: "25% off",
-    ratingNum: 5,
+    // ratingNum: 5,
     price: "$520.00",
   },
   {
@@ -71,7 +69,7 @@ const SlidesFlashStore = [
     product: "Camera",
     productImage: cameraFlash,
     percentOff: "10% off",
-    ratingNum: 5,
+    // ratingNum: 5,
     price: "$120.00",
   },
 ];
