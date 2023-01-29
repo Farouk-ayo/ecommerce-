@@ -1,7 +1,6 @@
-
 import MenProducts from "./MenProduct";
 import MenSidebar from "./MenSidebar";
-import classes from "../Store.module.css"
+import classes from "../Store.module.css";
 
 const Men = () => {
   return (

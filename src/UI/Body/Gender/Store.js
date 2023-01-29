@@ -32,7 +32,7 @@ import Navyandwhite from "../../../assets/women/Navyandwhite.png";
 import wnavyBlue from "../../../assets/women/wnavyBlue.png";
 import wnavysuit from "../../../assets/women/wnavysuit.png";
 import skirt from "../../../assets/women/skirt.png";
-import wpolo from "../../../assets/women/wnavyBlue.png";
+import wpolo from "../../../assets/women/wpolo.png";
 
 import blackDior from "../../../assets/women/blackDior.png";
 import cartierBag from "../../../assets/women/cartierBag.png";
@@ -159,15 +159,17 @@ export const Store = {
 
 // Men random clothes
 const menClothes =
-  Store.men.Clothes[Math.ceil(Math.random() * Store.men.Clothes.length)];
+  Store.men.Clothes[Math.round(Math.random() * (Store.men.Clothes.length - 1))];
 const menFurniture =
-  Store.men.Furniture[Math.ceil(Math.random() * Store.men.Furniture.length)];
+  Store.men.Furniture[
+    Math.round(Math.random() * (Store.men.Furniture.length - 1))
+  ];
 const menElectronics =
   Store.men.Electronics[
-    Math.ceil(Math.random() * Store.men.Electronics.length)
+    Math.round(Math.random() * (Store.men.Electronics.length - 1))
   ];
 const menShoes =
-  Store.men.Shoes[Math.ceil(Math.random() * Store.men.Shoes.length)];
+  Store.men.Shoes[Math.round(Math.random() * (Store.men.Shoes.length - 1))];
 
 export const allRandomMen = [
   [menClothes[0], menClothes[1], menClothes[2], menClothes[3]],
@@ -176,19 +178,23 @@ export const allRandomMen = [
   [menShoes[0], menShoes[1], menShoes[2], menShoes[3]],
 ];
 
-// console.log(menClothes[2]);
 // women random clothes
 
 const womenClothes =
-  Store.women.Clothes[Math.ceil(Math.random() * Store.women.Clothes.length)];
-const womenJewelry =
-  Store.women.Jewelry[Math.ceil(Math.random() * Store.women.Jewelry.length)];
+  Store.women.Clothes[
+    Math.round(Math.random() * (Store.women.Clothes.length - 1))
+  ];
+const womenJewelry = Store.women.Jewelry[0]; // Math.round(Math.random() * Store.women.Jewelry.length - 1)
 
 const womenBags =
-  Store.women.Bags[Math.ceil(Math.random() * Store.women.Bags.length)];
+  Store.women.Bags[Math.round(Math.random() * (Store.women.Bags.length - 1))];
 
 const womenShoes =
-  Store.women.Shoes[Math.ceil(Math.random() * Store.women.Shoes.length)];
+  Store.women.Shoes[Math.round(Math.random() * (Store.women.Shoes.length - 1))];
+
+console.log(Math.round(Math.random() * (Store.kids.Toys.length - 1)));
+console.log(Math.round(Math.random() * (Store.women.Clothes.length - 1)));
+console.log(Math.round(Math.random() * (Store.men.Clothes.length - 1)));
 
 export const allRandomWomen = [
   [womenClothes[0], womenClothes[1], womenClothes[2], womenClothes[3]],
@@ -200,9 +206,11 @@ export const allRandomWomen = [
 
 // kids random
 const kidsClothes =
-  Store.kids.Clothes[Math.ceil(Math.random() * Store.kids.Clothes.length)];
+  Store.kids.Clothes[
+    Math.round(Math.random() * (Store.kids.Clothes.length - 1))
+  ];
 const kidsToys =
-  Store.kids.Toys[Math.ceil(Math.random() * Store.kids.Toys.length)];
+  Store.kids.Toys[Math.round(Math.random() * (Store.kids.Toys.length - 1))];
 
 export const allRandomKids = [
   [kidsClothes[0], kidsClothes[1], kidsClothes[2], kidsClothes[3]],
