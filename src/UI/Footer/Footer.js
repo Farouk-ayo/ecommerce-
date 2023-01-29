@@ -14,18 +14,14 @@ const Footer = () => {
         </article>
         <div className={classes.stores}>
           <button>
-            <IoLogoGooglePlaystore />
-            <span>
-              <p>Get it on </p>
-              <h2>Google play</h2>
-            </span>
+            <IoLogoGooglePlaystore size={30} />
+
+            <h2>Google play</h2>
           </button>
           <button>
-            <FaAppStoreIos />
-            <span>
-              <p>Download on the </p>
-              <h2>App store</h2>
-            </span>
+            <FaAppStoreIos size={30} />
+
+            <h2>App store</h2>
           </button>
         </div>
       </div>

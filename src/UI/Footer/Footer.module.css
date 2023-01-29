@@ -35,9 +35,25 @@
 .brand article {
   color: #f6f6f6b7;
 }
+.stores {
+  display: flex;
+}
+
 .stores button {
   color: white;
-  background-color: #0f3051;
+  background-color: #092037aa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.stores button h2 {
+  font-size: 1rem;
 }
 
 .socialLogo {
