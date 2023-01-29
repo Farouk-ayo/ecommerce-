@@ -31,3 +31,20 @@
 .swiper-button-next {
   background-image: url(./assets/arrow-forward-circle.svg) !important;
 }
+
+.addcart {
+  background-color: white;
+  border-radius: 0.4rem;
+  color: #f55353;
+  font-size: 2rem;
+  font-weight: bolder;
+  border: 0.2rem solid #f6f9fc;
+
+  padding: 0 0.5rem;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #f55353;
+}

@@ -70,12 +70,12 @@ import toyvector from "../../../assets/kids/toyvector.png";
 
 export const Store = {
   men: {
-    Fashion: "Men Fashion",
+    Fashion: "Men",
     sections: ["Clothes", "Furniture", "Electronics", "Shoes"],
     Clothes: [
       [GreyBrownShirt, "Grey Brown Shirt", "$20.00", "12"],
       [GreyRusticLinen, "Grey Rustic Linen", "$40.00", "10"],
-      [GreyTShirt, "Grey Tshirt"],
+      [GreyTShirt, "Grey Tshirt", "$45.00", "34"],
       [longsleevedTshirt, "Long Sleeved Tshirt", "$75.00", "5"],
       [RedPlainLong, "Red Plain Long", "$50.00", "11"],
       [sepiaBrownSuit, "Sepia Brown Suit", "$65.00", "7"],
@@ -104,7 +104,7 @@ export const Store = {
     ],
   },
   women: {
-    Fashion: "Women Fashion",
+    Fashion: "Women",
     sections: ["Clothes", "Bags", "Shoes", "Jewelry"],
     Clothes: [
       [Navyandwhite, "Navy and White", "$40.00", "14"],
@@ -132,7 +132,7 @@ export const Store = {
   },
 
   kids: {
-    Fashion: "Kids Fashion",
+    Fashion: "Kids",
     sections: ["Clothes", "Toys"],
     Clothes: [
       [Blackgown, "Black Gown", "$18.00", "5"],

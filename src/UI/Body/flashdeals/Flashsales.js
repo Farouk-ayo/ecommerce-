@@ -46,9 +46,9 @@ const Flashsale = () => {
                         {<AiFillStar color="#fde047" />}
                       </div>
 
-                      <p> {value.price}</p>
+                      <p className="price"> {value.price}</p>
                     </div>
-                    <p className={classes.addcart}>+</p>
+                    <button className="addcart">+</button>
                   </div>
                 </div>
               </SwiperSlide>

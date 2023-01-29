@@ -4,7 +4,7 @@
 
   padding: 2rem 5rem;
 
-  background-color: #f6f6f6;
+  background-color: #f6f9fc;
 }
 
 .catalogue h2 {
@@ -19,6 +19,8 @@
   gap: 1rem;
   justify-content: space-between;
   width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
 }
 
 .catSection > * {
