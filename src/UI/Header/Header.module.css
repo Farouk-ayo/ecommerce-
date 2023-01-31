@@ -135,6 +135,15 @@
   flex-direction: row;
   align-items: center;
   gap: 1rem;
+  position: relative;
+}
+
+.navBar div {
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .eachNav {
   display: flex;
@@ -146,10 +155,6 @@
 /* .eachNav:hover {
 } */
 
-.eachNav img {
-  transform: rotate(90deg);
-}
-
 .categories button {
   font-size: 1.3em;
   padding: 0.5rem 1rem;
@@ -160,4 +165,13 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+}
+
+.dropdown {
+  position: absolute;
+  background-color: red;
+  width: 40%;
+  height: 10rem;
+  top: 3rem;
+  right: 2rem;
 }

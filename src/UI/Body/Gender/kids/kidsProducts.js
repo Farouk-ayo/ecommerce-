@@ -2,6 +2,8 @@ import { allRandomKids } from "../Store";
 import classes from "../Store.module.css";
 import { AiFillStar } from "react-icons/ai";
 import { MdFavoriteBorder } from "react-icons/md";
+import { Link } from "react-router-dom";
+import { BsPlayFill } from "react-icons/bs";
 // import { MdFavorite } from "react-icons/md";
 
 const KidsProduct = () => {
@@ -37,7 +39,10 @@ const KidsProduct = () => {
         );
       })}
 
-      <p className={classes.viewAll}>View All</p>
+      <Link to="/kids" className={classes.viewAll}>
+        View All
+        <BsPlayFill color="#808080" />
+      </Link>
     </section>
   );
 };

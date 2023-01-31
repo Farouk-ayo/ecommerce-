@@ -4,6 +4,7 @@ import { allRandomWomen } from "../Store";
 import { AiFillStar } from "react-icons/ai";
 import { BsPlayFill } from "react-icons/bs";
 import { MdFavoriteBorder } from "react-icons/md";
+import { Link } from "react-router-dom";
 // import { MdFavorite } from "react-icons/md";
 
 const WomenProducts = () => {
@@ -38,10 +39,10 @@ const WomenProducts = () => {
           </div>
         );
       })}
-      <div className={classes.viewAll}>
-        <p>View All</p>
+      <Link to="/women" className={classes.viewAll}>
+        View All
         <BsPlayFill color="#808080" />
-      </div>
+      </Link>
     </section>
   );
 };

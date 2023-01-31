@@ -3,7 +3,6 @@ import { IoPerson } from "react-icons/io5";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { MdCall } from "react-icons/md";
 import { AiOutlineMail } from "react-icons/ai";
-
 import { AiOutlineSearch } from "react-icons/ai";
 
 import classes from "./Header.module.css";
@@ -18,6 +17,13 @@ const Header = () => {
 
   const changeSuggestion = (e) => {
     setSearchValue(e.target.value);
+  };
+
+  const [dropdown, setDropdown] = useState(false);
+
+  const changeDropdown = () => {
+    setDropdown(!dropdown);
+    console.log(dropdown);
   };
 
   return (
@@ -49,7 +55,9 @@ const Header = () => {
       </div>
 
       <div className={classes.header}>
-        <h1 className={classes.logo}>FrK</h1>
+        <Link to="/" className={classes.logo}>
+          FrK
+        </Link>
         <div className={classes.searchMenu}>
           <input
             type="text"
@@ -86,22 +94,50 @@ const Header = () => {
           </button> */}
         </div>
         <nav className={classes.navBar}>
-          <Link className={classes.eachNav}>
-            Men
-            <RiArrowDropDownFill />
-          </Link>
-          <Link className={classes.eachNav}>
-            Women
-            <RiArrowDropDownFill />
-          </Link>
-          <Link className={classes.eachNav}>
-            Kids
-            <RiArrowDropDownFill />
-          </Link>
-          <div className={classes.eachNav}>
-            User Account
-            <RiArrowDropDownFill />
+          <div>
+            <Link to="/men" className={classes.eachNav}>
+              Men
+            </Link>
+            <RiArrowDropDownFill
+              cursor="pointer"
+              size={25}
+              onClick={changeDropdown}
+            />
           </div>
+          <div>
+            <Link to="/women" className={classes.eachNav}>
+              Women
+            </Link>
+            <RiArrowDropDownFill
+              cursor="pointer"
+              size={25}
+              onClick={changeDropdown}
+            />
+          </div>
+          <div>
+            <Link to="/kids" className={classes.eachNav}>
+              Kids
+            </Link>
+            <RiArrowDropDownFill
+              cursor="pointer"
+              size={25}
+              onClick={changeDropdown}
+            />
+          </div>
+
+          <div>
+            <Link to="/authentication" className={classes.eachNav}>
+              User Account{" "}
+            </Link>
+            <RiArrowDropDownFill cursor="pointer" size={25} />
+          </div>
+
+          {dropdown ? (
+            <div className={classes.dropdown}>
+              {/* <Link></Link> */}
+              Red
+            </div>
+          ) : null}
         </nav>
       </div>
     </section>
