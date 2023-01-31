@@ -10,6 +10,8 @@ import classes from "./Header.module.css";
 
 import { useState } from "react";
 
+import { Link } from "react-router-dom";
+
 const Header = () => {
   const [searchValue, setSearchValue] = useState();
   // const [suggestion, setSuggestion] = useState();
@@ -71,28 +73,31 @@ const Header = () => {
 
         <div className={classes.loginDetails}>
           <IoPerson size="2rem" color="" />
-          <AiOutlineShoppingCart size="2rem" color="#212a2f" />
+
+          <Link to="/cart">
+            <AiOutlineShoppingCart size="2rem" color="#212a2f" />
+          </Link>
         </div>
       </div>
       <div className={classes.menu}>
         <div className={classes.categories}>
-          <button>
+          {/* <button>
             Categories <RiArrowDropDownFill />
-          </button>
+          </button> */}
         </div>
         <nav className={classes.navBar}>
-          <div className={classes.eachNav}>
+          <Link to="/men" className={classes.eachNav}>
             Men
             <RiArrowDropDownFill />
-          </div>
-          <div className={classes.eachNav}>
+          </Link>
+          <Link to="/women" className={classes.eachNav}>
             Women
             <RiArrowDropDownFill />
-          </div>
-          <div className={classes.eachNav}>
+          </Link>
+          <Link to="/kids" className={classes.eachNav}>
             Kids
             <RiArrowDropDownFill />
-          </div>
+          </Link>
           <div className={classes.eachNav}>
             User Account
             <RiArrowDropDownFill />
