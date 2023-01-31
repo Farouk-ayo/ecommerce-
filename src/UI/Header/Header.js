@@ -86,15 +86,15 @@ const Header = () => {
           </button> */}
         </div>
         <nav className={classes.navBar}>
-          <Link to="/men" className={classes.eachNav}>
+          <Link className={classes.eachNav}>
             Men
             <RiArrowDropDownFill />
           </Link>
-          <Link to="/women" className={classes.eachNav}>
+          <Link className={classes.eachNav}>
             Women
             <RiArrowDropDownFill />
           </Link>
-          <Link to="/kids" className={classes.eachNav}>
+          <Link className={classes.eachNav}>
             Kids
             <RiArrowDropDownFill />
           </Link>
