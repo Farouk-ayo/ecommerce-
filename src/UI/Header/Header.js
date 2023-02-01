@@ -6,17 +6,14 @@ import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineSearch } from "react-icons/ai";
 
 import classes from "./Header.module.css";
-
-import { useState } from "react";
-
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 // import { Store } from "../Body/Gender/Store";
 
-const Header = () => {
+const Header = (props) => {
   const [searchValue, setSearchValue] = useState();
   // const [suggestion, setSuggestion] = useState();
-
   const changeSuggestion = (e) => {
     setSearchValue(e.target.value);
   };
@@ -28,8 +25,14 @@ const Header = () => {
     console.log(dropdown);
   };
 
+  const scrollFunction = (e) => {
+    const id = e.target.getAttribute("id");
+    console.log(id);
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section className={classes.headerSection}>
+    <section className={classes.headerSection} value={props.scrollValue}>
       <div className={classes.contactDetails}>
         <div className={classes.contact}>
           <div className={classes.call}>
@@ -96,13 +99,30 @@ const Header = () => {
           </button> */}
         </div>
         <nav className={classes.navBar}>
-          <Link to="/#men">Men</Link>
+          <Link
+            to="/#men"
+            id="#men"
+            onClick={scrollFunction}
+            className={classes.eachNav}
+          >
+            Men
+          </Link>
 
-          <Link to="/#women" className={classes.eachNav}>
+          <Link
+            to="/#women"
+            id="#women"
+            onClick={scrollFunction}
+            className={classes.eachNav}
+          >
             Women
           </Link>
 
-          <Link to="/#kids" className={classes.eachNav}>
+          <Link
+            to="/#kids"
+            id="#kids"
+            onClick={scrollFunction}
+            className={classes.eachNav}
+          >
             Kids
           </Link>
 

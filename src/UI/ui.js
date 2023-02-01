@@ -5,11 +5,11 @@ import React from "react";
 import Main from "./Main/Main";
 // import Footer from "./Footer/Footer";
 
-const Ui = () => {
+const Ui = (props) => {
   return (
     <React.Fragment>
       <Main />
-      <Body />
+      <Body ref={props.ref}/>
     </React.Fragment>
   );
 };

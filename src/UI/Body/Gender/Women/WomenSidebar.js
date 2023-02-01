@@ -5,7 +5,7 @@ const WomenSidebar = () => {
   return (
     <section className={classes.sidebar}>
       <div className={classes.fasCon}>
-        <h4>{Store.kids.Fashion}</h4>
+        <h4>{Store.women.Fashion}</h4>
         <p className={classes.fashion}>/Fashion</p>
       </div>
       <div className={classes.sec}>
