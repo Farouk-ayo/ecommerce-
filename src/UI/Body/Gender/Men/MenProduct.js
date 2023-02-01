@@ -2,12 +2,17 @@
 import { allRandomMen } from "../Store";
 import classes from "../Store.module.css";
 import { AiFillStar } from "react-icons/ai";
-import { MdFavoriteBorder } from "react-icons/md";
+import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { BsPlayFill } from "react-icons/bs";
+import { useState } from "react";
 // import { MdFavorite } from "react-icons/md";
 
 const MenProducts = () => {
+  const [favorite, setFavorite] = useState(true);
+  const changeFavorite = () => {
+    setFavorite(false);
+  };
   return (
     <section className={classes.products}>
       {allRandomMen.map((random) => {
@@ -31,11 +36,20 @@ const MenProducts = () => {
               <button className="addcart">+</button>
             </div>
 
-            <MdFavoriteBorder
-              color="#143f6b"
-              size={20}
-              className={classes.favourite}
-            />
+            {favorite ? (
+              <MdFavoriteBorder
+                color="#143f6b"
+                size={20}
+                className={classes.favourite}
+                onClick={changeFavorite}
+              />
+            ) : (
+              <MdFavorite
+                color="#143f6b"
+                size={20}
+                className={classes.favourite}
+              />
+            )}
           </div>
         );
       })}

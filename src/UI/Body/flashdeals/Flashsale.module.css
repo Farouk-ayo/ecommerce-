@@ -27,6 +27,11 @@
   box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
 }
 
+.flashcontainer:hover {
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+
 .image {
   align-self: center;
   height: 10rem;
