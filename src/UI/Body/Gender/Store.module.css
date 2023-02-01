@@ -24,10 +24,10 @@
 }
 
 .fasCon h4 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .fashion {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #c3bebe;
 }
 .sec {
@@ -40,6 +40,13 @@
   background-color: #f6f9fc;
   padding: 0.5rem;
   border-radius: 0.5rem;
+}
+.eachSec:hover {
+  transform: translateY(0.2rem);
+  transition: all 0.2s;
+  background-color: white;
+  box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
+  cursor: pointer;
 }
 
 .products {
