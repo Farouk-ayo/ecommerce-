@@ -7,6 +7,7 @@ import Womenpage from "./page/Womenpage";
 import Kidspage from "./page/Kidspage";
 import Cart from "./page/Cart";
 import Authentication from "./page/Authentication";
+import NewArrival from "./page/NewArrival";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: "/kids", element: <Kidspage /> },
       { path: "/cart", element: <Cart /> },
       { path: "/authentication", element: <Authentication /> },
+      { path: "/new-arrival", element: <NewArrival /> },
     ],
   },
 ]);

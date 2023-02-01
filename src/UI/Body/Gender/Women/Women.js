@@ -4,7 +4,7 @@ import classes from "../Store.module.css";
 
 const Women = () => {
   return (
-    <section className={classes.section}>
+    <section className={classes.section} id="women">
       <WomenSidebar />
       <WomenProducts />
     </section>

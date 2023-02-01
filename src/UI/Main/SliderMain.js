@@ -10,6 +10,7 @@ import "swiper/css/a11y";
 import "swiper/css/autoplay";
 
 import classes from "./SliderMain.module.css";
+import { Link } from "react-router-dom";
 
 const Sliders = () => {
   return (
@@ -34,7 +35,9 @@ const Sliders = () => {
                   <span className={classes.reddie}>{value.salesDiscount}</span>
                 </h2>
                 <p>{value.shipping}</p>
-                <button className={classes.shopNow}>Shop Now</button>
+                <Link to={`/${value.Gender}`} className={classes.shopNow}>
+                  Shop Now
+                </Link>
               </div>
               <img className={classes.mainImage} src={value.image} alt="" />
             </section>

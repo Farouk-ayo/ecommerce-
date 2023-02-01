@@ -7,6 +7,8 @@ import computer from "../../assets/computer.png";
 
 import classes from "./Main.module.css";
 import Sliders from "./SliderMain";
+import { Link } from "react-router-dom";
+import { BsArrowRightShort } from "react-icons/bs";
 
 const Main = () => {
   return (
@@ -22,9 +24,10 @@ const Main = () => {
             <h1>
               summer <br /> sale 20% off
             </h1>
-            <link rel="stylesheet" href="" />
-            shop now
-            <link />
+
+            <Link to="/new-arrival">
+              shop now <BsArrowRightShort />
+            </Link>
           </div>
           <div className={classes.ImgContainer}>
             <img className={classes.sectionImg} src={shoe} alt="" />
@@ -36,9 +39,9 @@ const Main = () => {
             <h1>
               Desktops &<br /> Laptops
             </h1>
-            <link rel="stylesheet" href="" />
-            shop now
-            <link />
+            <Link to="/new-arrival">
+              shop now <BsArrowRightShort />
+            </Link>
           </div>
           <div className={classes.ImgContainer}>
             <img className={classes.sectionImg} src={computer} alt="" />

@@ -11,6 +11,8 @@ import { useState } from "react";
 
 import { Link } from "react-router-dom";
 
+// import { Store } from "../Body/Gender/Store";
+
 const Header = () => {
   const [searchValue, setSearchValue] = useState();
   // const [suggestion, setSuggestion] = useState();
@@ -94,48 +96,31 @@ const Header = () => {
           </button> */}
         </div>
         <nav className={classes.navBar}>
-          <div>
-            <Link to="/men" className={classes.eachNav}>
-              Men
-            </Link>
-            <RiArrowDropDownFill
-              cursor="pointer"
-              size={25}
-              onClick={changeDropdown}
-            />
-          </div>
-          <div>
-            <Link to="/women" className={classes.eachNav}>
-              Women
-            </Link>
-            <RiArrowDropDownFill
-              cursor="pointer"
-              size={25}
-              onClick={changeDropdown}
-            />
-          </div>
-          <div>
-            <Link to="/kids" className={classes.eachNav}>
-              Kids
-            </Link>
-            <RiArrowDropDownFill
-              cursor="pointer"
-              size={25}
-              onClick={changeDropdown}
-            />
-          </div>
+          <Link to="/#men">Men</Link>
+
+          <Link to="/#women" className={classes.eachNav}>
+            Women
+          </Link>
+
+          <Link to="/#kids" className={classes.eachNav}>
+            Kids
+          </Link>
 
           <div>
             <Link to="/authentication" className={classes.eachNav}>
               User Account{" "}
             </Link>
-            <RiArrowDropDownFill cursor="pointer" size={25} />
+            <RiArrowDropDownFill
+              onClick={changeDropdown}
+              cursor="pointer"
+              size={25}
+            />
           </div>
 
           {dropdown ? (
             <div className={classes.dropdown}>
               {/* <Link></Link> */}
-              Red
+              accounts
             </div>
           ) : null}
         </nav>

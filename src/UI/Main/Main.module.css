@@ -37,6 +37,15 @@
   width: 40%;
 }
 
+.arrivalText a {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+  align-items: center;
+  color: black;
+  font-weight: 500;
+}
+
 .arrivalText h3,
 .arrivalText h1 {
   text-transform: uppercase;
@@ -70,6 +79,15 @@
   gap: 0.1rem;
   width: 40%;
 }
+.gamingText a {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+  align-items: center;
+  color: black;
+  font-weight: 500;
+}
+
 .gamingText h3,
 .gamingText h1 {
   text-transform: uppercase;
