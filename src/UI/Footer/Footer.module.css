@@ -22,6 +22,10 @@
 .footer > * h2 {
   color: white;
 }
+.footer > * h2:hover {
+  color: #092037;
+  cursor: pointer;
+}
 
 .footer > * ul {
   display: flex;

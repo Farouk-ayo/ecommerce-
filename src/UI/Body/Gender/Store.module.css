@@ -66,6 +66,7 @@
   justify-content: center;
   align-items: center;
   background-color: white;
+  border: 0.1px solid #8080802d;
   padding: 2rem 1rem;
   border-radius: 0.8rem;
   position: relative;
@@ -75,12 +76,12 @@
   display: inline-block;
 }
 .imageContainer:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: all 0.3s;
 }
 
 .image {
-  height: 7rem;
+  height: 10rem;
   width: 12rem;
 }
 
@@ -97,7 +98,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .titleCon {
@@ -123,4 +124,16 @@
   top: 0.7rem;
   cursor: pointer;
   display: none;
+}
+
+.productsPage {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  justify-content: space-around;
+  padding: 4rem 5rem;
 }

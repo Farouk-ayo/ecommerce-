@@ -22,12 +22,12 @@ const Header = (props) => {
 
   const changeDropdown = () => {
     setDropdown(!dropdown);
-    console.log(dropdown);
+    // console.log(dropdown);
   };
 
   const scrollFunction = (e) => {
     const id = e.target.getAttribute("id");
-    console.log(id);
+    // console.log(id);
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   };
 

@@ -192,9 +192,9 @@ const womenBags =
 const womenShoes =
   Store.women.Shoes[Math.round(Math.random() * (Store.women.Shoes.length - 1))];
 
-console.log(Math.round(Math.random() * (Store.kids.Toys.length - 1)));
-console.log(Math.round(Math.random() * (Store.women.Clothes.length - 1)));
-console.log(Math.round(Math.random() * (Store.men.Clothes.length - 1)));
+// console.log(Math.round(Math.random() * (Store.kids.Toys.length - 1)));
+// console.log(Math.round(Math.random() * (Store.women.Clothes.length - 1)));
+// console.log(Math.round(Math.random() * (Store.men.Clothes.length - 1)));
 
 export const allRandomWomen = [
   [womenClothes[0], womenClothes[1], womenClothes[2], womenClothes[3]],

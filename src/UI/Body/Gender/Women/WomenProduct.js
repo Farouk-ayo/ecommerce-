@@ -49,6 +49,7 @@ const WomenProducts = () => {
                 color="#143f6b"
                 size={20}
                 className={classes.favourite}
+                onClick={changeFavorite}
               />
             )}
           </div>

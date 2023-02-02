@@ -47,7 +47,7 @@ const MenProducts = () => {
               <MdFavorite
                 color="#143f6b"
                 size={20}
-                className={classes.favourite}
+                className={classes.favourite}onClick={changeFavorite}
               />
             )}
           </div>
