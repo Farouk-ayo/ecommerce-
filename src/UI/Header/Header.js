@@ -1,25 +1,44 @@
 import { RiArrowDropDownFill } from "react-icons/ri";
 import { IoPerson } from "react-icons/io5";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { TiShoppingCart } from "react-icons/ti";
 import { MdCall } from "react-icons/md";
 import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineSearch } from "react-icons/ai";
+import { GrFacebook } from "react-icons/gr";
+import { BsTwitter } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
 
 import classes from "./Header.module.css";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 // import { Store } from "../Body/Gender/Store";
 
 const Header = (props) => {
+  const suggestionArray = [
+    "Clothes",
+    "Furniture",
+    "Electronics",
+    "Shoes",
+    "Bags",
+    "Jewelry",
+    "Toys",
+  ];
+
   const [searchValue, setSearchValue] = useState();
-  // const [suggestion, setSuggestion] = useState();
+  const [suggest, setSuggest] = useState(false);
+
   const changeSuggestion = (e) => {
+    setSuggest(true);
     setSearchValue(e.target.value);
   };
 
-  const [dropdown, setDropdown] = useState(false);
+  const [categories, setCategories] = useState(false);
+  const changeCategory = () => {
+    setCategories(!categories);
+  };
 
+  const [dropdown, setDropdown] = useState(false);
   const changeDropdown = () => {
     setDropdown(!dropdown);
     // console.log(dropdown);
@@ -37,7 +56,7 @@ const Header = (props) => {
         <div className={classes.contact}>
           <div className={classes.call}>
             <MdCall />
-            <a href={+2348073946451}>+2348073946451</a>
+            <Link to="+2348073946451">+2348073946451</Link>
           </div>
           <div className={classes.mail}>
             <AiOutlineMail />
@@ -46,14 +65,19 @@ const Header = (props) => {
         </div>
         <ul className={classes.details}>
           <li>
-            <p>Theme FAQ's</p>
-            <p>Need Help?</p>
+            <Link to="www.facebook">
+              <GrFacebook />
+            </Link>
+            <Link to="https://twitter.com/Faroukayo24">
+              <BsTwitter />
+            </Link>
+            <Link to="https://www.linkedin.com/in/mustapha-farouk-441a20214/">
+              {" "}
+              <BsLinkedin />
+            </Link>
+
             <div>
               <p>EN</p> <RiArrowDropDownFill />
-            </div>
-            <div>
-              <p>USD </p>
-              <RiArrowDropDownFill />
             </div>
           </li>
         </ul>
@@ -67,36 +91,58 @@ const Header = (props) => {
           <input
             type="text"
             value={searchValue}
-            onChange={changeSuggestion}
+            onInput={changeSuggestion}
             placeholder=" I'm shopping for "
             name=""
-            id=""
           />
           <button>
             <AiOutlineSearch color="" />
           </button>
-          <ul className={classes.suggestion}>
-            <li>garri</li>
-            <li>garri</li>
-            <li>garri</li>
-            <li>garri</li>
-            <li>garri</li>
-          </ul>
+          {suggest && searchValue !== "" ? (
+            <ul className={classes.suggestion}>
+              <li>lo gadget electronics</li>
+              <li>free mifi 24</li>
+              <li>computer lattitude series</li>
+              {suggestionArray.map((each) => {
+                return <li>{each}</li>;
+              })}
+            </ul>
+          ) : null}
         </div>
 
         <div className={classes.loginDetails}>
-          <IoPerson size="2rem" color="" />
+          <IoPerson
+            size="3rem"
+            color="black"
+            className={classes.TiShoppingCart}
+          />
 
-          <Link to="/cart">
-            <AiOutlineShoppingCart size="2rem" color="#212a2f" />
-          </Link>
+          <TiShoppingCart
+            size="3rem"
+            color="black"
+            className={classes.TiShoppingCart}
+          />
         </div>
       </div>
       <div className={classes.menu}>
         <div className={classes.categories}>
-          {/* <button>
-            Categories <RiArrowDropDownFill />
-          </button> */}
+          <button onClick={changeCategory}>
+            Categories{" "}
+            <RiArrowDropDownFill
+              className={categories ? classes.rotate : classes.normal}
+            />
+          </button>
+          {categories ? (
+            <ul className={classes.categoriesSug}>
+              {suggestionArray.map((each) => {
+                return (
+                  <li>
+                    <Link to={`/search/${each}`}> {each}</Link>
+                  </li>
+                );
+              })}
+            </ul>
+          ) : null}
         </div>
         <nav className={classes.navBar}>
           <Link
