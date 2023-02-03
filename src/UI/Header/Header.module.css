@@ -111,6 +111,11 @@
   padding-top: 2rem;
   box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
   max-height: 20rem;
+  overflow-y: scroll;
+}
+
+.suggestion::-webkit-scrollbar {
+  display: none;
 }
 .suggestion li {
   padding: 0.5rem 2rem;

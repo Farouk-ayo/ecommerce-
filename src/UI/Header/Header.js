@@ -102,7 +102,6 @@ const Header = (props) => {
             <ul className={classes.suggestion}>
               <li>lo gadget electronics</li>
               <li>free mifi 24</li>
-              <li>computer lattitude series</li>
               {suggestionArray.map((each) => {
                 return <li>{each}</li>;
               })}
