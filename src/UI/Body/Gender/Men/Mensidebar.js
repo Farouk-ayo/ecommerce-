@@ -3,12 +3,12 @@ import { Store } from "../Store";
 import classes from "../Store.module.css";
 
 const MenSidebar = () => {
-const [filter , setFilter]=useState()
+  const [filter, setFilter] = useState();
 
-const fashionFilter=(e)=>{
-  setFilter(!filter)
-  console.log(e.target.value)
-}
+  const fashionFilter = (e) => {
+    // console.log(e.);
+    setFilter(!filter);
+  };
 
   return (
     <section className={classes.sidebar}>
@@ -18,7 +18,15 @@ const fashionFilter=(e)=>{
       </div>
       <div className={classes.sec}>
         {Store.men.sections.map((eachSec) => {
-          return <p onClick={fashionFilter} className={classes.eachSec}>{eachSec}</p>;
+          return (
+            <p
+              onClick={fashionFilter}
+              value={eachSec}
+              className={classes.eachSec}
+            >
+              {eachSec}
+            </p>
+          );
         })}
       </div>
     </section>
