@@ -9,7 +9,7 @@ const Search = () => {
   const jewelry = [Store.women.Jewelry];
   const toys = [Store.kids.Toys];
 
-  return { Store };
+  return {};
 };
 
 export default Search;
