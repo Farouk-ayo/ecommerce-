@@ -5,3 +5,5 @@ const CartPage = () => {
     </section>
   );
 };
+
+export default CartPage;

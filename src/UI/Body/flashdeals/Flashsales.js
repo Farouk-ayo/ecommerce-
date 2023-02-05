@@ -1,6 +1,5 @@
 import { IoFlash } from "react-icons/io5";
 import classes from "./Flashsale.module.css";
-import { AiFillStar } from "react-icons/ai";
 
 import SlidesFlashStore from "./SlidesFlashStore";
 
@@ -11,7 +10,9 @@ import "swiper/css/a11y";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const Flashsale = () => {
+import Flash from "./Flash";
+
+const Flashsale = (props) => {
   return (
     <section className={classes.flashsale}>
       <div className={classes.flashHead}>
@@ -23,34 +24,13 @@ const Flashsale = () => {
           {SlidesFlashStore.map((value) => {
             return (
               <SwiperSlide>
-                <div className={classes.flashcontainer}>
-                  <div>
-                    <h5>{value.percentOff}</h5>
-                  </div>
-
-                  <div className={classes.image}>
-                    <img
-                      className={classes.productImage}
-                      src={value.productImage}
-                      alt=""
-                    />
-                  </div>
-                  <div className={classes.details}>
-                    <div className={classes.productDetail}>
-                      <h6>{value.product}</h6>
-                      <div className={classes.allstars}>
-                        {<AiFillStar color="#fde047" />}
-                        {<AiFillStar color="#fde047" />}
-                        {<AiFillStar color="#fde047" />}
-                        {<AiFillStar color="#fde047" />}
-                        {<AiFillStar color="#fde047" />}
-                      </div>
-
-                      <p className="price"> {value.price}</p>
-                    </div>
-                    <button className="addcart">+</button>
-                  </div>
-                </div>
+                <Flash
+                  key={value.key}
+                  productName={value.product}
+                  productImage={value.productImage}
+                  percentOff={value.percentOff}
+                  price={value.price}
+                />
               </SwiperSlide>
             );
           })}
