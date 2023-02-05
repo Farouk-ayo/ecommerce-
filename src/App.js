@@ -5,7 +5,7 @@ import Root from "./page/Root";
 import Menpage from "./page/Menpage";
 import Womenpage from "./page/Womenpage";
 import Kidspage from "./page/Kidspage";
-import Cart from "./page/Cart";
+import Cart from "./page/CartPage";
 import Authentication from "./page/Authentication";
 import NewArrival from "./page/NewArrival";
 import Search from "./page/Search";
