@@ -1,15 +1,17 @@
 import { useContext } from "react";
 import { RxCross2 } from "react-icons/rx";
+import { Link } from "react-router-dom";
 import CartCtx from "../store/Cartctx";
 import CartInfo from "./CartInfo";
+import classes from "./CartInfo.module.css";
 
 const Cart = () => {
   const cartCtx = useContext(CartCtx);
 
   return (
-    <section>
+    <section className={classes.cart}>
       <header>
-        <div>
+        <div className={classes.cartHead}>
           <div>
             <p>{cartCtx.items.length}</p>
           </div>
@@ -24,9 +26,11 @@ const Cart = () => {
       </header>
 
       <footer>
-        <button>
-          Checkout <span>total amount of all</span>
-        </button>
+        <Link to="/cart">
+          <button>
+            Checkout <span>total amount of all</span>
+          </button>
+        </Link>
         <button>View Cart</button>
       </footer>
     </section>

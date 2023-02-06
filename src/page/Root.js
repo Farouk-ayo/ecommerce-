@@ -3,10 +3,10 @@ import { Outlet } from "react-router-dom";
 import Footer from "../UI/Footer/Footer";
 import Header from "../UI/Header/Header";
 
-const Root = (props) => {
+const Root = () => {
   return (
     <React.Fragment>
-      <Header ref={props.ref}/>
+      <Header />
       <Outlet />
       <Footer />
     </React.Fragment>

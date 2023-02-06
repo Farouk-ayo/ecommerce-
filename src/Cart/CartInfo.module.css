@@ -1,0 +1,20 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.cartHead {
+  display: flex;
+  flex-direction: row;
+}
+
+.cartInfo {
+  display: flex;
+  flex-direction: row;
+}

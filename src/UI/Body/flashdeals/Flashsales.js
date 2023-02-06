@@ -12,7 +12,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import Flash from "./Flash";
 
-const Flashsale = (props) => {
+const Flashsale = () => {
   return (
     <section className={classes.flashsale}>
       <div className={classes.flashHead}>
