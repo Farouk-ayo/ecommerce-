@@ -10,6 +10,11 @@ const cartReducer = (state, action) => {
   if ((action.type = "ADD")) {
     const totalAmount = state.totalAmount + action.price;
   }
+
+  if ((action.type = "REMOVE")) {
+    console.log(action.id);
+    const removedItemId = state.items.findIndex();
+  }
 };
 
 const CartProvider = () => {
