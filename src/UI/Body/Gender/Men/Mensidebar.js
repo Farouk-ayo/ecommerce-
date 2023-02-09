@@ -20,6 +20,7 @@ const MenSidebar = () => {
         {Store.men.sections.map((eachSec) => {
           return (
             <p
+              key={eachSec.length}
               onClick={fashionFilter}
               value={eachSec}
               className={classes.eachSec}

@@ -6,11 +6,11 @@ import Men from "./Gender/Men/Men";
 import Women from "./Gender/Women/Women";
 import classes from "./Body.module.css";
 
-const Body = () => {
+const Body = (props) => {
   return (
     <Fragment>
       <Catalogue />
-      <Flashsale />
+      <Flashsale key={props.key} />
       <section className={classes.gender}>
         <Men />
         <Women />

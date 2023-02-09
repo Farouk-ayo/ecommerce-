@@ -23,9 +23,10 @@ const Flashsale = () => {
         <Swiper modules={[Navigation]} navigation loop={true} slidesPerView={4}>
           {SlidesFlashStore.map((value) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={value.id}>
                 <Flash
-                  key={value.key}
+                  key={value.id}
+                  id={value.id}
                   productName={value.product}
                   productImage={value.productImage}
                   percentOff={value.percentOff}

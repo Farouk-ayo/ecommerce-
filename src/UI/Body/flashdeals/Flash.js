@@ -6,8 +6,9 @@ import { useContext } from "react";
 const Flash = (props) => {
   const Cartctx = useContext(CartCtx);
   const addToCart = () => {
+    // console.log(props.id);
     Cartctx.addItems({
-      key: props.key,
+      id: props.id,
       productName: props.productName,
       productImage: props.productImage,
       percentOff: props.percentOff,

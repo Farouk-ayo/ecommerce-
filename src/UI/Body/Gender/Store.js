@@ -111,7 +111,7 @@ export const Store = {
       [wnavyBlue, "Navy Blue", "$55.00", "10"],
       [wnavysuit, "Navy Suit", "$47.00", "24"],
       [skirt, "Skirt", "$12.00", "14"],
-      [wpolo, "Polo", "$32.00"],
+      [wpolo, "Polo", "$32.00", "10"],
     ],
     Bags: [
       [sunMountain, "Sun Mountain", "$45.00", "16"],

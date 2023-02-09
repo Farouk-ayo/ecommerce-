@@ -17,7 +17,7 @@ const MenProducts = () => {
     <section className={classes.products}>
       {allRandomMen.map((random) => {
         return (
-          <div className={classes.imageContainer}>
+          <div className={classes.imageContainer} key={random[3]}>
             <img className={classes.image} src={random[0]} alt="" />
             <div className={classes.detailCon}>
               <div className={classes.titleCon}>
@@ -47,7 +47,8 @@ const MenProducts = () => {
               <MdFavorite
                 color="#143f6b"
                 size={20}
-                className={classes.favourite}onClick={changeFavorite}
+                className={classes.favourite}
+                onClick={changeFavorite}
               />
             )}
           </div>
