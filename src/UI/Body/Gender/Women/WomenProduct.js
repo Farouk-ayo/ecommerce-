@@ -32,7 +32,7 @@ const WomenProducts = () => {
                   {<AiFillStar color="#fde047" />}
                   {<AiFillStar color="#fde047" />}
                 </div>
-                <p className="price">{random[2]}</p>
+                <p className="price">${random[2]}.00</p>
               </div>
               <button className="addcart">+</button>
             </div>

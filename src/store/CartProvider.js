@@ -1,5 +1,5 @@
-import { useReducer } from "react";
 import CartCtx from "./Cartctx";
+import { useReducer } from "react";
 
 const defaultState = {
   items: [],
@@ -8,8 +8,8 @@ const defaultState = {
 
 const cartReducer = (state, action) => {
   if ((action.type = "ADD")) {
-    // const totalAmount = state.price;
-    console.log(action.item);
+    const updatedItems = state.items.concat(action.item);
+    console.log(updatedItems);
   }
 
   if ((action.type = "REMOVE")) {
@@ -17,13 +17,14 @@ const cartReducer = (state, action) => {
     // const removedItemId = state.items;
     // console.log(removedItemId);
   }
+  return defaultState;
 };
 
 const CartProvider = (props) => {
   const [cartState, dispatchState] = useReducer(cartReducer, defaultState);
 
-  const addCartItems = (price) => {
-    dispatchState({ type: "ADD", price: price });
+  const addCartItems = (item) => {
+    dispatchState({ type: "ADD", item: item });
   };
 
   const removeCartItems = (id) => {

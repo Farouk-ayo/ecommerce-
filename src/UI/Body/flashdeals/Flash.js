@@ -36,7 +36,7 @@ const Flash = (props) => {
             {<AiFillStar color="#fde047" />}
           </div>
 
-          <p className="price"> {props.price}</p>
+          <p className="price"> ${props.price}.00</p>
         </div>
         <button className="addcart" onClick={addToCart}>
           +

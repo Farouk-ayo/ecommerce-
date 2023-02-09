@@ -14,7 +14,7 @@ const SlidesFlashStore = [
     productImage: shoeFlash,
     percentOff: "50% off",
     // ratingNum: 5,
-    price: "$20.00",
+    price: "20",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const SlidesFlashStore = [
     productImage: iphoneFlash,
     percentOff: "30% off",
     // ratingNum: 5,
-    price: "$320.00",
+    price: "320",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const SlidesFlashStore = [
     productImage: Necklace,
     percentOff: "10% off",
     ratingNum: 4,
-    price: "$50.00",
+    price: "50",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const SlidesFlashStore = [
     productImage: smartwatchFlash,
     percentOff: "50% off",
     // ratingNum: 5,
-    price: "$20.00",
+    price: "20",
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ const SlidesFlashStore = [
     productImage: dellFlash,
     percentOff: "25% off",
     // ratingNum: 5,
-    price: "$520.00",
+    price: "520",
   },
   {
     id: 6,
@@ -54,7 +54,7 @@ const SlidesFlashStore = [
     productImage: laptopBagFlash,
     percentOff: "5% off",
     ratingNum: 3,
-    price: "$20.00",
+    price: "20",
   },
   {
     id: 7,
@@ -62,7 +62,7 @@ const SlidesFlashStore = [
     productImage: hoodieFlash,
     percentOff: "15% off",
     ratingNum: 3,
-    price: "$30.00",
+    price: "30",
   },
   {
     id: 8,
@@ -70,7 +70,7 @@ const SlidesFlashStore = [
     productImage: cameraFlash,
     percentOff: "10% off",
     // ratingNum: 5,
-    price: "$120.00",
+    price: "120",
   },
 ];
 
