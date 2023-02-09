@@ -6,13 +6,13 @@ import { useContext } from "react";
 const Flash = (props) => {
   const Cartctx = useContext(CartCtx);
   const addToCart = () => {
-    // console.log(props.id);
     Cartctx.addItems({
       id: props.id,
       productName: props.productName,
       productImage: props.productImage,
       percentOff: props.percentOff,
       price: props.price,
+      quantity: 1,
     });
   };
 

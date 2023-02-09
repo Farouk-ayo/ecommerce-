@@ -8,14 +8,13 @@ const defaultState = {
 
 const cartReducer = (state, action) => {
   if ((action.type = "ADD")) {
-    const updatedItems = state.items.concat(action.item);
-    console.log(updatedItems);
+    state.items.push(action.item);
+    // let quanty = action.item.quantity;
+
+    console.log(state.items.findIdex((index)=>), action.item.id);
   }
 
   if ((action.type = "REMOVE")) {
-    // console.log(action.id);
-    // const removedItemId = state.items;
-    // console.log(removedItemId);
   }
   return defaultState;
 };
