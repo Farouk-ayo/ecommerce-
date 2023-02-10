@@ -11,6 +11,7 @@ import { BsLinkedin } from "react-icons/bs";
 import classes from "./Header.module.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Cart from "../../Cart/Cart";
 
 // import { Store } from "../Body/Gender/Store";
 
@@ -27,6 +28,7 @@ const Header = (props) => {
 
   const [searchValue, setSearchValue] = useState();
   const [suggest, setSuggest] = useState(false);
+  const [cartVisibility, setCartVisibility] = useState(false);
 
   const changeSuggestion = (e) => {
     setSuggest(true);
@@ -48,6 +50,10 @@ const Header = (props) => {
     const id = e.target.getAttribute("id");
     // console.log(id);
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  };
+
+  const cartBar = () => {
+    setCartVisibility(!cartVisibility);
   };
 
   return (
@@ -110,17 +116,21 @@ const Header = (props) => {
         </div>
 
         <div className={classes.loginDetails}>
-          <IoPerson
-            size="3rem"
-            color="black"
-            className={classes.TiShoppingCart}
-          />
+          <Link to="/account">
+            <IoPerson
+              size="3rem"
+              color="black"
+              className={classes.TiShoppingCart}
+            />
+          </Link>
 
           <TiShoppingCart
             size="3rem"
             color="black"
             className={classes.TiShoppingCart}
+            onClick={cartBar}
           />
+          {cartVisibility ? <Cart /> : null}
         </div>
       </div>
       <div className={classes.menu}>
