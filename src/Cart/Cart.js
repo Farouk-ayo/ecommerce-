@@ -20,11 +20,20 @@ const Cart = () => {
           <RxCross2 size={30} className={classes.TiShoppingCart} />
         </div>
         <hr />
-        {
-          (cartCtx.items.map = () => {
-            return <CartInfo />;
-          })
-        }
+        {cartCtx.items.map((item) => {
+          return (
+            <CartInfo
+              key={item.id}
+              id={item.id}
+              productName={item.product}
+              productImage={item.productImage}
+              percentOff={item.percentOff}
+              price={item.price}
+              quantity={item.quantity}
+              totalAmount={cartCtx.totalAmount}
+            />
+          );
+        })}
       </header>
 
       <footer>

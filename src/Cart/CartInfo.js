@@ -3,23 +3,23 @@ import { AiOutlinePlusCircle } from "react-icons/ai";
 import { AiOutlineMinusCircle } from "react-icons/ai";
 import classes from "./CartInfo.module.css";
 
-const CartInfo = () => {
+const CartInfo = (props) => {
   return (
     <section className={classes.cartInfo}>
-      <div>
+      <div className={classes.eachInfo}>
         <div>
-          <AiOutlinePlusCircle />
-          <p>"num"</p>
-          <AiOutlineMinusCircle />
+          <button className={classes.firstBtn}>+</button>
+          <p>{props.quantity}</p>
+          <button className={classes.secondBtn}>-</button>
         </div>
-        <img src="" alt="" />
+        <img src={props.productImage} alt="" />
         <div>
-          <h5>Budi car</h5>
+          <h5>{props.product}</h5>
           <p>
-            <span>$290</span>
-            <span>"num"</span>
+            <span>${props.price}</span>
+            <span>{props.quantity}</span>
           </p>
-          <h2>"total amount"</h2>
+          <h2>{props.totalAmount}</h2>
         </div>
         <RxCross2 />
       </div>

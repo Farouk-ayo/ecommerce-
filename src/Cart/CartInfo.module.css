@@ -33,7 +33,7 @@ header {
 }
 
 hr {
-  color: grey;
+  color: rgba(128, 128, 128, 0.331);
 }
 .TiShoppingCart {
   cursor: pointer;
@@ -45,7 +45,49 @@ hr {
 
 .cartInfo {
   display: flex;
+  flex-direction: column;
+}
+.eachInfo {
+  display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+
+.eachInfo div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.eachInfo div button {
+  border-radius: 100%;
+  font-size: 1.1rem;
+  padding: 0rem 0.5rem;
+  width: 2rem;
+  height: 1.8rem;
+  align-content: center;
+  text-align: center;
+  font-weight: 600;
+}
+
+.firstBtn {
+  background-color: white;
+  border: #f55353 0.1rem solid;
+  color: #f55353;
+}
+.secondBtn {
+  color: grey;
+  border: grey 0.1rem solid;
+  background-color: white;
+}
+
+.eachInfo img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
 }
 
 footer {
