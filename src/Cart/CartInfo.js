@@ -1,6 +1,5 @@
 import { RxCross2 } from "react-icons/rx";
-import { AiOutlinePlusCircle } from "react-icons/ai";
-import { AiOutlineMinusCircle } from "react-icons/ai";
+
 import classes from "./CartInfo.module.css";
 
 const CartInfo = (props) => {
