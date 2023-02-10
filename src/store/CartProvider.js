@@ -8,12 +8,30 @@ const defaultState = {
 
 const cartReducer = (state, action) => {
   if ((action.type = "ADD")) {
-    state.items.push(action.item);
-    // let quanty = action.item.quantity;
+    const existingItemIndex = state.items.findIndex(
+      (item) => item.id === action.item.id
+    );
+    let quanty = action.item.quantity;
+    let totalAmnt = state.totalAmount + +action.item.price * quanty;
+    const existingItem = state.items[existingItemIndex];
+    console.log(state.totalAmount, +action.item.price, quanty);
+    let updatedItems;
 
-    console.log(state.items.findIdex((index)=>), action.item.id);
+    if (existingItem) {
+      quanty++;
+      totalAmnt = state.totalAmount + +action.item.price * quanty;
+      updatedItems = { ...existingItem };
+    } else {
+      state.items.push(action.item);
+
+      updatedItems = state.items;
+    }
+
+    console.log(
+      { items: updatedItems, totalAmount: totalAmnt },
+      existingItemIndex
+    );
   }
-
   if ((action.type = "REMOVE")) {
   }
   return defaultState;

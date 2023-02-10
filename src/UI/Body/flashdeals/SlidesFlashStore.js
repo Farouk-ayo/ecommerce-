@@ -29,7 +29,7 @@ const SlidesFlashStore = [
     product: "Necklace",
     productImage: Necklace,
     percentOff: "10% off",
-    ratingNum: 4,
+    // ratingNum: 4,
     price: "50",
   },
   {
