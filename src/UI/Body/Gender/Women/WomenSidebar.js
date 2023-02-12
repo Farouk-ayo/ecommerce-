@@ -11,7 +11,11 @@ const WomenSidebar = () => {
       <div className={classes.sec}>
         {Store.women.sections.map((eachSec) => {
           return (
-            <p key={eachSec.length} value={eachSec} className={classes.eachSec}>
+            <p
+              //  key={eachSec.length}
+              value={eachSec}
+              className={classes.eachSec}
+            >
               {eachSec}
             </p>
           );

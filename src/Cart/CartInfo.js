@@ -1,5 +1,4 @@
 import { RxCross2 } from "react-icons/rx";
-
 import classes from "./CartInfo.module.css";
 
 const CartInfo = (props) => {
