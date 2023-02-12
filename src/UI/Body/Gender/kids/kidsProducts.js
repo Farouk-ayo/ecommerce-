@@ -7,7 +7,7 @@ import { BsPlayFill } from "react-icons/bs";
 import { useState } from "react";
 // import { MdFavorite } from "react-icons/md";
 
-const KidsProduct = () => {
+const KidsProducts = () => {
   const [favorite, setFavorite] = useState(true);
   const changeFavorite = () => {
     setFavorite(false);
@@ -62,4 +62,4 @@ const KidsProduct = () => {
     </section>
   );
 };
-export default KidsProduct;
+export default KidsProducts;

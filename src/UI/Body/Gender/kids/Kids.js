@@ -1,12 +1,12 @@
 import KidSidebar from "./KidSidebar";
-import KidsProduct from "./KidsProducts";
 import classes from "../Store.module.css";
+import KidsProducts from "./KidsProducts";
 
 const Kids = (props) => {
   return (
     <section className={classes.section} id="kids">
       <KidSidebar />
-      <KidsProduct key={props.key} />
+      <KidsProducts />
     </section>
   );
 };
