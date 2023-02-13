@@ -158,43 +158,56 @@ export const Store = {
 };
 
 // Men random clothes
-const menClothes =
-  Store.men.Clothes[Math.round(Math.random() * (Store.men.Clothes.length - 1))];
-const menFurniture =
-  Store.men.Furniture[
-    Math.round(Math.random() * (Store.men.Furniture.length - 1))
-  ];
-const menElectronics =
-  Store.men.Electronics[
-    Math.round(Math.random() * (Store.men.Electronics.length - 1))
-  ];
-const menShoes =
-  Store.men.Shoes[Math.round(Math.random() * (Store.men.Shoes.length - 1))];
+// const menClothes =
+//   Store.men.Clothes[Math.round(Math.random() * (Store.men.Clothes.length - 1))];
+// const menFurniture =
+//   Store.men.Furniture[
+//     Math.round(Math.random() * (Store.men.Furniture.length - 1))
+//   ];
+// const menElectronics =
+//   Store.men.Electronics[
+//     Math.round(Math.random() * (Store.men.Electronics.length - 1))
+//   ];
+// const menShoes =
+//   Store.men.Shoes[Math.round(Math.random() * (Store.men.Shoes.length - 1))];
+
+const menClothes = Store.men.Clothes[0];
+const menFurniture = Store.men.Furniture[0];
+const menElectronics = Store.men.Electronics[0];
+const menShoes = Store.men.Shoes[0];
+const menShoes2 = Store.men.Shoes[1];
+const menClothes2 = Store.men.Clothes[1];
 
 export const allRandomMen = [
   [menClothes[0], menClothes[1], menClothes[2], menClothes[3]],
   [menFurniture[0], menFurniture[1], menFurniture[2], menFurniture[3]],
   [menElectronics[0], menElectronics[1], menElectronics[2], menElectronics[3]],
   [menShoes[0], menShoes[1], menShoes[2], menShoes[3]],
+
+  [menClothes2[0], menClothes2[1], menClothes2[2], menClothes2[3]],
+  [menShoes2[0], menShoes2[1], menShoes2[2], menShoes2[3]],
 ];
 
 // women random clothes
 
-const womenClothes =
-  Store.women.Clothes[
-    Math.round(Math.random() * (Store.women.Clothes.length - 1))
-  ];
+// const womenClothes =
+//   Store.women.Clothes[
+//     Math.round(Math.random() * (Store.women.Clothes.length - 1))
+//   ];
+// const womenJewelry = Store.women.Jewelry[0]; // Math.round(Math.random() * Store.women.Jewelry.length - 1)
+
+// const womenBags =
+//   Store.women.Bags[Math.round(Math.random() * (Store.women.Bags.length - 1))];
+
+// const womenShoes =
+//   Store.women.Shoes[Math.round(Math.random() * (Store.women.Shoes.length - 1))];
+
+const womenClothes = Store.women.Clothes[1];
 const womenJewelry = Store.women.Jewelry[0]; // Math.round(Math.random() * Store.women.Jewelry.length - 1)
-
-const womenBags =
-  Store.women.Bags[Math.round(Math.random() * (Store.women.Bags.length - 1))];
-
-const womenShoes =
-  Store.women.Shoes[Math.round(Math.random() * (Store.women.Shoes.length - 1))];
-
-// console.log(Math.round(Math.random() * (Store.kids.Toys.length - 1)));
-// console.log(Math.round(Math.random() * (Store.women.Clothes.length - 1)));
-// console.log(Math.round(Math.random() * (Store.men.Clothes.length - 1)));
+const womenBags = Store.women.Bags[0];
+const womenShoes = Store.women.Shoes[0];
+const womenClothes2 = Store.women.Clothes[2];
+const womenBags2 = Store.women.Bags[1];
 
 export const allRandomWomen = [
   [womenClothes[0], womenClothes[1], womenClothes[2], womenClothes[3]],
@@ -202,17 +215,30 @@ export const allRandomWomen = [
   [womenBags[0], womenBags[1], womenBags[2], womenBags[3]],
 
   [womenShoes[0], womenShoes[1], womenShoes[2], womenShoes[3]],
+  [womenClothes2[0], womenClothes2[1], womenClothes2[2], womenClothes2[3]],
+  [womenBags2[0], womenBags2[1], womenBags2[2], womenBags2[3]],
 ];
 
 // kids random
-const kidsClothes =
-  Store.kids.Clothes[
-    Math.round(Math.random() * (Store.kids.Clothes.length - 1))
-  ];
-const kidsToys =
-  Store.kids.Toys[Math.round(Math.random() * (Store.kids.Toys.length - 1))];
+// const kidsClothes =
+//   Store.kids.Clothes[
+//     Math.round(Math.random() * (Store.kids.Clothes.length - 1))
+//   ];
+// const kidsToys =
+//   Store.kids.Toys[Math.round(Math.random() * (Store.kids.Toys.length - 1))];
+
+const kidsClothes = Store.kids.Clothes[0];
+const kidsToys = Store.kids.Toys[0];
+const kidsClothes2 = Store.kids.Clothes[1];
+const kidsToys2 = Store.kids.Toys[1];
+const kidsClothes3 = Store.kids.Clothes[2];
+const kidsToys3 = Store.kids.Toys[2];
 
 export const allRandomKids = [
   [kidsClothes[0], kidsClothes[1], kidsClothes[2], kidsClothes[3]],
   [kidsToys[0], kidsToys[1], kidsToys[2], kidsToys[3]],
+  [kidsClothes2[0], kidsClothes2[1], kidsClothes2[2], kidsClothes2[3]],
+  [kidsToys2[0], kidsToys2[1], kidsToys2[2], kidsToys2[3]],
+  [kidsClothes3[0], kidsClothes3[1], kidsClothes3[2], kidsClothes3[3]],
+  [kidsToys3[0], kidsToys3[1], kidsToys3[2], kidsToys3[3]],
 ];
