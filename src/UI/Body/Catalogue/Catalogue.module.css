@@ -1,0 +1,44 @@
+.catalogue {
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem 5rem;
+
+  background-color: #f6f9fc;
+}
+
+.catalogue h2 {
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+}
+
+.catSection {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
+}
+
+.catSection > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 20%;
+  background-color: white;
+  padding: 2.5rem 1rem;
+}
+.catSection > * img {
+  height: 7rem;
+  width: 100%;
+}
+
+link {
+  font-size: 2rem;
+  font-weight: 400;
+}
