@@ -5,19 +5,18 @@ const CartInfo = (props) => {
   return (
     <section className={classes.cartInfo}>
       <div className={classes.eachInfo}>
-        <div>
+        <div className={classes.btnDiv}>
           <button className={classes.firstBtn}>+</button>
           <p>{props.quantity}</p>
           <button className={classes.secondBtn}>-</button>
         </div>
         <img src={props.productImage} alt="" />
-        <div>
-          <h5>{props.product}</h5>
+        <div className={classes.details}>
+          <h5>{props.productName}</h5>
           <p>
-            <span>${props.price}</span>
-            <span>{props.quantity}</span>
+            <span>${props.price}.00</span>x<span>{props.quantity}</span>
           </p>
-          <h2>{props.totalAmount}</h2>
+          <h2>${props.totalAmount}.00</h2>
         </div>
         <RxCross2 />
       </div>

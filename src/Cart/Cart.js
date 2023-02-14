@@ -17,7 +17,11 @@ const Cart = (props) => {
             <TiShoppingCart size={30} />
             <p>{cartCtx.items.length}item</p>
           </div>
-          <RxCross2 size={30} className={classes.TiShoppingCart} onClick={props.onClose} />
+          <RxCross2
+            size={30}
+            className={classes.TiShoppingCart}
+            onClick={props.onClose}
+          />
         </div>
         <hr />
         {cartCtx.items.map((item) => {
@@ -25,7 +29,7 @@ const Cart = (props) => {
             <CartInfo
               key={item.id}
               id={item.id}
-              productName={item.product}
+              productName={item.productName}
               productImage={item.productImage}
               percentOff={item.percentOff}
               price={item.price}

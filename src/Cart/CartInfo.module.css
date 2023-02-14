@@ -32,9 +32,6 @@ header {
   font-size: 1.3rem;
 }
 
-hr {
-  color: rgba(128, 128, 128, 0.331);
-}
 .TiShoppingCart {
   cursor: pointer;
 }
@@ -55,13 +52,6 @@ hr {
   align-items: center;
 }
 
-.eachInfo div {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  align-items: center;
-}
-
 .eachInfo div button {
   border-radius: 100%;
   font-size: 1.1rem;
@@ -71,6 +61,12 @@ hr {
   align-content: center;
   text-align: center;
   font-weight: 600;
+}
+.btnDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .firstBtn {
@@ -85,11 +81,31 @@ hr {
 }
 
 .eachInfo img {
-  height: 4rem;
-  width: 4rem;
+  height: 4.5rem;
+  width: 4.5rem;
   border-radius: 50%;
 }
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
+.details h5 {
+  color: black;
+  font-size: 1rem;
+}
+
+.details p {
+  font-size: 1rem;
+  color: #4444;
+  display: flex;
+  gap: 0.5rem;
+}
+.details h2 {
+  color: #f55353;
+  font-size: 1.2rem;
+}
 footer {
   padding: 1rem;
   width: 100%;
@@ -112,4 +128,9 @@ footer a button {
   background-color: white;
   color: #f55353;
   border: #f55353 solid 0.1rem;
+}
+
+hr {
+  border-bottom: 0.1rem;
+  border-color: #44444448;
 }
