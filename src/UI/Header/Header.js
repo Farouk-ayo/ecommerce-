@@ -61,6 +61,9 @@ const Header = (props) => {
   const cartBar = () => {
     setCartVisibility(!cartVisibility);
   };
+  const closeCartBar = () => {
+    setCartVisibility(!cartVisibility);
+  };
 
   return (
     <section className={classes.headerSection} value={props.scrollValue}>
@@ -140,7 +143,7 @@ const Header = (props) => {
             {number > 0 ? <span>{number}</span> : null}
           </div>
 
-          {cartVisibility ? <Cart /> : null}
+          {cartVisibility ? <Cart onClose={closeCartBar} /> : null}
         </div>
       </div>
       <div className={classes.menu}>
