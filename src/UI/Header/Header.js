@@ -9,9 +9,10 @@ import { BsTwitter } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 
 import classes from "./Header.module.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Cart from "../../Cart/Cart";
+import CartCtx from "../../store/Cartctx";
 
 // import { Store } from "../Body/Gender/Store";
 
@@ -20,6 +21,9 @@ const Header = (props) => {
     const head = document.querySelector(".header");
     head.classList.toggle("fixed", window.scrollY > 100);
   });
+
+  const Cartctx = useContext(CartCtx);
+  const number = Cartctx.items.length;
 
   const suggestionArray = [
     "Clothes",
@@ -126,12 +130,16 @@ const Header = (props) => {
             />
           </Link>
 
-          <TiShoppingCart
-            size="3rem"
-            color="black"
-            className={classes.TiShoppingCart}
-            onClick={cartBar}
-          />
+          <div className={classes.cartDiv}>
+            <TiShoppingCart
+              size="3rem"
+              color="black"
+              className={classes.TiShoppingCart}
+              onClick={cartBar}
+            />
+            {number > 0 ? <span>{number}</span> : null}
+          </div>
+
           {cartVisibility ? <Cart /> : null}
         </div>
       </div>
