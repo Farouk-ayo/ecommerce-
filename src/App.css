@@ -58,3 +58,21 @@ a:hover {
   transform: scale(1.05);
   transition: all 0.1s;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 5rem;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.2);
+  transform: all 0.3s ease-in;
+  z-index: 10;
+  padding-top: 1rem;
+  padding-bottom: 0.3rem;
+}

@@ -16,6 +16,11 @@ import Cart from "../../Cart/Cart";
 // import { Store } from "../Body/Gender/Store";
 
 const Header = (props) => {
+  window.addEventListener("scroll", function () {
+    const head = document.querySelector(".header");
+    head.classList.toggle("fixed", window.scrollY > 100);
+  });
+
   const suggestionArray = [
     "Clothes",
     "Furniture",
@@ -43,12 +48,9 @@ const Header = (props) => {
   const [dropdown, setDropdown] = useState(false);
   const changeDropdown = () => {
     setDropdown(!dropdown);
-    // console.log(dropdown);
   };
-
   const scrollFunction = (e) => {
     const id = e.target.getAttribute("id");
-    // console.log(id);
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   };
 
@@ -89,7 +91,7 @@ const Header = (props) => {
         </ul>
       </div>
 
-      <div className={classes.header}>
+      <div className="header">
         <Link to="/" className={classes.logo}>
           FrK
         </Link>
