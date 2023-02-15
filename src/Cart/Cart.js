@@ -15,7 +15,12 @@ const Cart = (props) => {
         <div className={classes.cartHead}>
           <div>
             <TiShoppingCart size={30} />
-            <p>{cartCtx.items.length}item</p>
+            <p>
+              {" "}
+              {cartCtx.items.length > 0
+                ? `${cartCtx.items.length} items`
+                : "no item"}
+            </p>
           </div>
           <RxCross2
             size={30}
