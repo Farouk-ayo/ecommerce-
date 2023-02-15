@@ -9,7 +9,6 @@
   width: 27vw;
   top: 0;
   right: 0;
-  box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
 }
 
 header {
@@ -58,7 +57,7 @@ header::-webkit-scrollbar {
   align-items: center;
 }
 
-.eachInfo div button {
+.btnDiv button {
   border-radius: 100%;
   font-size: 1.1rem;
   padding: 0rem 0.5rem;
@@ -67,6 +66,7 @@ header::-webkit-scrollbar {
   align-content: center;
   text-align: center;
   font-weight: 600;
+  cursor: pointer;
 }
 .btnDiv {
   display: flex;
