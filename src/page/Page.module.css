@@ -1,3 +1,19 @@
+.CartPage {
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.cart {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+}
+.cart div {
+  width: 60%;
+}
+
 .links {
   display: flex;
   width: 100%;
@@ -13,7 +29,7 @@
 .links :last-child {
   opacity: 0.4;
 }
-hr {
+.links hr {
   height: 0.3rem;
   background-color: #fcc8c8;
   width: 3rem;
@@ -32,13 +48,13 @@ hr {
 
 .cartInfo {
   display: flex;
-  width: 70%;
+  width: 100%;
   justify-content: space-between;
   padding: 1rem;
   align-items: flex-start;
-  margin: 2rem;
   border-radius: 0.8rem;
-  box-shadow: rgb(3 0 71 / 9%) 5px 10px 30px;
+  box-shadow: rgb(3 0 71 / 9%) 2px 2px 1px;
+  margin-bottom: 2rem;
 }
 
 .cartInfo div {
@@ -109,4 +125,19 @@ hr {
   color: grey;
   border: grey 0.1rem solid;
   background-color: white;
+}
+
+.totalAmount {
+  width: 30%;
+  border-radius: 0.8rem;
+  box-shadow: rgb(3 0 71 / 9%) 5px 10px 30px;
+  padding: 1rem;
+}
+.totalAmount h3 {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.totalAmount h3 :first-child {
+  color: #444444b4;
 }
