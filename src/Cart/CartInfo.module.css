@@ -104,7 +104,7 @@ header::-webkit-scrollbar {
 
 .details p {
   font-size: 1rem;
-  color: #4444;
+  color: #444444b4;
   display: flex;
   gap: 0.5rem;
 }

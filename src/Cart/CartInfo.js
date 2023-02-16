@@ -18,7 +18,7 @@ const CartInfo = (props) => {
           </p>
           <h2>${props.totalAmount}.00</h2>
         </div>
-        <RxCross2 />
+        <RxCross2 className="RxCross2" />
       </div>
       <hr />
     </section>
