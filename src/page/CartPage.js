@@ -8,19 +8,20 @@ const CartPage = () => {
   const cartCtx = useContext(CartCtx);
   return (
     <section>
-      <div>
-        <Link to="./cart"></Link>
+      <div className={classes.links}>
+        <Link to="./cart">1. Cart</Link>
+        <hr />
+        <Link to="./details">2. Details</Link>
+        <hr />
+        <Link to="./payment">3. Payment</Link>
+        <hr />
+        <Link to="./review">4. Review</Link>
       </div>
       {cartCtx.items.map((item) => {
         return (
           <section className={classes.cartInfo}>
+            <img src={item.productImage} alt="" />
             <div className={classes.eachInfo}>
-              <div className={classes.btnDiv}>
-                <button className={classes.firstBtn}>+</button>
-                <p>{item.quantity}</p>
-                <button className={classes.secondBtn}>-</button>
-              </div>
-              <img src={item.productImage} alt="" />
               <div className={classes.details}>
                 <h5>{item.productName}</h5>
                 <p>
@@ -28,9 +29,13 @@ const CartPage = () => {
                 </p>
                 <h2>${item.totalAmount}.00</h2>
               </div>
-              <RxCross2 />
+              <div className={classes.btnDiv}>
+                <button className={classes.firstBtn}>+</button>
+                <p>{item.quantity}</p>
+                <button className={classes.secondBtn}>-</button>
+              </div>
             </div>
-            <hr />
+            <RxCross2 />
           </section>
         );
       })}
