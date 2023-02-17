@@ -8,6 +8,7 @@ import classes from "./CartInfo.module.css";
 
 const Cart = (props) => {
   const cartCtx = useContext(CartCtx);
+  const number = cartCtx.items.length;
 
   return (
     <section className={classes.cart}>
@@ -29,20 +30,28 @@ const Cart = (props) => {
           />
         </div>
         <hr />
-        {cartCtx.items.map((item) => {
-          return (
-            <CartInfo
-              key={item.id}
-              id={item.id}
-              productName={item.productName}
-              productImage={item.productImage}
-              percentOff={item.percentOff}
-              price={item.price}
-              quantity={item.quantity}
-              totalAmount={cartCtx.totalAmount}
-            />
-          );
-        })}
+        {number ? (
+          <section>
+            {cartCtx.items.map((item) => {
+              return (
+                <CartInfo
+                  key={item.id}
+                  id={item.id}
+                  productName={item.productName}
+                  productImage={item.productImage}
+                  percentOff={item.percentOff}
+                  price={item.price}
+                  quantity={item.quantity}
+                  totalAmount={cartCtx.totalAmount}
+                />
+              );
+            })}
+          </section>
+        ) : (
+          <section className={classes.null}>
+            <h1>Nothing dey here brother, try add something nigga😌😌</h1>
+          </section>
+        )}
       </header>
 
       <footer>
@@ -50,7 +59,7 @@ const Cart = (props) => {
           Checkout <span>total amount of all</span>
         </button>
 
-        <Link to="/cart">
+        <Link to="/cart" onClick={props.onClose}>
           <button>View Cart</button>
         </Link>
       </footer>

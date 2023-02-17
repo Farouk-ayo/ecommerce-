@@ -140,3 +140,13 @@ hr {
   border-bottom: 0.1rem;
   border-color: #44444448;
 }
+
+.null {
+  gap: 2rem;
+  width: 100%;
+  padding: 4rem 2rem;
+}
+.null h1 {
+  font-size: 2rem;
+  text-align: center;
+}
