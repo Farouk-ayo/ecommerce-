@@ -4,11 +4,16 @@ import furnitures from "../../../assets/furnitures.png";
 import electronics from "../../../assets/electronics.png";
 import toys from "../../../assets/toys.png";
 import clothes from "../../../assets/clothes.png";
+import { GrCatalogOption } from "react-icons/gr";
 
 const Catalogue = () => {
   return (
     <section className={classes.catalogue}>
-      <h2>Catalogue</h2>
+      <div className={classes.headCat}>
+        <GrCatalogOption color="#f55353" size={30} />
+
+        <h2>Catalogue</h2>
+      </div>
 
       <div className={classes.catSection}>
         <div className={classes.clothes}>

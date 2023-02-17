@@ -90,7 +90,7 @@ export const Store = {
       [Dinningtable, "Dinning Table", "", "25", "10"],
     ],
     Electronics: [
-      [digitalclock, "Digital Clock", "", "10", "11"],
+      [digitalclock, "Digital Clock", "45", "10", "11"],
       [DjSpeaker, "Dj Speaker", "45", "9", "12"],
       [GameController, "Game Controller", "23", "12", "13"],
       [Headphone, "Headphone", "12", "19", "14"],
@@ -143,7 +143,7 @@ export const Store = {
       [cartoon, "Cartoon", "45", "9", "42"],
     ],
     Toys: [
-      [assortmentkidstoys, "Assortment Toys", "", "14", "43"],
+      [assortmentkidstoys, "Assortment Toys", "40", "14", "43"],
       [babytoy, "Baby Toy", "30", "14", "44"],
       [fishercornpopper, "Corn Popper", "45", "10", "45"],
       [girafeehead, "Girafee Head", "19", "18", "46"],

@@ -3,14 +3,18 @@
   flex-direction: column;
 
   padding: 2rem 5rem;
-
   background-color: #f6f9fc;
 }
 
-.catalogue h2 {
+.headCat h2 {
   font-size: 1.5rem;
-  padding: 1rem 3rem;
   text-transform: uppercase;
+}
+
+.headCat {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 3rem;
 }
 
 .catSection {
