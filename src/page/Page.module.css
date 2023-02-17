@@ -2,6 +2,7 @@
   width: 100%;
   overflow: hidden;
   padding: 2rem;
+  background-color: #f6f9fc;
 }
 
 .cart {
@@ -53,8 +54,9 @@
   padding: 1rem;
   align-items: flex-start;
   border-radius: 0.8rem;
-  box-shadow: rgb(3 0 71 / 9%) 2px 2px 1px;
+  box-shadow: rgb(3 0 71 / 9%) 1px 1px 10px;
   margin-bottom: 2rem;
+  outline: 0.1rem solid #f6f6f6;
 }
 
 .cartInfo div {
