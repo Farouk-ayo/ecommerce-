@@ -7,6 +7,7 @@ const defaultState = {
 };
 
 const cartReducer = (state, action) => {
+  // ADD CART
   if ((action.type = "ADD")) {
     const existingItemIndex = state.items.findIndex(
       (item) => item.id === action.item.id
@@ -32,12 +33,30 @@ const cartReducer = (state, action) => {
 
     return { items: updatedItems, totalAmount: totalAmnt };
   }
+
+  // REMOVE CART
   if ((action.type = "REMOVE")) {
     const existingItemIndex = state.items.findIndex(
       (item) => item.id === action.item.id
     );
     const existingItem = state.items[existingItemIndex];
+    let updatedItems;
+    let quant;
+
+    if (existingItem) {
+    } else {
+      updatedItems = state.items.splice(existingItemIndex, 1);
+    }
+    return {
+      items: updatedItems,
+      totalAmount:0    };
   }
+
+  //CLEAR CART
+  if (action.type === "CLEAR") {
+    return defaultState;
+  }
+
   return defaultState;
 };
 

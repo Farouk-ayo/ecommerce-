@@ -1,14 +1,35 @@
+import { useContext } from "react";
 import { RxCross2 } from "react-icons/rx";
+import CartCtx from "../store/Cartctx";
 import classes from "./CartInfo.module.css";
 
 const CartInfo = (props) => {
+  const Cartctx = useContext(CartCtx);
+  const addToCart = () => {
+    Cartctx.addItems({
+      id: props.id,
+      productName: props.productName,
+      productImage: props.productImage,
+      percentOff: props.percentOff,
+      price: props.price,
+      quantity: 1,
+    });
+  };
+  const removeCart = () => {
+    Cartctx.removeItems(props.id);
+  };
+
   return (
     <section className={classes.cartInfo}>
       <div className={classes.eachInfo}>
         <div className={classes.btnDiv}>
-          <button className={classes.firstBtn}>+</button>
+          <button className={classes.firstBtn} onClick={addToCart}>
+            +
+          </button>
           <p>{props.quantity}</p>
-          <button className={classes.secondBtn}>-</button>
+          <button className={classes.secondBtn} onClick={removeCart}>
+            -
+          </button>
         </div>
         <img src={props.productImage} alt="" />
         <div className={classes.details}>
@@ -18,7 +39,7 @@ const CartInfo = (props) => {
           </p>
           <h2>${props.totalAmount}.00</h2>
         </div>
-        <RxCross2 className="RxCross2" />
+        <RxCross2 className="RxCross2" onClick={removeCart} />
       </div>
       <hr />
     </section>
