@@ -5,12 +5,16 @@ import classes from "./CartInfo.module.css";
 
 const CartInfo = (props) => {
   const Cartctx = useContext(CartCtx);
-  const [numbers, setNumber] = useState(1);
+  let numb = props.quantity;
+
+  const [numbers, setNumber] = useState(numb);
+  // console.log(props.quantity);
+  // console.log(Cartctx.items);
+
   const addToCart = () => {
     if (numbers < 5) {
       setNumber(numbers + 1);
     }
-
     Cartctx.addItems({
       id: props.id,
       productName: props.productName,
@@ -18,6 +22,7 @@ const CartInfo = (props) => {
       percentOff: props.percentOff,
       price: props.price,
       quantity: numbers,
+      totalPrice: props.price * numbers,
     });
   };
   const removeCart = () => {

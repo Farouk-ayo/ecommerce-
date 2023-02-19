@@ -42,8 +42,8 @@ const Cart = (props) => {
                   percentOff={item.percentOff}
                   price={item.price}
                   quantity={item.quantity}
+                  totalPrice={item.totalPrice}
                   totalAmount={cartCtx.totalAmount}
-                  totalPrice={cartCtx.totalPrice}
                 />
               );
             })}

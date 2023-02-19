@@ -5,10 +5,11 @@ import { useContext, useState } from "react";
 
 const Flash = (props) => {
   const Cartctx = useContext(CartCtx);
+
   const [numbers, setNumber] = useState(1);
   const addToCart = () => {
     if (numbers < 5) {
-      setNumber(+numbers + 1);
+      setNumber(numbers + 1);
     }
 
     Cartctx.addItems({
@@ -17,7 +18,8 @@ const Flash = (props) => {
       productImage: props.productImage,
       percentOff: props.percentOff,
       price: props.price,
-      quantity: numbers,
+      quantity: 1,
+      totalPrice: props.price * 1,
     });
   };
 

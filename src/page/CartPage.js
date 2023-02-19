@@ -15,7 +15,8 @@ const CartPage = () => {
       productImage: item.productImage,
       percentOff: item.percentOff,
       price: item.price,
-      quantity: item.quantity,
+      quantity: item.quantity++,
+      totalPrice: item.price * item.quantity,
     });
   };
   const removeCart = (id) => {
@@ -49,7 +50,7 @@ const CartPage = () => {
                             <span>${item.price}.00</span>x
                             <span>{item.quantity}</span>
                           </p>
-                          <h2>${cartCtx.totalPrice}.00</h2>
+                          <h2>${item.totalPrice}.00</h2>
                         </span>
                       </div>
                       <div className={classes.btnDiv}>

@@ -4,28 +4,26 @@ import { useReducer } from "react";
 const defaultState = {
   items: [],
   totalAmount: 0,
-  totalPrice: 0,
 };
 
 const cartReducer = (state, action) => {
   // ADD CART
   if (action.type === "ADD") {
     const totalAmnt =
-      state.totalAmount + action.item.price * action.item.quantity;
-    const totalPrice = action.item.price * action.item.quantity;
+      state.totalAmount + action.item.price * action.item.quantity-1;
     const existingItemIndex = state.items.findIndex(
       (item) => item.id === action.item.id
     );
-
     const existingItem = state.items[existingItemIndex];
 
     let updatedItems;
 
     if (existingItem) {
+      const newPrice = action.item.price * action.item.quantity;
       const updatedItem = {
         ...existingItem,
         quantity: action.item.quantity,
-        totalPrice: totalPrice,
+        totalPrice: newPrice,
       };
       updatedItems = [...state.items];
       updatedItems[existingItemIndex] = updatedItem;
@@ -38,7 +36,6 @@ const cartReducer = (state, action) => {
     return {
       items: updatedItems,
       totalAmount: totalAmnt,
-      totalPrice: totalPrice,
     };
   }
 
@@ -86,7 +83,6 @@ const CartProvider = (props) => {
   const cartCtx = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
-    totalPrice: cartState.totalPrice,
     addItems: addCartItems,
     removeItems: removeCartItems,
     clearItems: clearCartItems,
