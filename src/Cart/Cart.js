@@ -43,6 +43,7 @@ const Cart = (props) => {
                   price={item.price}
                   quantity={item.quantity}
                   totalAmount={cartCtx.totalAmount}
+                  totalPrice={cartCtx.totalPrice}
                 />
               );
             })}
