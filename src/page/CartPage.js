@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import CartCtx from "../store/Cartctx";
 import classes from "./Page.module.css";
@@ -7,6 +7,20 @@ import { Link } from "react-router-dom";
 const CartPage = () => {
   const cartCtx = useContext(CartCtx);
   const number = cartCtx.items.length;
+
+  const addToCart = (item) => {
+    cartCtx.addItems({
+      id: item.id,
+      productName: item.productName,
+      productImage: item.productImage,
+      percentOff: item.percentOff,
+      price: item.price,
+      quantity: item.quantity,
+    });
+  };
+  const removeCart = (id) => {
+    cartCtx.removeItems(id);
+  };
 
   return (
     <section className={classes.CartPage}>
@@ -39,9 +53,19 @@ const CartPage = () => {
                         </span>
                       </div>
                       <div className={classes.btnDiv}>
-                        <button className={classes.secondBtn}>-</button>
+                        <button
+                          className={classes.secondBtn}
+                          onClick={removeCart.bind(null, item.id)}
+                        >
+                          -
+                        </button>
                         <p>{item.quantity}</p>
-                        <button className={classes.firstBtn}>+</button>
+                        <button
+                          className={classes.firstBtn}
+                          onClick={addToCart.bind(null, item)}
+                        >
+                          +
+                        </button>
                       </div>
                     </div>
                   </div>

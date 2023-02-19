@@ -1,18 +1,23 @@
 import { AiFillStar } from "react-icons/ai";
 import classes from "./Flashsale.module.css";
 import CartCtx from "../../../store/Cartctx";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 const Flash = (props) => {
   const Cartctx = useContext(CartCtx);
+  const [numbers, setNumber] = useState(1);
   const addToCart = () => {
+    if (numbers < 5) {
+      setNumber(+numbers + 1);
+    }
+
     Cartctx.addItems({
       id: props.id,
       productName: props.productName,
       productImage: props.productImage,
       percentOff: props.percentOff,
       price: props.price,
-      quantity: 1,
+      quantity: numbers,
     });
   };
 
