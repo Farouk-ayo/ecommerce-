@@ -1,5 +1,5 @@
 import CartCtx from "./Cartctx";
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 
 const defaultState = {
   items: [],
@@ -7,27 +7,26 @@ const defaultState = {
 };
 
 const cartReducer = (state, action) => {
+  // const [cart, cartNumber]-useState(1)
+
   // ADD CART
   if (action.type === "ADD") {
-    const totalAmnt =
-      state.totalAmount + action.item.price * action.item.quantity-1;
+    const totalAmnt = +state.totalAmount + +action.item.price;
     const existingItemIndex = state.items.findIndex(
       (item) => item.id === action.item.id
     );
     const existingItem = state.items[existingItemIndex];
-
     let updatedItems;
 
     if (existingItem) {
-      const newPrice = action.item.price * action.item.quantity;
+      const newPrice = action.item.price * (action.item.quantity + 1);
       const updatedItem = {
         ...existingItem,
-        quantity: action.item.quantity,
+        quantity: action.item.quantity + 1,
         totalPrice: newPrice,
       };
       updatedItems = [...state.items];
       updatedItems[existingItemIndex] = updatedItem;
-      console.log(existingItem);
     } else {
       state.items.push(action.item);
       updatedItems = state.items;
