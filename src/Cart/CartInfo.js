@@ -5,9 +5,8 @@ import classes from "./CartInfo.module.css";
 
 const CartInfo = (props) => {
   const Cartctx = useContext(CartCtx);
-  let numb = props.quantity;
 
-  const [numbers, setNumber] = useState(numb);
+  const [numbers, setNumber] = useState(props.quantity);
   // console.log(props.quantity);
   // console.log(Cartctx.items);
 
