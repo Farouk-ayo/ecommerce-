@@ -9,7 +9,7 @@ const CartPage = () => {
   const number = cartCtx.items.length;
 
   const addToCart = (item) => {
-    cartCtx.addItems(item);
+    cartCtx.addItems({ ...item, quantity: 1, totalPrice: item.price });
     console.log(item);
   };
   const removeCart = (id) => {

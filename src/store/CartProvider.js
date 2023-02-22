@@ -19,12 +19,14 @@ const cartReducer = (state, action) => {
     let updatedItems;
 
     if (existingItem) {
-      const newPrice = action.item.price * (action.item.quantity + 1);
+      const newPrice =
+        action.item.price * (existingItem.quantity + action.item.quantity);
       const updatedItem = {
         ...existingItem,
-        quantity: action.item.quantity + 1,
+        quantity: existingItem.quantity + action.item.quantity,
         totalPrice: newPrice,
       };
+
       updatedItems = [...state.items];
       updatedItems[existingItemIndex] = updatedItem;
     } else {

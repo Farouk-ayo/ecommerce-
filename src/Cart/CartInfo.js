@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { RxCross2 } from "react-icons/rx";
 import CartCtx from "../store/Cartctx";
 import classes from "./CartInfo.module.css";
@@ -6,29 +6,18 @@ import classes from "./CartInfo.module.css";
 const CartInfo = (props) => {
   const Cartctx = useContext(CartCtx);
 
-  const [numbers, setNumber] = useState(props.quantity);
-  // console.log(props.quantity);
-  // console.log(Cartctx.items);
-
   const addToCart = () => {
-    if (numbers < 5) {
-      setNumber(numbers + 1);
-    }
     Cartctx.addItems({
       id: props.id,
       productName: props.productName,
       productImage: props.productImage,
       percentOff: props.percentOff,
       price: props.price,
-      quantity: numbers,
-      totalPrice: props.price * numbers,
+      quantity: 1,
+      totalPrice: props.price * 1,
     });
   };
   const removeCart = () => {
-    if (numbers >= 1) {
-      setNumber(numbers - 1);
-    }
-
     Cartctx.removeItems(props.id);
   };
 
