@@ -1,10 +1,11 @@
 import classes from "../Store.module.css";
 import { AiFillStar } from "react-icons/ai";
-import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
+import { MdFavoriteBorder } from "react-icons/md";
+import { MdFavorite } from "react-icons/md";
 import { useContext, useState } from "react";
 import CartCtx from "../../../../store/Cartctx";
 
-const EachKid = (props) => {
+const EachWomen = (props) => {
   const [favorite, setFavorite] = useState(true);
   const changeFavorite = () => {
     setFavorite(false);
@@ -37,7 +38,7 @@ const EachKid = (props) => {
             {<AiFillStar color="#fde047" />}
             {<AiFillStar color="#fde047" />}
           </div>
-          <p className="price">${props.price}.00</p>
+          <p className="price">${props.totalPrice}.00</p>
         </div>
         <button className="addcart" onClick={addToCart}>
           +
@@ -63,4 +64,4 @@ const EachKid = (props) => {
   );
 };
 
-export default EachKid;
+export default EachWomen;

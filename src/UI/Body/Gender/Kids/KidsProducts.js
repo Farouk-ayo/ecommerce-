@@ -11,13 +11,13 @@ const KidsProducts = () => {
       {allRandomKids.map((random) => {
         return (
           <EachKid
-            id={random[4]}
-            productName={random[1]}
-            productImage={random[0]}
+            id={random[0]}
+            productName={random[2]}
+            productImage={random[1]}
             percentOff={0}
-            price={random[2]}
-            quantity={random[3]}
-            totalPrice={random[2] * 1}
+            price={random[3]}
+            quantity={random[4]}
+            totalPrice={random[3] * 1}
           />
         );
       })}
