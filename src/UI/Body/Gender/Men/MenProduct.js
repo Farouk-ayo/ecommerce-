@@ -5,13 +5,28 @@ import { AiFillStar } from "react-icons/ai";
 import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { BsPlayFill } from "react-icons/bs";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import CartCtx from "../../../../store/Cartctx";
 // import { MdFavorite } from "react-icons/md";
 
 const MenProducts = () => {
   const [favorite, setFavorite] = useState(true);
   const changeFavorite = () => {
     setFavorite(false);
+  };
+
+  const cartCtx = useContext(CartCtx);
+
+  const addToCart = (random) => {
+    cartCtx.addItems({
+      id: random[4],
+      productName: random[1],
+      productImage: random[0],
+      percentOff: 0,
+      price: random[2],
+      quantity: random[3],
+      totalPrice: random[2] * 1,
+    });
   };
   return (
     <section className={classes.products}>
@@ -33,7 +48,12 @@ const MenProducts = () => {
                 </div>
                 <p className="price">${random[2]}.00</p>
               </div>
-              <button className="addcart">+</button>
+              <button
+                className="addcart"
+                onClick={addToCart.bind(null, random)}
+              >
+                +
+              </button>
             </div>
 
             {favorite ? (

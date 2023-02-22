@@ -4,10 +4,10 @@ import CartCtx from "../store/Cartctx";
 import classes from "./CartInfo.module.css";
 
 const CartInfo = (props) => {
-  const Cartctx = useContext(CartCtx);
+  const cartCtx = useContext(CartCtx);
 
   const addToCart = () => {
-    Cartctx.addItems({
+    cartCtx.addItems({
       id: props.id,
       productName: props.productName,
       productImage: props.productImage,
@@ -18,7 +18,10 @@ const CartInfo = (props) => {
     });
   };
   const removeCart = () => {
-    Cartctx.removeItems(props.id);
+    cartCtx.removeItems(props.id);
+  };
+  const clearCart = () => {
+    cartCtx.clearItems(props.id);
   };
 
   return (
@@ -41,7 +44,7 @@ const CartInfo = (props) => {
           </p>
           <h2>${props.totalPrice}.00</h2>
         </div>
-        <RxCross2 className="RxCross2" onClick={removeCart} />
+        <RxCross2 className="RxCross2" onClick={clearCart} />
       </div>
       <hr />
     </section>

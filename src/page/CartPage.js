@@ -16,6 +16,10 @@ const CartPage = () => {
     cartCtx.removeItems(id);
   };
 
+  const clearCart = (id) => {
+    cartCtx.clearItems(id);
+  };
+
   return (
     <section className={classes.CartPage}>
       <div className={classes.links}>
@@ -63,7 +67,10 @@ const CartPage = () => {
                       </div>
                     </div>
                   </div>
-                  <RxCross2 className="RxCross2" />
+                  <RxCross2
+                    className="RxCross2"
+                    onClick={clearCart.bind(null, item.id)}
+                  />
                 </section>
               );
             })}

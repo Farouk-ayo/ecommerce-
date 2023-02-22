@@ -56,7 +56,7 @@ const Cart = (props) => {
       </header>
 
       <footer>
-        <button>
+        <button >
           Checkout <span>total amount of all</span>
         </button>
 
