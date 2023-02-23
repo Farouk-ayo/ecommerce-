@@ -44,7 +44,7 @@ const CartInfo = (props) => {
           </p>
           <h2>${props.totalPrice}.00</h2>
         </div>
-        <RxCross2 className="RxCross2" onClick={clearCart} />
+        <RxCross2 size={30} className={classes.RxCross2} onClick={clearCart} />
       </div>
       <hr />
     </section>

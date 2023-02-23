@@ -12,7 +12,7 @@
   padding: 0rem 2rem;
 }
 .cart div {
-  width: 60%;
+  width: 70%;
 }
 .null {
   gap: 2rem;
@@ -36,6 +36,7 @@
   background-color: #f55353;
   color: white;
 }
+
 .links :last-child {
   opacity: 0.4;
 }
@@ -54,17 +55,22 @@
   border-radius: 2rem;
   font-weight: 500;
   cursor: pointer;
+  font-weight: 800;
+}
+.links a:hover {
+  background-color: #f55353;
+  color: white;
 }
 
 .cartInfo {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 2rem 1rem;
+  padding: 1.2rem;
   align-items: flex-start;
   border-radius: 0.8rem;
   box-shadow: rgb(3 0 71 / 9%) 1px 1px 10px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   background-color: white;
   outline: 0.1rem solid #f6f6f6;
 }
@@ -143,8 +149,11 @@
   width: 30%;
   border-radius: 0.8rem;
   box-shadow: rgb(3 0 71 / 9%) 5px 10px 30px;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .totalAmount h3 {
   font-size: 1.5rem;
@@ -153,4 +162,93 @@
 }
 .totalAmount h3 :first-child {
   color: #444444b4;
+}
+
+.totalAmount hr {
+  border-bottom: 0.1rem;
+  border-color: #44444439;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+form label {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+form label span {
+  color: #f55353;
+  background-color: #feebeb;
+  padding: 0.15rem 0.7rem;
+  font-size: 0.9rem;
+  border-radius: 0.4rem;
+}
+form textarea {
+  max-width: 100%;
+  max-height: 10rem;
+  border: 0.1rem solid #44444448;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  resize: none;
+}
+
+form textarea:hover,
+textarea:active,
+textarea:focus {
+  border: 0.12rem solid #f55353;
+  outline: none;
+}
+
+.checkout {
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1rem;
+  background-color: #f55353;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.checkout:hover {
+  background-color: #fc3232;
+  transition: all 0.5s;
+}
+
+form input {
+  max-width: 100%;
+  border: 0.1rem solid #44444448;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+form input:hover,
+input:active,
+input:focus {
+  border: 0.12rem solid #f55353;
+  outline: none;
+}
+
+form input:placeholder-shown {
+  color: #44444439;
+  font-weight: 500;
+}
+
+.voucher {
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1rem;
+  background-color: white;
+  color: #f55353;
+  border: #f55353 solid 0.1rem;
+  cursor: pointer;
+}
+
+.voucher:hover {
+  background-color: #fef3f3;
+  transition: all 0.4s;
 }

@@ -24,8 +24,8 @@ const Cart = (props) => {
             </p>
           </div>
           <RxCross2
-            size={30}
-            className={classes.TiShoppingCart}
+            size={40}
+            className={classes.RxCross2}
             onClick={props.onClose}
           />
         </div>
@@ -56,12 +56,12 @@ const Cart = (props) => {
       </header>
 
       <footer>
-        <button >
-          Checkout <span>total amount of all</span>
-        </button>
+        <Link to="/checkout" className={classes.checkout}>
+          Checkout Now <span>(${cartCtx.totalAmount}.00)</span>
+        </Link>
 
-        <Link to="/cart" onClick={props.onClose}>
-          <button>View Cart</button>
+        <Link className={classes.viewCart} to="/cart" onClick={props.onClose}>
+          View Cart
         </Link>
       </footer>
     </section>

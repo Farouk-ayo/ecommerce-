@@ -37,11 +37,20 @@ header::-webkit-scrollbar {
   font-size: 1.3rem;
 }
 
-.TiShoppingCart {
+
+
+.RxCross2 {
   cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 100%;
 }
 
-.TiShoppingCart:active {
+.RxCross2:hover{
+  background-color: #fef3f3;
+  transition: all 0.5s;
+}
+.RxCross2:active{
+  background-color: #fef3f3;
   transform: translateY(0.1rem);
 }
 
@@ -120,22 +129,37 @@ footer {
   gap: 0.5rem;
 }
 
-footer button {
+footer a {
   border-radius: 0.5rem;
   width: 100%;
   padding: 0.8rem;
   font-size: 1rem;
-  background-color: #f55353;
-  color: white;
   border: none;
+  font-weight: 800;
+  cursor: pointer;
+  text-align: center;
 }
 
-footer a button {
+.checkout {
+  background-color: #f55353;
+  color: white;
+}
+.checkout:hover {
+  background-color: #fc3232;
+  transition: all 0.5s;
+}
+
+.viewCart {
   background-color: white;
   color: #f55353;
   border: #f55353 solid 0.1rem;
 }
 
+.viewCart:hover {
+  border: #fc3232 solid 0.1rem;
+  transition: all 0.4s;
+  background-color: #fef3f3;
+}
 hr {
   border-bottom: 0.1rem;
   border-color: #44444448;

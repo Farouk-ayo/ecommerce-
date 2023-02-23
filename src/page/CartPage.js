@@ -81,6 +81,19 @@ const CartPage = () => {
               <span>Total:</span>
               <span>${cartCtx.totalAmount}</span>
             </h3>
+            <hr />
+            <form
+              action="
+            "
+            >
+              <label htmlFor="comment">
+                Additional Comments <span>Note</span>
+              </label>
+              <textarea name="comment" id="" cols="30" rows="10"></textarea>
+              <input type="text" placeholder="Voucher" />
+              <button className={classes.voucher}>Apply Voucher</button>
+              <button className={classes.checkout}> Checkout</button>
+            </form>
           </section>
         </section>
       ) : (
