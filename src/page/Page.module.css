@@ -195,10 +195,13 @@ form textarea {
   resize: none;
 }
 
-form textarea:hover,
-textarea:active,
-textarea:focus {
-  border: 0.12rem solid #f55353;
+form textarea:focus {
+  border: 0.13rem solid #f55353 !important;
+  outline: none;
+}
+
+form textarea:hover {
+  border: 0.12rem solid black;
   outline: none;
 }
 
@@ -216,28 +219,45 @@ textarea:focus {
   background-color: #fc3232;
   transition: all 0.5s;
 }
+.voucher {
+  width: 100%;
+  position: relative;
+}
 
-form input {
-  max-width: 100%;
+.voucherInput {
+  width: 100%;
   border: 0.1rem solid #44444448;
   border-radius: 0.5rem;
-  padding: 0.3rem;
+  padding: 0.4rem;
   font-size: 1rem;
 }
+.voucher label {
+  color: black;
+  font-weight: 500;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.6rem;
+  z-index: 10;
+}
 
-form input:hover,
-input:active,
-input:focus {
-  border: 0.12rem solid #f55353;
+.voucherInput:hover {
+  border: 0.12rem solid black;
   outline: none;
 }
-
-form input:placeholder-shown {
-  color: #44444439;
-  font-weight: 500;
+.voucherInput:focus {
+  border: 0.13rem solid #f55353 !important;
+  outline: none;
+}
+.voucherInput:focus ~ label {
+  top: -0.95rem;
+  left: 0.2;
+  color: #f55353;
+  transition: all 0.3s;
+  padding: 0.1rem;
+  background-color: white;
 }
 
-.voucher {
+.voucherBtn {
   border-radius: 0.5rem;
   width: 100%;
   padding: 0.4rem;
@@ -246,9 +266,58 @@ form input:placeholder-shown {
   color: #f55353;
   border: #f55353 solid 0.1rem;
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
-.voucher:hover {
+.voucherBtn:hover {
   background-color: #fef3f3;
   transition: all 0.4s;
+}
+.country {
+  width: 100%;
+  position: relative;
+}
+.country label {
+  color: black;
+  font-weight: 500;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.6rem;
+  z-index: 10;
+}
+
+.select {
+  width: 100%;
+  border: 0.1rem solid #44444448;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+  font-size: 1rem;
+  appearance: none;
+}
+
+.select:hover {
+  border: 0.12rem solid black;
+  outline: none;
+}
+.select:focus {
+  border: 0.13rem solid #f55353 !important;
+  outline: none;
+}
+
+.select:focus ~ label {
+  top: -0.95rem;
+  left: 0.2;
+  color: #f55353;
+  transition: all 0.3s;
+  padding: 0.1rem;
+  background-color: white;
+}
+
+.select::after {
+  position: absolute;
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: grey;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
 }

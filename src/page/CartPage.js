@@ -3,6 +3,7 @@ import { RxCross2 } from "react-icons/rx";
 import CartCtx from "../store/Cartctx";
 import classes from "./Page.module.css";
 import { Link } from "react-router-dom";
+import Form from "../Form/Form";
 
 const CartPage = () => {
   const cartCtx = useContext(CartCtx);
@@ -89,10 +90,45 @@ const CartPage = () => {
               <label htmlFor="comment">
                 Additional Comments <span>Note</span>
               </label>
-              <textarea name="comment" id="" cols="30" rows="10"></textarea>
-              <input type="text" placeholder="Voucher" />
-              <button className={classes.voucher}>Apply Voucher</button>
-              <button className={classes.checkout}> Checkout</button>
+              <textarea
+                name="comment"
+                id="comment"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <hr />
+              {/* <span className={classes.voucher}>
+                <input
+                  type="text"
+                  id="voucher"
+                  className={classes.voucherInput}
+                />
+                <label htmlFor="voucher">Voucher</label>
+              </span>
+
+              <button className={classes.voucherBtn}>Apply Voucher</button>
+              <hr />
+              <label htmlFor="">Shipping Estimates</label>
+              <span className={classes.country}>
+                <select
+                  name=""
+                  id="select1"
+                  className={classes.select}
+                ></select>
+                <label htmlFor="select1">Country</label>
+              </span>
+              <span className={classes.country}>
+                <select
+                  name=""
+                  id="select2 "
+                  className={classes.select}
+                ></select>
+                <label htmlFor="select2">State</label>
+              </span>
+
+              <input type="text" className={classes.voucherInput} />
+              <button className={classes.checkout}> Checkout</button> */}
+              <Form />
             </form>
           </section>
         </section>

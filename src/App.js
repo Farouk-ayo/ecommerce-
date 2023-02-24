@@ -9,6 +9,7 @@ import Cart from "./page/CartPage";
 import Authentication from "./page/Authentication";
 import NewArrival from "./page/NewArrival";
 import Search from "./page/Search";
+import { ChakraProvider } from "@chakra-ui/react";
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <ChakraProvider>
+      <RouterProvider router={router} />
+    </ChakraProvider>
+  );
 }
 
 export default App;
