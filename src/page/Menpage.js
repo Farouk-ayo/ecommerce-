@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { AiFillStar } from "react-icons/ai";
-import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 import { Store } from "../UI/Body/Gender/Store";
 import classes from "../UI/Body/Gender/Store.module.css";
 import EachMen from "../UI/Body/Gender/Men/EachMen";
