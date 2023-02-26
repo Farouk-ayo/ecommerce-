@@ -33,7 +33,7 @@
 }
 
 .links :first-child {
-  background-color: #f55353;
+  background-color: #d32f2f;
   color: white;
 }
 
@@ -51,14 +51,14 @@
   padding: 0.3rem 2rem;
   font-size: 1rem;
   background-color: #fcc8c8;
-  color: #f55353;
+  color: #d32f2f;
   border-radius: 2rem;
   font-weight: 500;
   cursor: pointer;
   font-weight: 800;
 }
 .links a:hover {
-  background-color: #f55353;
+  background-color: #d32f2f;
   color: white;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .details span h2 {
-  color: #f55353;
+  color: #d32f2f;
   font-size: 1.3rem;
 }
 
@@ -136,8 +136,8 @@
 
 .firstBtn {
   background-color: white;
-  border: #f55353 0.1rem solid;
-  color: #f55353;
+  border: #d32f2f 0.1rem solid;
+  color: #d32f2f;
 }
 .secondBtn {
   color: grey;
@@ -181,7 +181,7 @@ form label {
   align-items: center;
 }
 form label span {
-  color: #f55353;
+  color: #d32f2f;
   background-color: #feebeb;
   padding: 0.15rem 0.7rem;
   font-size: 0.9rem;
@@ -198,7 +198,7 @@ form textarea {
 }
 
 form textarea:focus {
-  border: 0.13rem solid #f55353 !important;
+  border: 0.13rem solid #d32f2f !important;
   outline: none;
 }
 

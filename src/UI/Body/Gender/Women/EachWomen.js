@@ -1,11 +1,13 @@
 import classes from "../Store.module.css";
-import { AiFillStar } from "react-icons/ai";
 import { MdFavoriteBorder } from "react-icons/md";
 import { MdFavorite } from "react-icons/md";
 import { useContext, useState } from "react";
 import CartCtx from "../../../../store/Cartctx";
+import { Rating } from "@mui/material";
 
 const EachWomen = (props) => {
+  const [value, setValue] = useState(0);
+
   const [favorite, setFavorite] = useState(true);
   const changeFavorite = () => {
     setFavorite(false);
@@ -31,13 +33,13 @@ const EachWomen = (props) => {
           <div className={classes.title}>
             <h3>{props.productName}</h3> <p>({props.quantity})</p>
           </div>
-          <div className={classes.stars}>
-            {<AiFillStar color="#fde047" />}
-            {<AiFillStar color="#fde047" />}
-            {<AiFillStar color="#fde047" />}
-            {<AiFillStar color="#fde047" />}
-            {<AiFillStar color="#fde047" />}
-          </div>
+          <Rating
+            name="simple-controlled"
+            value={value}
+            onChange={(event, newValue) => {
+              setValue(newValue);
+            }}
+          />
           <p className="price">${props.totalPrice}.00</p>
         </div>
         <button className="addcart" onClick={addToCart}>

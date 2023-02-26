@@ -21,6 +21,7 @@ const theme = createTheme({
     },
   },
   typography: {
+    fontFamily: [""],
     button: {
       textTransform: "none",
     },
@@ -318,7 +319,8 @@ const Form = () => {
           renderInput={(params) => (
             <TextField
               {...params}
-              label="Choose a Country"
+              label="Country"
+              placeholder="Select Country"
               inputProps={{
                 ...params.inputProps,
                 autoComplete: "new-password", // disable autocomplete and autofill
@@ -326,13 +328,13 @@ const Form = () => {
             />
           )}
         />
-        <FormControl sx={{ mb: 1 }} size="small">
-          <InputLabel id="select-state">Country</InputLabel>
+        <FormControl size="small">
+          <InputLabel id="select-state">State</InputLabel>
           <Select
             fullWidth
             labelId="select-state"
             id="select-state"
-            label="Country"
+            label="State"
             size="small"
 
             // MenuProps={{
@@ -350,6 +352,27 @@ const Form = () => {
             ))}
           </Select>
         </FormControl>
+        <TextField
+          placeholder="11023"
+          label="Zip Code"
+          size="small"
+          sx={{ width: "100%" }}
+        />
+        <Button
+          color="error"
+          variant="outlined"
+          sx={{ fontWeight: "bolder", fontSize: "1rem" }}
+        >
+          Calculate Shipping
+        </Button>
+        <Button
+          color="error"
+          disableElevation
+          variant="contained"
+          sx={{ fontWeight: "bolder", fontSize: "1rem" }}
+        >
+          Checkout Now
+        </Button>
       </ThemeProvider>
     </Stack>
   );

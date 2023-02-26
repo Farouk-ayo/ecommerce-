@@ -129,7 +129,7 @@
 .logo {
   font-size: 2rem;
   font-family: cursive;
-  color: #f55353;
+  color: #d32f2f;
 }
 .menu {
   display: flex;
@@ -181,8 +181,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  gap: 0.4rem;
-  width: 15rem;
+  width: 17rem;
   background-color: white;
   color: black;
   z-index: 50;
@@ -192,21 +191,29 @@
   box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
 }
 .categoriesSug li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
   list-style: none;
-  padding: 0.7rem 1.3rem;
-}
-.categoriesSug li a {
-  text-decoration: none;
-  padding: 0.4rem 0.8rem;
+  margin: 0.3rem 1rem;
   background-color: #f6f9fc;
-  font-size: 1.2rem;
-  font-weight: 500;
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
 }
-.categoriesSug li a:hover {
+.categoriesSug li:hover,
+.categoriesSug li:target {
   background-color: white;
   transform: scale(1.05);
   transition: all 0.3s;
   box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
+}
+
+.categoriesSug li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .dropdown {
@@ -251,7 +258,7 @@
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 100%;
-  background-color: #f55353;
+  background-color: #d32f2f;
   color: white;
   z-index: 100;
   text-align: center;

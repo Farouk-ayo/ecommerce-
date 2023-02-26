@@ -1,11 +1,19 @@
 import { RiArrowDropDownFill } from "react-icons/ri";
 import { IoPerson } from "react-icons/io5";
 import { TiShoppingCart } from "react-icons/ti";
-import { MdCall } from "react-icons/md";
+import {
+  MdCable,
+  MdCall,
+  MdCheckroom,
+  MdToys,
+  MdWeekend,
+} from "react-icons/md";
+import { GiGoldNuggets, GiRunningShoe } from "react-icons/gi";
+
 import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineSearch } from "react-icons/ai";
 import { GrFacebook } from "react-icons/gr";
-import { BsTwitter } from "react-icons/bs";
+import { BsHandbagFill, BsTwitter } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 
 import classes from "./Header.module.css";
@@ -13,8 +21,6 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Cart from "../../Cart/Cart";
 import CartCtx from "../../store/Cartctx";
-
-// import { Store } from "../Body/Gender/Store";
 
 const Header = (props) => {
   window.addEventListener("scroll", function () {
@@ -26,13 +32,13 @@ const Header = (props) => {
   const number = Cartctx.items.length;
 
   const suggestionArray = [
-    "Clothes",
-    "Furniture",
-    "Electronics",
-    "Shoes",
-    "Bags",
-    "Jewelry",
-    "Toys",
+    { id: 1, type: "Clothes", img: <MdCheckroom size={40} /> },
+    { id: 2, type: "Furniture", img: <MdWeekend size={40} /> },
+    { id: 3, type: "Electronics", img: <MdCable size={40} /> },
+    { id: 4, type: "Shoes", img: <GiRunningShoe size={40} /> },
+    { id: 5, type: "Bags", img: <BsHandbagFill size={40} /> },
+    { id: 6, type: "Jewelry", img: <GiGoldNuggets size={40} /> },
+    { id: 7, type: "Toys", img: <MdToys size={40} /> },
   ];
 
   const [searchValue, setSearchValue] = useState();
@@ -118,7 +124,7 @@ const Header = (props) => {
               <li>lo gadget electronics</li>
               <li>free mifi 24</li>
               {suggestionArray.map((each) => {
-                return <li>{each}</li>;
+                return <li>{each.type}</li>;
               })}
             </ul>
           ) : null}
@@ -159,7 +165,8 @@ const Header = (props) => {
               {suggestionArray.map((each) => {
                 return (
                   <li>
-                    <Link to={`/search/${each}`}> {each}</Link>
+                    <Link to={`/search/${each.type}`}> {each.type}</Link>
+                    {each.img}
                   </li>
                 );
               })}

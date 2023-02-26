@@ -37,19 +37,17 @@ header::-webkit-scrollbar {
   font-size: 1.3rem;
 }
 
-
-
 .RxCross2 {
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 100%;
 }
 
-.RxCross2:hover{
+.RxCross2:hover {
   background-color: #fef3f3;
   transition: all 0.5s;
 }
-.RxCross2:active{
+.RxCross2:active {
   background-color: #fef3f3;
   transform: translateY(0.1rem);
 }
@@ -86,8 +84,8 @@ header::-webkit-scrollbar {
 
 .firstBtn {
   background-color: white;
-  border: #f55353 0.1rem solid;
-  color: #f55353;
+  border: #d32f2f 0.1rem solid;
+  color: #d32f2f;
 }
 .secondBtn {
   color: grey;
@@ -118,7 +116,7 @@ header::-webkit-scrollbar {
   gap: 0.5rem;
 }
 .details h2 {
-  color: #f55353;
+  color: #d32f2f;
   font-size: 1.2rem;
 }
 footer {
@@ -141,22 +139,22 @@ footer a {
 }
 
 .checkout {
-  background-color: #f55353;
+  background-color: #d32f2f;
   color: white;
 }
 .checkout:hover {
-  background-color: #fc3232;
+  background-color: #c62828;
   transition: all 0.5s;
 }
 
 .viewCart {
   background-color: white;
-  color: #f55353;
-  border: #f55353 solid 0.1rem;
+  color: #d32f2f;
+  border: #d32f2f solid 0.1rem;
 }
 
 .viewCart:hover {
-  border: #fc3232 solid 0.1rem;
+  border: #d32f2f solid 0.1rem;
   transition: all 0.4s;
   background-color: #fef3f3;
 }

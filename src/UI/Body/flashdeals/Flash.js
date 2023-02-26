@@ -1,9 +1,11 @@
-import { AiFillStar } from "react-icons/ai";
 import classes from "./Flashsale.module.css";
 import CartCtx from "../../../store/Cartctx";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { Rating } from "@mui/material";
 
 const Flash = (props) => {
+  const [value, setValue] = useState(4);
+
   const cartCtx = useContext(CartCtx);
   const addToCart = () => {
     cartCtx.addItems({
@@ -29,13 +31,13 @@ const Flash = (props) => {
       <div className={classes.details}>
         <div className={classes.productDetail}>
           <h6>{props.product}</h6>
-          <div className={classes.allstars}>
-            {<AiFillStar color="#fde047" />}
-            {<AiFillStar color="#fde047" />}
-            {<AiFillStar color="#fde047" />}
-            {<AiFillStar color="#fde047" />}
-            {<AiFillStar color="#fde047" />}
-          </div>
+          <Rating
+            name="simple-controlled"
+            value={value}
+            onChange={(event, newValue) => {
+              setValue(newValue);
+            }}
+          />
 
           <p className="price"> ${props.price}.00</p>
         </div>

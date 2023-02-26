@@ -16,7 +16,7 @@ const Flashsale = () => {
   return (
     <section className={classes.flashsale}>
       <div className={classes.flashHead}>
-        <IoFlash color="#f55353" size={30} />
+        <IoFlash color="#d32f2f" size={30} />
         <h2>Flash Sales</h2>
       </div>
       <div className={classes.container}>

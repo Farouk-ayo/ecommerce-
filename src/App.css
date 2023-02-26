@@ -35,7 +35,7 @@
 .addcart {
   background-color: white;
   border-radius: 0.4rem;
-  color: #f55353;
+  color: #d32f2f;
   font-size: 2rem;
   font-weight: bolder;
   border: 0.2rem solid #f6f9fc;
@@ -46,7 +46,7 @@
 .price {
   font-size: 1.2rem;
   font-weight: bolder;
-  color: #f55353;
+  color: #d32f2f;
 }
 
 a {
