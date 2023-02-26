@@ -1,14 +1,18 @@
+import React, { useState } from "react";
+
 import {
   Autocomplete,
   Box,
   Button,
   createTheme,
+  FormControl,
   InputLabel,
+  MenuItem,
+  Select,
   Stack,
   TextField,
   ThemeProvider,
 } from "@mui/material";
-import React from "react";
 
 const theme = createTheme({
   palette: {
@@ -271,16 +275,17 @@ const countries = [
   { code: "ZM", name: "Zambia" },
   { code: "ZW", name: "Zimbabwe" },
 ];
+const states = [
+  { code: 1, name: "NewYork" },
+  {
+    code: 2,
+    name: "Ajegunle 😂",
+  },
+];
 
 const Form = () => {
-  const [country, setCountry] = React.useState("");
-
-  const handleChange = (event, newCountry) => {
-    setCountry(newCountry);
-  };
-
   return (
-    <Stack style={{ width: "100%" }} gap={"1rem"} size="small">
+    <Stack style={{ width: "100%" }} gap={"1rem"}>
       <ThemeProvider theme={theme}>
         <TextField
           placeholder="Voucher"
@@ -289,10 +294,9 @@ const Form = () => {
           sx={{ width: "100%" }}
         />
         <Button
-          size="small"
           color="error"
           variant="outlined"
-          sx={{ fontWeight: "bold", fontSize: "1rem" }}
+          sx={{ fontWeight: "bolder", fontSize: "1rem" }}
         >
           Apply Voucher
         </Button>
@@ -304,8 +308,6 @@ const Form = () => {
           size="small"
           id="countries"
           options={countries}
-          onChange={handleChange}
-          value={country}
           autoHighlight
           getOptionLabel={(option) => option.name}
           renderOption={(props, option) => (
@@ -314,9 +316,40 @@ const Form = () => {
             </Box>
           )}
           renderInput={(params) => (
-            <TextField {...params} label="Choose a Country" />
+            <TextField
+              {...params}
+              label="Choose a Country"
+              inputProps={{
+                ...params.inputProps,
+                autoComplete: "new-password", // disable autocomplete and autofill
+              }}
+            />
           )}
         />
+        <FormControl sx={{ mb: 1 }} size="small">
+          <InputLabel id="select-state">Country</InputLabel>
+          <Select
+            fullWidth
+            labelId="select-state"
+            id="select-state"
+            label="Country"
+            size="small"
+
+            // MenuProps={{
+            //   PaperProps: {
+            //     style: {
+            //       maxHeight: "200px",
+            //     },
+            //   },
+            // }}
+          >
+            {states.map((eachState) => (
+              <MenuItem key={eachState.code} value={eachState.name}>
+                {eachState.name}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
       </ThemeProvider>
     </Stack>
   );
