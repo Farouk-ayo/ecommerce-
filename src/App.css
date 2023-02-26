@@ -76,3 +76,17 @@ a:active {
   padding-top: 1rem;
   padding-bottom: 0.3rem;
 }
+.RxCross2 {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 100%;
+}
+
+.RxCross2:hover {
+  background-color: #fef3f3;
+  transition: all 0.5s;
+}
+.RxCross2:active {
+  background-color: #fef3f3;
+  transform: translateY(0.1rem);
+}

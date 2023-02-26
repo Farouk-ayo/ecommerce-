@@ -23,11 +23,7 @@ const Cart = (props) => {
                 : "no item"}
             </p>
           </div>
-          <RxCross2
-            size={40}
-            className={classes.RxCross2}
-            onClick={props.onClose}
-          />
+          <RxCross2 size={40} className="RxCross2" onClick={props.onClose} />
         </div>
         <hr />
         {number ? (

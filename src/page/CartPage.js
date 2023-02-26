@@ -32,8 +32,8 @@ const CartPage = () => {
         <hr />
         <Link to="./review">4. Review</Link>
       </div>
-      {number ? (
-        <section className={classes.cart}>
+      <section className={classes.cart}>
+        {number ? (
           <div className={classes.carts}>
             {cartCtx.items.map((item) => {
               return (
@@ -69,6 +69,7 @@ const CartPage = () => {
                     </div>
                   </div>
                   <RxCross2
+                    size={40}
                     className="RxCross2"
                     onClick={clearCart.bind(null, item.id)}
                   />
@@ -76,36 +77,36 @@ const CartPage = () => {
               );
             })}
           </div>
-
-          <section className={classes.totalAmount}>
-            <h3>
-              <span>Total:</span>
-              <span>${cartCtx.totalAmount}</span>
-            </h3>
-            <hr />
-            <form
-              action="
-            "
-            >
-              <label htmlFor="comment">
-                Additional Comments <span>Note</span>
-              </label>
-              <textarea
-                name="comment"
-                id="comment"
-                cols="30"
-                rows="10"
-              ></textarea>
-              <hr />
-              <Form />
-            </form>
+        ) : (
+          <section className={classes.null}>
+            <h1>Nothing dey here brother, try add something nigga😌😌</h1>
           </section>
+        )}
+
+        <section className={classes.totalAmount}>
+          <h3>
+            <span>Total:</span>
+            <span>${cartCtx.totalAmount}</span>
+          </h3>
+          <hr />
+          <form
+            action="
+            "
+          >
+            <label htmlFor="comment">
+              Additional Comments <span>Note</span>
+            </label>
+            <textarea
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <hr />
+            <Form />
+          </form>
         </section>
-      ) : (
-        <section className={classes.null}>
-          <h1>Nothing dey here brother, try add something nigga😌😌</h1>
-        </section>
-      )}
+      </section>
     </section>
   );
 };

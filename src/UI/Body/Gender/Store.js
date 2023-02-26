@@ -67,11 +67,19 @@ import polyTurtle from "../../../assets/kids/polyTurtle.png";
 import toysTop from "../../../assets/kids/toysTop.png";
 import toytrain from "../../../assets/kids/toytrain.png";
 import toyvector from "../../../assets/kids/toyvector.png";
+import { MdCable, MdCheckroom, MdToys, MdWeekend } from "react-icons/md";
+import { GiGoldNuggets, GiRunningShoe } from "react-icons/gi";
+import { BsHandbagFill } from "react-icons/bs";
 
 export const Store = {
   men: {
     Fashion: "Men",
-    sections: ["Clothes", "Furniture", "Electronics", "Shoes"],
+    sections: [
+      { id: 1, type: "Clothes", img: <MdCheckroom size={40} /> },
+      { id: 2, type: "Furniture", img: <MdWeekend size={40} /> },
+      { id: 3, type: "Electronics", img: <MdCable size={40} /> },
+      { id: 4, type: "Shoes", img: <GiRunningShoe size={40} /> },
+    ],
     Clothes: [
       ["1", GreyBrownShirt, "Grey Brown Shirt", "20", "12"],
       ["2", GreyRusticLinen, "Grey Rustic Linen", "40", "10"],
@@ -105,7 +113,12 @@ export const Store = {
   },
   women: {
     Fashion: "Women",
-    sections: ["Clothes", "Bags", "Shoes", "Jewelry"],
+    sections: [
+      { id: 1, type: "Clothes", img: <MdCheckroom size={40} /> },
+      { id: 5, type: "Bags", img: <BsHandbagFill size={40} /> },
+      { id: 4, type: "Shoes", img: <GiRunningShoe size={40} /> },
+      { id: 6, type: "Jewelry", img: <GiGoldNuggets size={40} /> },
+    ],
     Clothes: [
       ["23", Navyandwhite, "Navy and White", "40", "14"],
       ["24", wnavyBlue, "Navy Blue", "55", "10"],
@@ -133,7 +146,10 @@ export const Store = {
 
   kids: {
     Fashion: "Kids",
-    sections: ["Clothes", "Toys"],
+    sections: [
+      { id: 1, type: "Clothes", img: <MdCheckroom size={40} /> },
+      { id: 7, type: "Toys", img: <MdToys size={40} /> },
+    ],
     Clothes: [
       ["40", Blackgown, "Black Gown", "18", "5"],
       ["41", DreamSleepSuit, "Dream Sleep Suit", "7", "15"],

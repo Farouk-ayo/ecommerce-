@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Store } from "../Store";
 import classes from "../Store.module.css";
 
@@ -11,9 +12,12 @@ const WomenSidebar = () => {
       <div className={classes.sec}>
         {Store.women.sections.map((eachSec) => {
           return (
-            <p key={eachSec.length} value={eachSec} className={classes.eachSec}>
-              {eachSec}
-            </p>
+            <span>
+              <Link to={"/"} className={classes.eachSec}>
+                {eachSec.type}
+              </Link>
+              {eachSec.img}
+            </span>
           );
         })}
       </div>
