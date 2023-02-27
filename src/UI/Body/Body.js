@@ -10,7 +10,7 @@ const Body = (props) => {
   return (
     <Fragment>
       <Catalogue />
-      <Flashsale key={props.key} />
+      <Flashsale  />
       <section className={classes.gender}>
         <Men />
         <Women />

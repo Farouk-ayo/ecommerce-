@@ -1,5 +1,6 @@
 import CartCtx from "./Cartctx";
 import { useReducer } from "react";
+import { SnackbarProvider, useSnackbar } from "notistack";
 
 const defaultState = {
   items: [],
@@ -13,7 +14,7 @@ const cartReducer = (state, action) => {
     const existingItemIndex = state.items.findIndex(
       (item) => item.id === action.item.id
     );
-    console.log(action.item);
+    // console.log(action.item);
     const existingItem = state.items[existingItemIndex];
     let updatedItems;
 
@@ -90,8 +91,16 @@ const cartReducer = (state, action) => {
 
 const CartProvider = (props) => {
   const [cartState, dispatchState] = useReducer(cartReducer, defaultState);
+  const { enqueueSnackbar } = useSnackbar();
+  const handleClickVariant = (variant) => () => {
+    // variant could be success, error, warning, info, or default
+    enqueueSnackbar("Added To Cart!", { variant });
+    console.log(variant);
+  };
 
   const addCartItems = (item) => {
+    handleClickVariant("success");
+
     dispatchState({ type: "ADD", item: item });
   };
 
@@ -111,7 +120,11 @@ const CartProvider = (props) => {
     clearItems: clearCartItems,
   };
 
-  return <CartCtx.Provider value={cartCtx}>{props.children}</CartCtx.Provider>;
+  return (
+    <SnackbarProvider maxSnack={3}>
+      <CartCtx.Provider value={cartCtx}>{props.children}</CartCtx.Provider>
+    </SnackbarProvider>
+  );
 };
 
 export default CartProvider;
