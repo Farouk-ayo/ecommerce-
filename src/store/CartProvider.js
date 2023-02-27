@@ -91,25 +91,33 @@ const cartReducer = (state, action) => {
 
 const CartProvider = (props) => {
   const [cartState, dispatchState] = useReducer(cartReducer, defaultState);
+
+  // SNACKBAR
   const { enqueueSnackbar } = useSnackbar();
-  const handleClickVariant = (variant) => () => {
+  const handleClickVariant = (variant) => {
     // variant could be success, error, warning, info, or default
-    console.log("variant");
     enqueueSnackbar("Added To Cart!", { variant });
   };
-
+  const closeSnackbar = (variant) => {
+    enqueueSnackbar("Remove From Cart", { variant });
+  };
+  const clearSnackbar = (variant) => {
+    enqueueSnackbar("Cleared Cart", { variant });
+  };
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   const addCartItems = (item) => {
-    handleClickVariant("success");
-
     dispatchState({ type: "ADD", item: item });
+    handleClickVariant("success");
   };
 
   const removeCartItems = (id) => {
     dispatchState({ type: "REMOVE", id: id });
+    closeSnackbar("error");
   };
 
   const clearCartItems = (id) => {
     dispatchState({ type: "CLEAR", id: id });
+    clearSnackbar("default");
   };
 
   const cartCtx = {
