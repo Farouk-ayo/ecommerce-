@@ -1,6 +1,6 @@
 import CartCtx from "./Cartctx";
 import { useReducer } from "react";
-import { SnackbarProvider, useSnackbar } from "notistack";
+import { useSnackbar } from "notistack";
 
 const defaultState = {
   items: [],
@@ -94,8 +94,8 @@ const CartProvider = (props) => {
   const { enqueueSnackbar } = useSnackbar();
   const handleClickVariant = (variant) => () => {
     // variant could be success, error, warning, info, or default
+    console.log("variant");
     enqueueSnackbar("Added To Cart!", { variant });
-    console.log(variant);
   };
 
   const addCartItems = (item) => {
@@ -120,11 +120,7 @@ const CartProvider = (props) => {
     clearItems: clearCartItems,
   };
 
-  return (
-    <SnackbarProvider maxSnack={3}>
-      <CartCtx.Provider value={cartCtx}>{props.children}</CartCtx.Provider>
-    </SnackbarProvider>
-  );
+  return <CartCtx.Provider value={cartCtx}>{props.children}</CartCtx.Provider>;
 };
 
 export default CartProvider;

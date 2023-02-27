@@ -1,7 +1,7 @@
 import classes from "./Flashsale.module.css";
 import CartCtx from "../../../store/Cartctx";
 import { useContext, useState } from "react";
-import { Rating } from "@mui/material";
+import { Button, Rating } from "@mui/material";
 
 const Flash = (props) => {
   const [value, setValue] = useState(4);
@@ -41,9 +41,15 @@ const Flash = (props) => {
 
           <p className="price"> ${props.price}.00</p>
         </div>
-        <button className="addcart" onClick={addToCart}>
-          +
-        </button>
+        <Button
+          variant="outlined"
+          size="small"
+          onClick={addToCart}
+          color="error"
+          style={{ fontSize: ".7rem" }}
+        >
+          Add To Cart +
+        </Button>
       </div>
     </div>
   );

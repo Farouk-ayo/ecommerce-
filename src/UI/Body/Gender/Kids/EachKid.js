@@ -2,7 +2,7 @@ import classes from "../Store.module.css";
 import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 import { useContext, useState } from "react";
 import CartCtx from "../../../../store/Cartctx";
-import { Rating } from "@mui/material";
+import { Button, Rating } from "@mui/material";
 
 const EachKid = (props) => {
   const [value, setValue] = useState(0);
@@ -41,9 +41,15 @@ const EachKid = (props) => {
           />
           <p className="price">${props.price}.00</p>
         </div>
-        <button className="addcart" onClick={addToCart}>
-          +
-        </button>
+        <Button
+          variant="outlined"
+          size="small"
+          onClick={addToCart}
+          color="error"
+          style={{ fontSize: ".7rem" }}
+        >
+          Add To Cart +
+        </Button>
       </div>
 
       {favorite ? (
