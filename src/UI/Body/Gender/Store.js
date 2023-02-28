@@ -195,13 +195,31 @@ const menShoes2 = Store.men.Shoes[1];
 const menClothes2 = Store.men.Clothes[1];
 
 export const allRandomMen = [
-  [menClothes[0], menClothes[1], menClothes[2], menClothes[3]],
-  [menFurniture[0], menFurniture[1], menFurniture[2], menFurniture[3]],
-  [menElectronics[0], menElectronics[1], menElectronics[2], menElectronics[3]],
-  [menShoes[0], menShoes[1], menShoes[2], menShoes[3]],
+  [menClothes[0], menClothes[1], menClothes[2], menClothes[3], menClothes[4]],
+  [
+    menFurniture[0],
+    menFurniture[1],
+    menFurniture[2],
+    menFurniture[3],
+    menFurniture[4],
+  ],
+  [
+    menElectronics[0],
+    menElectronics[1],
+    menElectronics[2],
+    menElectronics[3],
+    menElectronics[4],
+  ],
+  [menShoes[0], menShoes[1], menShoes[2], menShoes[3], menShoes[4]],
 
-  [menClothes2[0], menClothes2[1], menClothes2[2], menClothes2[3]],
-  [menShoes2[0], menShoes2[1], menShoes2[2], menShoes2[3]],
+  [
+    menClothes2[0],
+    menClothes2[1],
+    menClothes2[2],
+    menClothes2[3],
+    menClothes2[4],
+  ],
+  [menShoes2[0], menShoes2[1], menShoes2[2], menShoes2[3], menShoes2[4]],
 ];
 
 // women random clothes
@@ -226,13 +244,31 @@ const womenClothes2 = Store.women.Clothes[2];
 const womenBags2 = Store.women.Bags[1];
 
 export const allRandomWomen = [
-  [womenClothes[0], womenClothes[1], womenClothes[2], womenClothes[3]],
-  [womenJewelry[0], womenJewelry[1], womenJewelry[2], womenJewelry[3]],
-  [womenBags[0], womenBags[1], womenBags[2], womenBags[3]],
+  [
+    womenClothes[0],
+    womenClothes[1],
+    womenClothes[2],
+    womenClothes[3],
+    womenClothes[4],
+  ],
+  [
+    womenJewelry[0],
+    womenJewelry[1],
+    womenJewelry[2],
+    womenJewelry[3],
+    womenJewelry[4],
+  ],
+  [womenBags[0], womenBags[1], womenBags[2], womenBags[3], womenBags[4]],
 
-  [womenShoes[0], womenShoes[1], womenShoes[2], womenShoes[3]],
-  [womenClothes2[0], womenClothes2[1], womenClothes2[2], womenClothes2[3]],
-  [womenBags2[0], womenBags2[1], womenBags2[2], womenBags2[3]],
+  [womenShoes[0], womenShoes[1], womenShoes[2], womenShoes[3], womenShoes[4]],
+  [
+    womenClothes2[0],
+    womenClothes2[1],
+    womenClothes2[2],
+    womenClothes2[3],
+    womenClothes2[4],
+  ],
+  [womenBags2[0], womenBags2[1], womenBags2[2], womenBags2[3], womenBags2[4]],
 ];
 
 // kids random
@@ -251,10 +287,28 @@ const kidsClothes3 = Store.kids.Clothes[2];
 const kidsToys3 = Store.kids.Toys[2];
 
 export const allRandomKids = [
-  [kidsClothes[0], kidsClothes[1], kidsClothes[2], kidsClothes[3]],
-  [kidsToys[0], kidsToys[1], kidsToys[2], kidsToys[3]],
-  [kidsClothes2[0], kidsClothes2[1], kidsClothes2[2], kidsClothes2[3]],
-  [kidsToys2[0], kidsToys2[1], kidsToys2[2], kidsToys2[3]],
-  [kidsClothes3[0], kidsClothes3[1], kidsClothes3[2], kidsClothes3[3]],
-  [kidsToys3[0], kidsToys3[1], kidsToys3[2], kidsToys3[3]],
+  [
+    kidsClothes[0],
+    kidsClothes[1],
+    kidsClothes[2],
+    kidsClothes[3],
+    kidsClothes[4],
+  ],
+  [kidsToys[0], kidsToys[1], kidsToys[2], kidsToys[3], kidsToys[4]],
+  [
+    kidsClothes2[0],
+    kidsClothes2[1],
+    kidsClothes2[2],
+    kidsClothes2[3],
+    kidsClothes2[4],
+  ],
+  [kidsToys2[0], kidsToys2[1], kidsToys2[2], kidsToys2[3], kidsToys2[4]],
+  [
+    kidsClothes3[0],
+    kidsClothes3[1],
+    kidsClothes3[2],
+    kidsClothes3[3],
+    kidsClothes3[4],
+  ],
+  [kidsToys3[0], kidsToys3[1], kidsToys3[2], kidsToys3[3], kidsToys3[4]],
 ];

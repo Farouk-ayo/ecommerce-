@@ -141,7 +141,7 @@ const Header = (props) => {
           </Link>
 
           <div className={classes.cartDiv}>
-            <Badge color="error" badgeContent={number}>
+            <Badge color="error" badgeContent={number} max={9}>
               <TiShoppingCart
                 size="3rem"
                 color="black"
