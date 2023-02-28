@@ -3,6 +3,7 @@ import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 import { useContext, useState } from "react";
 import CartCtx from "../../../../store/Cartctx";
 import { Button, Rating } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const EachKid = (props) => {
   const [value, setValue] = useState(0);
@@ -11,6 +12,13 @@ const EachKid = (props) => {
   const changeFavorite = () => {
     setFavorite(false);
   };
+
+  const navigate = useNavigate();
+
+  const navigateHandler = () => {
+    navigate(`/search/${props.productName}`);
+  };
+
   const cartCtx = useContext(CartCtx);
   const addToCart = () => {
     cartCtx.addItems({
@@ -25,7 +33,11 @@ const EachKid = (props) => {
   };
 
   return (
-    <div className={classes.imageContainer} key={props.id}>
+    <div
+      className={classes.imageContainer}
+      key={props.id}
+      onClick={navigateHandler}
+    >
       <img className={classes.image} src={props.productImage} alt="" />
       <div className={classes.detailCon}>
         <div className={classes.titleCon}>
