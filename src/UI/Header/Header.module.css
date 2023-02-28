@@ -249,19 +249,3 @@
   transform: rotate(0deg);
   transition: all 0.3s;
 }
-.cartDiv {
-  position: relative;
-}
-
-.cartDiv span {
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 100%;
-  background-color: #d32f2f;
-  color: white;
-  z-index: 100;
-  text-align: center;
-  right: -0.3rem;
-  top: -0.5rem;
-}

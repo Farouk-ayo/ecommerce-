@@ -21,6 +21,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Cart from "../../Cart/Cart";
 import CartCtx from "../../store/Cartctx";
+import { Badge } from "@mui/material";
 
 const Header = (props) => {
   window.addEventListener("scroll", function () {
@@ -140,13 +141,14 @@ const Header = (props) => {
           </Link>
 
           <div className={classes.cartDiv}>
-            <TiShoppingCart
-              size="3rem"
-              color="black"
-              className={classes.TiShoppingCart}
-              onClick={cartBar}
-            />
-            {number > 0 ? <span>{number}</span> : null}
+            <Badge color="error" badgeContent={number}>
+              <TiShoppingCart
+                size="3rem"
+                color="black"
+                className={classes.TiShoppingCart}
+                onClick={cartBar}
+              />
+            </Badge>
           </div>
 
           {cartVisibility ? <Cart onClose={closeCartBar} /> : null}
