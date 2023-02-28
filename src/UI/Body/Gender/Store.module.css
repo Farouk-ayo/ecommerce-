@@ -100,8 +100,11 @@
 
 .title {
   display: flex;
-  gap: 0.4rem;
-  align-items: center;
+  gap: 0.1rem;
+  align-items: flex-end;
+}
+.title h3 {
+  font-size: 1rem;
 }
 .detailCon {
   display: flex;

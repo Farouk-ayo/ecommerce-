@@ -1,15 +1,17 @@
 import { Rating } from "@mui/material";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import classes from "./Page.module.css";
 
 const EachItem = () => {
   const [value, setValue] = useState(4);
+  const params = useParams();
 
   return (
     <section>
       <img src="" alt="" />
       <div>
-        <h1></h1>
+        <h1>{params.product}</h1>
         <span>
           <p>Rated:</p>
           <Rating

@@ -2,9 +2,15 @@ import classes from "./Flashsale.module.css";
 import CartCtx from "../../../store/Cartctx";
 import { useContext, useState } from "react";
 import { Button, Rating } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const Flash = (props) => {
   const [value, setValue] = useState(4);
+  const navigate = useNavigate();
+
+  const navigateHandler = () => {
+    navigate(`/search/${props.productName}`);
+  };
 
   const cartCtx = useContext(CartCtx);
   const addToCart = () => {
@@ -20,7 +26,7 @@ const Flash = (props) => {
   };
 
   return (
-    <div className={classes.flashcontainer}>
+    <div className={classes.flashcontainer} onClick={navigateHandler}>
       <div>
         <h5>{props.percentOff}</h5>
       </div>

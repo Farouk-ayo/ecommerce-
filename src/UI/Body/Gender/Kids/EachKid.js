@@ -46,7 +46,7 @@ const EachKid = (props) => {
           size="small"
           onClick={addToCart}
           color="error"
-          style={{ fontSize: ".7rem" }}
+          style={{ fontSize: ".7rem", width: "4rem" }}
         >
           Add To Cart +
         </Button>
