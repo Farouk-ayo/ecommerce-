@@ -247,7 +247,7 @@ form textarea:hover {
 .priceInfo {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .priceInfo h3 {

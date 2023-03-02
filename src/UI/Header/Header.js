@@ -132,7 +132,7 @@ const Header = (props) => {
         </div>
 
         <div className={classes.loginDetails}>
-          <Link to="/account">
+          <Link to="/authentication">
             <IoPerson
               size="3rem"
               color="black"
@@ -203,15 +203,11 @@ const Header = (props) => {
             Kids
           </Link>
 
-          <div>
-            <Link to="/authentication" className={classes.eachNav}>
-              User Account{" "}
+          <div onClick={changeDropdown}>
+            <Link to="" className={classes.eachNav}>
+              User Account
             </Link>
-            <RiArrowDropDownFill
-              onClick={changeDropdown}
-              cursor="pointer"
-              size={25}
-            />
+            <RiArrowDropDownFill cursor="pointer" size={25} />
           </div>
 
           {dropdown ? (
