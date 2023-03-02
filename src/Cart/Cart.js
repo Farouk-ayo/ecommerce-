@@ -52,7 +52,7 @@ const Cart = (props) => {
       </header>
 
       <footer>
-        <Link to="/checkout" className={classes.checkout}>
+        <Link to="/cart/checkout" className={classes.checkout}>
           Checkout Now <span>(${cartCtx.totalAmount}.00)</span>
         </Link>
 

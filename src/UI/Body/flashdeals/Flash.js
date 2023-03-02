@@ -5,7 +5,7 @@ import { Button, Rating } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const Flash = (props) => {
-  const [value, setValue] = useState(4);
+  const [value, setValue] = useState(props.rating);
   const navigate = useNavigate();
 
   const navigateHandler = () => {
@@ -41,6 +41,9 @@ const Flash = (props) => {
           <Rating
             name="simple-controlled"
             value={value}
+            onClick={(event) => {
+              event.stopPropagation();
+            }}
             onChange={(event, newValue) => {
               setValue(newValue);
             }}

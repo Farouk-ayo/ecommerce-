@@ -31,6 +31,7 @@ const Flashsale = () => {
                   productImage={value.productImage}
                   percentOff={value.percentOff}
                   price={value.price}
+                  rating={value.ratingNum}
                 />
               </SwiperSlide>
             );

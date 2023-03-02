@@ -6,7 +6,7 @@ import { Button, Rating } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const EachKid = (props) => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(5);
 
   const [favorite, setFavorite] = useState(true);
   const changeFavorite = () => {
@@ -16,7 +16,6 @@ const EachKid = (props) => {
   const navigate = useNavigate();
 
   const navigateHandler = () => {
-
     navigate(`/search/${props.id}`);
   };
 
@@ -49,6 +48,9 @@ const EachKid = (props) => {
           <Rating
             name="simple-controlled"
             value={value}
+            onClick={(event) => {
+              event.stopPropagation();
+            }}
             onChange={(event, newValue) => {
               setValue(newValue);
             }}

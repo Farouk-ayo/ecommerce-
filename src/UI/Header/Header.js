@@ -107,7 +107,7 @@ const Header = (props) => {
 
       <div className="header">
         <Link to="/" className={classes.logo}>
-          FrK
+          HuntStore
         </Link>
         <div className={classes.searchMenu}>
           <input

@@ -7,7 +7,7 @@ import { Button, Rating } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const EachWomen = (props) => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(5);
 
   const [favorite, setFavorite] = useState(true);
   const changeFavorite = () => {
@@ -48,8 +48,11 @@ const EachWomen = (props) => {
           </div>
           <Rating
             name="simple-controlled"
-            value={value}
+            value={value}onClick={(event) => {
+              event.stopPropagation();
+            }}
             onChange={(event, newValue) => {
+              event.stopPropagation();
               setValue(newValue);
             }}
           />

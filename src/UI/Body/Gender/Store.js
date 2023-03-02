@@ -70,6 +70,7 @@ import toyvector from "../../../assets/kids/toyvector.png";
 import { MdCable, MdCheckroom, MdToys, MdWeekend } from "react-icons/md";
 import { GiGoldNuggets, GiRunningShoe } from "react-icons/gi";
 import { BsHandbagFill } from "react-icons/bs";
+import SlidesFlashStore from "../flashdeals/SlidesFlashStore";
 
 export const Store = {
   men: {
@@ -329,8 +330,20 @@ const allMenProducts = [
 
 const allKidsProducts = [...Store.kids.Clothes, ...Store.kids.Toys];
 
+// ALL PRODUCTS ///////////////////////////////
+let flash = [];
+SlidesFlashStore.forEach((item) => {
+  return flash.push([
+    item.id,
+    item.productImage,
+    item.product,
+    item.price,
+    item.quantity,
+  ]);
+});
 export const AllProducts = [
   ...allWomenProducts,
   ...allMenProducts,
   ...allKidsProducts,
+  ...flash,
 ];

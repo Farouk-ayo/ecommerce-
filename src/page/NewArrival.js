@@ -1,5 +1,15 @@
+import Kidspage from "./Kidspage";
+import Menpage from "./Menpage";
+import Womenpage from "./Womenpage";
+
 const NewArrival = () => {
-  return <div>new arrivval</div>;
+  return (
+    <>
+      <Menpage />
+      <Kidspage />
+      <Womenpage />
+    </>
+  );
 };
 
 export default NewArrival;

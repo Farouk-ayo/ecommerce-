@@ -33,21 +33,21 @@ const CartPage = () => {
         </NavLink>
         <hr />
         <NavLink
-          to="/details"
+          to="/cart/checkout"
           className={({ isActive }) => (isActive ? classes.active : undefined)}
-        > 
+        >
           2. Details
         </NavLink>
         <hr />
         <NavLink
-          to="/payment"
+          to="/cart/payment"
           className={({ isActive }) => (isActive ? classes.active : undefined)}
         >
           3. Payment
         </NavLink>
         <hr />
         <NavLink
-          to="/review"
+          to="/cart/review"
           className={({ isActive }) => (isActive ? classes.active : undefined)}
         >
           4. Review
