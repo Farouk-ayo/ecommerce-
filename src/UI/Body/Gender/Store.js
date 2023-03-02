@@ -84,7 +84,7 @@ export const Store = {
       ["1", GreyBrownShirt, "Grey Brown Shirt", "20", "12"],
       ["2", GreyRusticLinen, "Grey Rustic Linen", "40", "10"],
       ["3", GreyTShirt, "Grey Tshirt", "45", "34"],
-      ["4", longsleevedTshirt, "Long Sleeved Tshirt", "75"],
+      ["4", longsleevedTshirt, "Long Sleeved Tshirt", "75", "23"],
       ["5", RedPlainLong, "Red Plain Long", "50", "11"],
       ["6", sepiaBrownSuit, "Sepia Brown Suit", "65", "7"],
       ["7", whiteHoodie, "White Hoodie", "10", "8"],
@@ -311,4 +311,26 @@ export const allRandomKids = [
     kidsClothes3[4],
   ],
   [kidsToys3[0], kidsToys3[1], kidsToys3[2], kidsToys3[3], kidsToys3[4]],
+];
+
+const allWomenProducts = [
+  ...Store.women.Bags,
+  ...Store.women.Jewelry,
+  ...Store.women.Clothes,
+  ...Store.women.Shoes,
+];
+
+const allMenProducts = [
+  ...Store.men.Clothes,
+  ...Store.men.Furniture,
+  ...Store.men.Electronics,
+  ...Store.men.Shoes,
+];
+
+const allKidsProducts = [...Store.kids.Clothes, ...Store.kids.Toys];
+
+export const AllProducts = [
+  ...allWomenProducts,
+  ...allMenProducts,
+  ...allKidsProducts,
 ];

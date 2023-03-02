@@ -9,14 +9,12 @@ const Flash = (props) => {
   const navigate = useNavigate();
 
   const navigateHandler = () => {
-    const CapitalizeWord =
-    props.productName.charAt(0).toLowerCase() + props.productName.slice(1);
-
-  navigate(`/search/${CapitalizeWord}`);
+    navigate(`/search/${props.id}`);
   };
 
   const cartCtx = useContext(CartCtx);
-  const addToCart = () => {
+  const addToCart = (event) => {
+    event.stopPropagation();
     cartCtx.addItems({
       id: props.id,
       productName: props.productName,
@@ -39,7 +37,7 @@ const Flash = (props) => {
       </div>
       <div className={classes.details}>
         <div className={classes.productDetail}>
-          <h6>{props.product}</h6>
+          <h6>{props.productName}</h6>
           <Rating
             name="simple-controlled"
             value={value}

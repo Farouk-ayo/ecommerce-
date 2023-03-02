@@ -16,14 +16,13 @@ const EachKid = (props) => {
   const navigate = useNavigate();
 
   const navigateHandler = () => {
-    const CapitalizeWord =
-      props.productName.charAt(0).toLowerCase() + props.productName.slice(1);
 
-    navigate(`/search/${CapitalizeWord}`);
+    navigate(`/search/${props.id}`);
   };
 
   const cartCtx = useContext(CartCtx);
-  const addToCart = () => {
+  const addToCart = (event) => {
+    event.stopPropagation();
     cartCtx.addItems({
       id: props.id,
       productName: props.productName,

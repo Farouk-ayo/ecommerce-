@@ -100,7 +100,6 @@
 
 .title {
   display: flex;
-  gap: 0.1rem;
   align-items: flex-end;
 }
 .title h3 {
@@ -109,7 +108,7 @@
 .detailCon {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .titleCon {

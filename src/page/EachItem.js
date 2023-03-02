@@ -1,17 +1,22 @@
 import { Rating } from "@mui/material";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import classes from "./Page.module.css";
+// import classes from "./Page.module.css";
+import { AllProducts } from "../UI/Body/Gender/Store";
 
 const EachItem = () => {
   const [value, setValue] = useState(4);
   const params = useParams();
+  const EachId = params.product;
+
+  const product = AllProducts.find((id) => id[0] === EachId);
+  console.log(product);
 
   return (
     <section>
-      <img src="" alt="" />
+      <img src={product[1]} alt="" />
       <div>
-        <h1>{params.product}</h1>
+        <h1>{product[2]}</h1>
         <span>
           <p>Rated:</p>
           <Rating
@@ -21,10 +26,10 @@ const EachItem = () => {
               setValue(newValue);
             }}
           />
-          <p>{}</p>
+          <p>{product[4]}</p>
         </span>
         <div>
-          <h3></h3>
+          <h3>{product[3]}</h3>
           <p>Stock Available</p>
         </div>
 
