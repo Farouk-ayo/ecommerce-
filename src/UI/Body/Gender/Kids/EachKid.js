@@ -9,8 +9,9 @@ const EachKid = (props) => {
   const [value, setValue] = useState(5);
 
   const [favorite, setFavorite] = useState(true);
-  const changeFavorite = () => {
-    setFavorite(false);
+  const changeFavorite = (event) => {
+    event.stopPropagation();
+    setFavorite(!favorite);
   };
 
   const navigate = useNavigate();

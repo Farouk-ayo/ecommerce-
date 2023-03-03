@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <section className={classes.footer}>
       <div className={classes.brand}>
-        <h1 className={classes.logo}>Frk</h1>
+        <h1 className="logo">HuntStore</h1>
         <article>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
           expedita quod error facere reprehenderit delectus a sint, nisi, fugiat

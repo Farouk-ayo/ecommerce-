@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { RxCross2 } from "react-icons/rx";
 import CartCtx from "../store/Cartctx";
 import classes from "./Page.module.css";
-import Form from "../Form/Form";
+import Form from "../components/Form";
 import { NavLink } from "react-router-dom";
 
 const CartPage = () => {

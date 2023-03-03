@@ -8,7 +8,7 @@ import Kidspage from "./page/Kidspage";
 import CartPage from "./page/CartPage";
 import Authentication from "./page/Authentication";
 import NewArrival from "./page/NewArrival";
-import Search from "./page/Search";
+import Search from "./components/Search";
 import Error from "./page/Error";
 import EachItem from "./page/EachItem";
 import Checkout from "./page/Checkout";

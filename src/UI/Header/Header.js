@@ -11,7 +11,6 @@ import {
 import { GiGoldNuggets, GiRunningShoe } from "react-icons/gi";
 
 import { AiOutlineMail } from "react-icons/ai";
-import { AiOutlineSearch } from "react-icons/ai";
 import { GrFacebook } from "react-icons/gr";
 import { BsHandbagFill, BsTwitter } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
@@ -22,6 +21,8 @@ import { Link } from "react-router-dom";
 import Cart from "../../Cart/Cart";
 import CartCtx from "../../store/Cartctx";
 import { Badge } from "@mui/material";
+import Search from "../../components/Search";
+import { AllProducts } from "../Body/Gender/Store";
 
 const Header = (props) => {
   window.addEventListener("scroll", function () {
@@ -42,14 +43,7 @@ const Header = (props) => {
     { id: 7, type: "Toys", img: <MdToys size={40} /> },
   ];
 
-  const [searchValue, setSearchValue] = useState();
-  const [suggest, setSuggest] = useState(false);
   const [cartVisibility, setCartVisibility] = useState(false);
-
-  const changeSuggestion = (e) => {
-    setSuggest(true);
-    setSearchValue(e.target.value);
-  };
 
   const [categories, setCategories] = useState(false);
   const changeCategory = () => {
@@ -106,31 +100,10 @@ const Header = (props) => {
       </div>
 
       <div className="header">
-        <Link to="/" className={classes.logo}>
+        <Link to="/" className="logo">
           HuntStore
         </Link>
-        <div className={classes.searchMenu}>
-          <input
-            type="text"
-            value={searchValue}
-            onInput={changeSuggestion}
-            placeholder=" I'm shopping for "
-            name=""
-          />
-          <button>
-            <AiOutlineSearch color="" />
-          </button>
-          {suggest && searchValue !== "" ? (
-            <ul className={classes.suggestion}>
-              <li>lo gadget electronics</li>
-              <li>free mifi 24</li>
-              {suggestionArray.map((each) => {
-                return <li>{each.type}</li>;
-              })}
-            </ul>
-          ) : null}
-        </div>
-
+        <Search data={AllProducts} />
         <div className={classes.loginDetails}>
           <Link to="/authentication">
             <IoPerson
@@ -150,7 +123,6 @@ const Header = (props) => {
               />
             </Badge>
           </div>
-
           {cartVisibility ? <Cart onClose={closeCartBar} /> : null}
         </div>
       </div>
