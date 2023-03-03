@@ -11,6 +11,7 @@ import {
   TextField,
   ThemeProvider,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const theme = createTheme({
   palette: {
@@ -283,6 +284,11 @@ const states = [
 ];
 
 const Form = () => {
+  const navigate = useNavigate();
+  const checkOut = () => {
+    navigate(`/checkout`);
+  };
+
   return (
     <Stack style={{ width: "100%" }} gap={"1rem"}>
       <ThemeProvider theme={theme}>
@@ -368,6 +374,7 @@ const Form = () => {
           disableElevation
           variant="contained"
           sx={{ fontWeight: "bolder", fontSize: "1rem" }}
+          onClick={checkOut}
         >
           Checkout Now
         </Button>
