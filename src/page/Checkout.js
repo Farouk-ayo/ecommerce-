@@ -1,9 +1,15 @@
 import { Checkbox, FormControlLabel } from "@mui/material";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { ShippingAddress1, ShippingAddress2 } from "../components/Form";
 import classes from "./Page.module.css";
 
 const Checkout = () => {
+  const [Billing, showBilling] = useState(false);
+  const checkboxHandler = () => {
+    showBilling(!Billing);
+  };
+
   return (
     <section className={classes.CartPage}>
       <div className={classes.links}>
@@ -49,14 +55,22 @@ const Checkout = () => {
           <section className={classes.shippingInfo}>
             <p>Billing Address</p>
             <FormControlLabel
-              control={<Checkbox style={{ color: "#2B3445" }} />}
+              control={
+                <Checkbox
+                  checked={Billing}
+                  onChange={checkboxHandler}
+                  style={{ color: "#2B3445" }}
+                />
+              }
               style={{ color: "grey" }}
               label="Same as shipping address"
             />
-            <section className={classes.shippingAddress}>
-              <ShippingAddress1 />
-              <ShippingAddress2 />
-            </section>
+            {!Billing ? (
+              <section className={classes.shippingAddress}>
+                <ShippingAddress1 />
+                <ShippingAddress2 />
+              </section>
+            ) : null}
           </section>
         </div>
         <section className={classes.totalAmount}></section>
