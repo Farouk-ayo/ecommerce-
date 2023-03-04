@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { RxCross2 } from "react-icons/rx";
-import CartCtx from "../store/Cartctx";
-import classes from "./Page.module.css";
-import Form from "../components/Form";
-import { NavLink } from "react-router-dom";
+import CartCtx from "../../store/Cartctx";
+import classes from "../Page.module.css";
+import Form from "../../components/Form";
+import CartLinks from "../../components/CartLinks";
 
 const CartPage = () => {
   const cartCtx = useContext(CartCtx);
@@ -23,36 +23,7 @@ const CartPage = () => {
 
   return (
     <section className={classes.CartPage}>
-      <div className={classes.links}>
-        <NavLink
-          to="/cart"
-          className={({ isActive }) => (isActive ? classes.active : undefined)}
-          end
-        >
-          1. Cart
-        </NavLink>
-        <hr />
-        <NavLink
-          to="/checkout"
-          className={({ isActive }) => (isActive ? classes.active : undefined)}
-        >
-          2. Details
-        </NavLink>
-        <hr />
-        <NavLink
-          to="/payment"
-          className={({ isActive }) => (isActive ? classes.active : undefined)}
-        >
-          3. Payment
-        </NavLink>
-        <hr />
-        <NavLink
-          to="/review"
-          className={({ isActive }) => (isActive ? classes.active : undefined)}
-        >
-          4. Review
-        </NavLink>
-      </div>
+      <CartLinks />
       <section className={classes.cart}>
         {number ? (
           <div className={classes.carts}>

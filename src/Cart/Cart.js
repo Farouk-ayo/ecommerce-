@@ -52,7 +52,11 @@ const Cart = (props) => {
       </header>
 
       <footer>
-        <Link to="/checkout" className={classes.checkout}>
+        <Link
+          to="/cart/checkout"
+          className={classes.checkout}
+          onClick={props.onClose}
+        >
           Checkout Now <span>(${cartCtx.totalAmount}.00)</span>
         </Link>
 

@@ -1,54 +1,35 @@
-import { Button, Checkbox, FormControlLabel, TextField } from "@mui/material";
+import { Button, Checkbox, FormControlLabel } from "@mui/material";
 import { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+
 import {
   ShippingAddress1,
   ShippingAddress2,
   TotalAmount,
-} from "../components/Form";
-import classes from "./Page.module.css";
-import CartCtx from "../store/Cartctx";
+} from "../../components/Form";
+import classes from "../Page.module.css";
+import CartCtx from "../../store/Cartctx";
+import { useNavigate } from "react-router-dom";
+import CartLinks from "../../components/CartLinks";
 
 const Checkout = () => {
   const cartCtx = useContext(CartCtx);
+  const navigate = useNavigate();
 
   const [Billing, showBilling] = useState(false);
   const checkboxHandler = () => {
     showBilling(!Billing);
   };
 
+  const routeCart = () => {
+    navigate(`..`);
+  };
+  const routePayment = () => {
+    navigate(`payment`);
+  };
+
   return (
     <section className={classes.CartPage}>
-      <div className={classes.links}>
-        <NavLink
-          to="/cart"
-          className={({ isActive }) => (isActive ? classes.active : undefined)}
-          end
-        >
-          1. Cart
-        </NavLink>
-        <hr />
-        <NavLink
-          to="/checkout"
-          className={({ isActive }) => (isActive ? classes.active : undefined)}
-        >
-          2. Details
-        </NavLink>
-        <hr />
-        <NavLink
-          to="/payment"
-          className={({ isActive }) => (isActive ? classes.active : undefined)}
-        >
-          3. Payment
-        </NavLink>
-        <hr />
-        <NavLink
-          to="/review"
-          className={({ isActive }) => (isActive ? classes.active : undefined)}
-        >
-          4. Review
-        </NavLink>
-      </div>
+      <CartLinks />
 
       <section className={classes.cart}>
         <div className={classes.carts}>
@@ -86,6 +67,7 @@ const Checkout = () => {
               variant="outlined"
               fullWidth
               sx={{ textTransform: "none" }}
+              onClick={routeCart}
             >
               Back To Cart
             </Button>
@@ -95,6 +77,7 @@ const Checkout = () => {
               disableElevation
               fullWidth
               sx={{ textTransform: "none" }}
+              onClick={routePayment}
             >
               Proceed To Payment
             </Button>

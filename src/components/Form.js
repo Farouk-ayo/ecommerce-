@@ -136,7 +136,7 @@ export const TotalAmount = () => {
 const Form = () => {
   const navigate = useNavigate();
   const checkOut = () => {
-    navigate(`/checkout`);
+    navigate(`checkout`);
   };
 
   return (

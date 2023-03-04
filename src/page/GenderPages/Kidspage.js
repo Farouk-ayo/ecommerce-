@@ -1,6 +1,6 @@
-import EachKid from "../UI/Body/Gender/Kids/EachKid";
-import { Store } from "../UI/Body/Gender/Store";
-import classes from "../UI/Body/Gender/Store.module.css";
+import EachKid from "../../UI/Body/Gender/Kids/EachKid";
+import { Store } from "../../UI/Body/Gender/Store";
+import classes from "../../UI/Body/Gender/Store.module.css";
 
 const Kidspage = () => {
   return (

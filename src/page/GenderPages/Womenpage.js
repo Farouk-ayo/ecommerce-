@@ -1,6 +1,6 @@
-import { Store } from "../UI/Body/Gender/Store";
-import classes from "../UI/Body/Gender/Store.module.css";
-import EachWomen from "../UI/Body/Gender/Women/EachWomen";
+import { Store } from "../../UI/Body/Gender/Store";
+import classes from "../../UI/Body/Gender/Store.module.css";
+import EachWomen from "../../UI/Body/Gender/Women/EachWomen";
 
 const Womenpage = () => {
   return (

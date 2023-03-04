@@ -1,6 +1,6 @@
-import Kidspage from "./Kidspage";
-import Menpage from "./Menpage";
-import Womenpage from "./Womenpage";
+import Kidspage from "./GenderPages/Kidspage";
+import Womenpage from "./GenderPages/Womenpage";
+import Menpage from "./GenderPages/Menpage";
 
 const NewArrival = () => {
   return (
