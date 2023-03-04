@@ -35,6 +35,7 @@
   flex-direction: column;
   gap: 0.1rem;
   width: 40%;
+  color: #2b3445;
 }
 
 .arrivalText a {
@@ -42,7 +43,7 @@
   flex-direction: row;
   gap: 0.3rem;
   align-items: center;
-  color: black;
+
   font-weight: 500;
 }
 
@@ -78,13 +79,13 @@
   flex-direction: column;
   gap: 0.1rem;
   width: 40%;
+  color: #2b3445;
 }
 .gamingText a {
   display: flex;
   flex-direction: row;
   gap: 0.3rem;
   align-items: center;
-  color: black;
   font-weight: 500;
 }
 

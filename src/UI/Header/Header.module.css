@@ -153,6 +153,7 @@
   align-items: center;
   gap: 2rem;
   position: relative;
+  color: #2b3445;
 }
 
 .navBar div {
@@ -183,6 +184,7 @@
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
+  color: #2b3445;
   background-color: #f6f9fc;
 }
 .categoriesSug {
@@ -191,7 +193,7 @@
   position: absolute;
   width: 17rem;
   background-color: white;
-  color: black;
+  color: #2b3445;
   z-index: 5;
   margin-top: 0.5rem;
   border-radius: 1rem;

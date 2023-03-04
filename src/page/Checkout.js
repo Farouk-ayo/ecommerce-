@@ -1,10 +1,17 @@
-import { Checkbox, FormControlLabel } from "@mui/material";
-import { useState } from "react";
+import { Button, Checkbox, FormControlLabel, TextField } from "@mui/material";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { ShippingAddress1, ShippingAddress2 } from "../components/Form";
+import {
+  ShippingAddress1,
+  ShippingAddress2,
+  TotalAmount,
+} from "../components/Form";
 import classes from "./Page.module.css";
+import CartCtx from "../store/Cartctx";
 
 const Checkout = () => {
+  const cartCtx = useContext(CartCtx);
+
   const [Billing, showBilling] = useState(false);
   const checkboxHandler = () => {
     showBilling(!Billing);
@@ -72,8 +79,46 @@ const Checkout = () => {
               </section>
             ) : null}
           </section>
+          <section className={classes.btnGroup}>
+            <Button
+              color="error"
+              disableElevation
+              variant="outlined"
+              fullWidth
+              sx={{ textTransform: "none" }}
+            >
+              Back To Cart
+            </Button>
+            <Button
+              color="error"
+              variant="contained"
+              disableElevation
+              fullWidth
+              sx={{ textTransform: "none" }}
+            >
+              Proceed To Payment
+            </Button>
+          </section>
         </div>
-        <section className={classes.totalAmount}></section>
+        <section className={classes.totalAmount}>
+          <section className={classes.fees}>
+            <h4>
+              <span>Subtotal:</span> <span>${cartCtx.totalAmount}</span>
+            </h4>
+            <h4>
+              <span>Shipping:</span> <span>$0.00</span>
+            </h4>
+            <h4>
+              <span>Tax:</span> <span>$40.00</span>
+            </h4>
+            <h4>
+              <span>Discount:</span> <span>$0.00</span>
+            </h4>
+          </section>
+          <hr />
+          <h1>${cartCtx.totalAmount + 40}.00</h1>
+          <TotalAmount />
+        </section>
       </section>
     </section>
   );

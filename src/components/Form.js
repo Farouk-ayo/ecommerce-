@@ -104,12 +104,30 @@ export const ShippingAddress2 = () => {
             />
           )}
         />
-         <TextField
+        <TextField
           placeholder="Address 2"
           label="Address 2"
           size="small"
           sx={{ width: "100%" }}
         />
+      </ThemeProvider>
+    </Stack>
+  );
+};
+
+export const TotalAmount = () => {
+  return (
+    <Stack style={{ width: "100%" }} gap={"1rem"}>
+      <ThemeProvider theme={theme}>
+        <TextField
+          placeholder="Voucher"
+          label="Voucher"
+          size="small"
+          sx={{ width: "100%" }}
+        />
+        <Button color="error" variant="outlined" sx={{ fontWeight: "bolder" }}>
+          Apply Voucher
+        </Button>
       </ThemeProvider>
     </Stack>
   );

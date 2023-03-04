@@ -144,8 +144,8 @@ footer a {
   background-color: #fef3f3;
 }
 hr {
-  border-bottom: 0.1rem;
-  border-color: #44444448;
+  border: none;
+  border-bottom: 0.1rem solid #2b344518;
 }
 
 .null {
