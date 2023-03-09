@@ -25,6 +25,7 @@
   gap: 1rem;
   border-radius: 0.8rem;
   box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
+  min-width: 15rem;
 }
 
 .flashcontainer:hover {
@@ -53,10 +54,17 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  position: relative;
+  width: 50%;
+  overflow: visible;
 }
 .productDetail h6 {
   font-size: 1.3rem;
   font-weight: 300;
+  width: 150%;
+  display: inline;
+
+  overflow: visible;
 }
 
 .flashcontainer h5 {
@@ -70,3 +78,7 @@
   display: flex;
   gap: 0.5rem;
 }
+
+/* button {
+  width: 50%;
+} */
