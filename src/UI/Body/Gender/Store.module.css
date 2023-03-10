@@ -102,6 +102,7 @@
 }
 
 .title {
+  width: 150%;
   display: flex;
   align-items: flex-end;
 }
@@ -111,13 +112,16 @@
 .detailCon {
   display: flex;
   align-items: flex-end;
-  /* justify-content: space-between; */
+  width: 100%;
+  justify-content: space-between;
 }
 
 .titleCon {
   display: flex;
   flex-direction: column;
+  width: 50%;
   gap: 0.2rem;
+  overflow: visible;
 }
 
 .viewAll {

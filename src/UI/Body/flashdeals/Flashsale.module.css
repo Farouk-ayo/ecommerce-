@@ -62,8 +62,6 @@
   font-size: 1.3rem;
   font-weight: 300;
   width: 150%;
-  display: inline;
-
   overflow: visible;
 }
 
@@ -78,7 +76,3 @@
   display: flex;
   gap: 0.5rem;
 }
-
-/* button {
-  width: 50%;
-} */
