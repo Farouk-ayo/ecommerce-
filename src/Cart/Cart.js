@@ -17,7 +17,6 @@ const Cart = (props) => {
           <div>
             <TiShoppingCart size={30} />
             <p>
-              {" "}
               {cartCtx.items.length > 0
                 ? `${cartCtx.items.length} items`
                 : "no item"}

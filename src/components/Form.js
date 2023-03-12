@@ -29,6 +29,70 @@ const theme = createTheme({
   },
 });
 
+// create a textfield for card number ,exp date and name on the card with mui using functional component?
+
+export const CreditCardDetails1 = () => {
+  return (
+    <Box
+      display={"flex"}
+      alignItems="center"
+      justifyContent={"space-between"}
+      gap="2rem"
+    >
+      <ThemeProvider theme={theme}>
+        <TextField
+          id="card-number"
+          label="Card Number"
+          variant="outlined"
+          sx={{ flexBasis: "50%" }}
+          inputProps={{
+            maxLength: 16,
+            pattern: "\\d*",
+            inputMode: "numeric",
+          }}
+        />
+        <TextField
+          id="exp-date"
+          label="Exp Date"
+          variant="outlined"
+          sx={{ flexBasis: "50%" }}
+        />
+        <TextField
+          id="card-name"
+          label="Name on Card"
+          variant="outlined"
+          sx={{ flexBasis: "50%" }}
+        />
+        <TextField
+          id="card-name"
+          label="Name on Card"
+          variant="outlined"
+          sx={{ flexBasis: "50%" }}
+        />
+      </ThemeProvider>
+    </Box>
+  );
+};
+
+export const PaypalEmail = () => {
+  return (
+    <Stack>
+      <ThemeProvider theme={theme}>
+        <TextField
+          placeholder="Email Address"
+          label="Email Address"
+          type="email"
+          size="small"
+          sx={{ width: "100%" }}
+        />
+        <Button color="error" variant="outlined" sx={{ fontWeight: "bolder" }}>
+          Submit
+        </Button>
+      </ThemeProvider>
+    </Stack>
+  );
+};
+
 export const ShippingAddress1 = () => {
   return (
     <Stack style={{ width: "100%" }} gap={"1rem"}>
