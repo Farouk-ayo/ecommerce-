@@ -21,10 +21,10 @@ const Checkout = () => {
   };
 
   const routeCart = () => {
-    navigate(`..`);
+    navigate(`/cart`);
   };
   const routePayment = () => {
-    navigate(`payment`);
+    navigate(`/cart/payment`);
   };
 
   return (

@@ -33,7 +33,7 @@ const CartLinks = () => {
       </NavLink>
       <hr />
       <NavLink
-        to="cart/review"
+        to="/cart/review"
         className={({ isActive }) =>
           isActive ? classes.active : classes.notActive
         }

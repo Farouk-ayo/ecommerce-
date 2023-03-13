@@ -7,15 +7,29 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
-import { CreditCardDetails1, PaypalEmail } from "../../components/Form";
+import {
+  CreditCardDetails1,
+  CreditCardDetails2,
+  PaypalEmail,
+} from "../../components/Form";
+import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const Payment = () => {
   const cartCtx = useContext(CartCtx);
+  const navigate = useNavigate();
 
   const [value, setValue] = useState("firstID");
 
   const handleChange = (event) => {
     setValue(event.target.value);
+  };
+
+  const routeCheckout = () => {
+    navigate(`/cart/checkout`);
+  };
+  const routeReview = () => {
+    navigate(`/cart/review`);
   };
 
   return (
@@ -46,10 +60,11 @@ const Payment = () => {
                   borderTopLeftRadius: "1rem",
                   boxShadow: "rgb(3 0 71 / 9%) 0px 1px 3px",
                 }}
-              />{" "}
+              />
               {value === "firstID" ? (
-                <div>
+                <div className={classes.creditCards}>
                   <CreditCardDetails1 />
+                  <CreditCardDetails2 />
                 </div>
               ) : null}
               <FormControlLabel
@@ -62,8 +77,13 @@ const Payment = () => {
                   borderBottom: ".1rem solid #2b344533",
                   boxShadow: "rgb(3 0 71 / 9%) 0px 1px 3px",
                 }}
-              />{" "}
-              {value === "secondID" ? <PaypalEmail /> : null}
+              />
+              {value === "secondID" ? (
+                <div className={classes.creditCards}>
+                  {" "}
+                  <PaypalEmail />{" "}
+                </div>
+              ) : null}
               <FormControlLabel
                 value="thirdID"
                 control={<Radio color="error" />}
@@ -79,6 +99,28 @@ const Payment = () => {
               />
             </RadioGroup>
           </FormControl>
+          <section className={classes.btnGroup}>
+            <Button
+              color="error"
+              disableElevation
+              variant="outlined"
+              fullWidth
+              sx={{ textTransform: "none" }}
+              onClick={routeCheckout}
+            >
+              Back To Checkout Details
+            </Button>
+            <Button
+              color="error"
+              variant="contained"
+              disableElevation
+              fullWidth
+              sx={{ textTransform: "none" }}
+              onClick={routeReview}
+            >
+              Review
+            </Button>
+          </section>
         </div>
         <section className={classes.totalAmount}>
           <section className={classes.fees}>

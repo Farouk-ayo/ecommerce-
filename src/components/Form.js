@@ -38,13 +38,17 @@ export const CreditCardDetails1 = () => {
       alignItems="center"
       justifyContent={"space-between"}
       gap="2rem"
+      flexWrap={"nowrap"}
+      width={"100%"}
     >
       <ThemeProvider theme={theme}>
         <TextField
           id="card-number"
           label="Card Number"
+          placeholder="1234 5678 9123 4567"
+          size="small"
           variant="outlined"
-          sx={{ flexBasis: "50%" }}
+          fullWidth
           inputProps={{
             maxLength: 16,
             pattern: "\\d*",
@@ -54,20 +58,41 @@ export const CreditCardDetails1 = () => {
         <TextField
           id="exp-date"
           label="Exp Date"
+          placeholder="mm/yy"
+          size="small"
           variant="outlined"
-          sx={{ flexBasis: "50%" }}
+          fullWidth
         />
+      </ThemeProvider>
+    </Box>
+  );
+};
+
+export const CreditCardDetails2 = () => {
+  return (
+    <Box
+      display={"flex"}
+      alignItems="center"
+      justifyContent={"space-between"}
+      gap="2rem"
+      flexWrap={"nowrap"}
+      width={"100%"}
+    >
+      <ThemeProvider theme={theme}>
         <TextField
           id="card-name"
           label="Name on Card"
           variant="outlined"
-          sx={{ flexBasis: "50%" }}
+          size="small"
+          fullWidth
         />
         <TextField
-          id="card-name"
-          label="Name on Card"
+          id="Cvc"
+          label="CVC"
+          placeholder="123"
+          size="small"
           variant="outlined"
-          sx={{ flexBasis: "50%" }}
+          fullWidth
         />
       </ThemeProvider>
     </Box>
@@ -76,20 +101,28 @@ export const CreditCardDetails1 = () => {
 
 export const PaypalEmail = () => {
   return (
-    <Stack>
+    <Box
+      display={"flex"}
+      alignItems="center"
+      justifyContent={"space-between"}
+      gap="2rem"
+      flexWrap={"nowrap"}
+      width={"100%"}
+    >
       <ThemeProvider theme={theme}>
         <TextField
           placeholder="Email Address"
           label="Email Address"
           type="email"
+          variant="outlined"
           size="small"
-          sx={{ width: "100%" }}
+          fullWidth
         />
         <Button color="error" variant="outlined" sx={{ fontWeight: "bolder" }}>
           Submit
         </Button>
       </ThemeProvider>
-    </Stack>
+    </Box>
   );
 };
 
