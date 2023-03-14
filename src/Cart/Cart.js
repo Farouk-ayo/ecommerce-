@@ -11,7 +11,7 @@ const Cart = (props) => {
   const number = cartCtx.items.length;
 
   return (
-    <section className={classes.cart}>
+    <section className={`${classes.cart} `}>
       <header>
         <div className={classes.cartHead}>
           <div>
@@ -24,30 +24,31 @@ const Cart = (props) => {
           </div>
           <RxCross2 size={40} className="RxCross2" onClick={props.onClose} />
         </div>
-        <hr />
-        {number ? (
-          <section>
-            {cartCtx.items.map((item) => {
-              return (
-                <CartInfo
-                  key={item.id}
-                  id={item.id}
-                  productName={item.productName}
-                  productImage={item.productImage}
-                  percentOff={item.percentOff}
-                  price={item.price}
-                  quantity={item.quantity}
-                  totalPrice={item.totalPrice}
-                  totalAmount={cartCtx.totalAmount}
-                />
-              );
-            })}
-          </section>
-        ) : (
-          <section className={classes.null}>
-            <h1>Nothing dey here brother, try add something nigga😌😌</h1>
-          </section>
-        )}
+        <section className={classes.cartBody}>
+          {number ? (
+            <section>
+              {cartCtx.items.map((item) => {
+                return (
+                  <CartInfo
+                    key={item.id}
+                    id={item.id}
+                    productName={item.productName}
+                    productImage={item.productImage}
+                    percentOff={item.percentOff}
+                    price={item.price}
+                    quantity={item.quantity}
+                    totalPrice={item.totalPrice}
+                    totalAmount={cartCtx.totalAmount}
+                  />
+                );
+              })}
+            </section>
+          ) : (
+            <section className={classes.null}>
+              <h1>Nothing dey here brother, try add something nigga😌😌</h1>
+            </section>
+          )}
+        </section>
       </header>
 
       <footer>

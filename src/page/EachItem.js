@@ -1,25 +1,33 @@
 import { Rating } from "@mui/material";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { AllProducts } from "../UI/Body/Gender/Store";
 import classes from "./Page.module.css";
 import CartCtx from "../store/Cartctx";
 
 const EachItem = () => {
+  const params = useParams();
+  const EachId = params.product;
+
   const [value, setValue] = useState(5);
   const [showButton, setShowButton] = useState(true);
   const [number, setNumber] = useState(0);
 
-  const params = useParams();
-  const EachId = params.product;
-
   const cartCtx = useContext(CartCtx);
-
   const product = AllProducts.find((id) => id[0] === EachId);
 
-  const addToCart = () => {
-    setNumber(number + 1);
+  useEffect(() => {
+    const Eachproduct = cartCtx.items.find((each) => each.id === product[0]);
+    if (Eachproduct) {
+      let numb = Eachproduct.quantity;
+      setNumber(numb);
+      console.log(numb);
+    } else {
+      setNumber(1);
+    }
+  }, [cartCtx.items, product]);
 
+  const addToCart = () => {
     cartCtx.addItems({
       id: product[0],
       productName: product[2],
@@ -29,12 +37,13 @@ const EachItem = () => {
       quantity: 1,
       totalPrice: product[3] * 1,
     });
-
     setShowButton(false);
   };
   const removeCart = () => {
-    setNumber(number - 1);
     cartCtx.removeItems(product[0]);
+    if (number === 1) {
+      setShowButton(true);
+    }
   };
 
   return (

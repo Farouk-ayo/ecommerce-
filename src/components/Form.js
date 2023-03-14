@@ -18,7 +18,7 @@ import { states } from "./Country";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#f55353",
+      main: "rgb(210, 63, 87);",
     },
   },
   typography: {
@@ -82,6 +82,7 @@ export const CreditCardDetails2 = () => {
         <TextField
           id="card-name"
           label="Name on Card"
+          placeholder="Mustapha Farouk Opeyemi"
           variant="outlined"
           size="small"
           fullWidth
@@ -96,6 +97,16 @@ export const CreditCardDetails2 = () => {
         />
       </ThemeProvider>
     </Box>
+  );
+};
+
+export const SubmitButton = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      <Button color="primary" variant="outlined" sx={{ fontWeight: "bolder" }}>
+        Submit
+      </Button>
+    </ThemeProvider>
   );
 };
 
@@ -118,7 +129,11 @@ export const PaypalEmail = () => {
           size="small"
           fullWidth
         />
-        <Button color="error" variant="outlined" sx={{ fontWeight: "bolder" }}>
+        <Button
+          color="primary"
+          variant="outlined"
+          sx={{ fontWeight: "bolder" }}
+        >
           Submit
         </Button>
       </ThemeProvider>
@@ -222,7 +237,11 @@ export const TotalAmount = () => {
           size="small"
           sx={{ width: "100%" }}
         />
-        <Button color="error" variant="outlined" sx={{ fontWeight: "bolder" }}>
+        <Button
+          color="primary"
+          variant="outlined"
+          sx={{ fontWeight: "bolder" }}
+        >
           Apply Voucher
         </Button>
       </ThemeProvider>
@@ -246,7 +265,7 @@ const Form = () => {
           sx={{ width: "100%" }}
         />
         <Button
-          color="error"
+          color="primary"
           variant="outlined"
           sx={{ fontWeight: "bolder", fontSize: "1rem" }}
         >
@@ -310,14 +329,14 @@ const Form = () => {
           sx={{ width: "100%" }}
         />
         <Button
-          color="error"
+          color="primary"
           variant="outlined"
           sx={{ fontWeight: "bolder", fontSize: "1rem" }}
         >
           Calculate Shipping
         </Button>
         <Button
-          color="error"
+          color="primary"
           disableElevation
           variant="contained"
           sx={{ fontWeight: "bolder", fontSize: "1rem" }}

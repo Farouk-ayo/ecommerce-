@@ -72,7 +72,7 @@
   color: #4444;
   height: 100%;
   padding: auto;
-  z-index: 20;
+  z-index: 5;
   font-size: 1.5rem;
   border: 0.1rem solid #212a2f41;
   background-color: #f6f9fc;
@@ -93,7 +93,7 @@
 
 .searchMenu input {
   position: relative;
-  z-index: 20;
+  z-index: 5;
   height: 2.5rem;
   width: 40rem;
   border-radius: 2rem;
@@ -111,7 +111,7 @@
   gap: 0.5rem;
   background-color: white;
   width: 100%;
-  z-index: 10;
+  z-index: 4;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   margin-top: -1rem;
@@ -132,12 +132,6 @@
 .alink:active {
   background-color: #d7e9b9;
 }
-/* .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0rem 5rem;
-} */
 
 .menu {
   display: flex;
@@ -258,4 +252,51 @@
 .normal {
   transform: rotate(0deg);
   transition: all 0.3s;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  gap: 1rem;
+  margin: auto;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 2rem;
+  min-width: 35rem;
+  border-radius: 1rem;
+  transition: all 2s;
+}
+.logoSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoSection p {
+  font-size: 1rem;
+
+  font-weight: 500;
+}
+.logoform {
+  font-size: 1.5rem;
+}
+
+.or {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: grey;
+}
+hr {
+  border: none;
+  border-bottom: 0.1rem solid #2b344518;
+  width: 5rem;
 }

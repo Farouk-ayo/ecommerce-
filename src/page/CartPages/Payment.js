@@ -11,6 +11,7 @@ import {
   CreditCardDetails1,
   CreditCardDetails2,
   PaypalEmail,
+  SubmitButton,
 } from "../../components/Form";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -65,6 +66,7 @@ const Payment = () => {
                 <div className={classes.creditCards}>
                   <CreditCardDetails1 />
                   <CreditCardDetails2 />
+                  <SubmitButton />
                 </div>
               ) : null}
               <FormControlLabel
@@ -80,8 +82,7 @@ const Payment = () => {
               />
               {value === "secondID" ? (
                 <div className={classes.creditCards}>
-                  {" "}
-                  <PaypalEmail />{" "}
+                  <PaypalEmail />
                 </div>
               ) : null}
               <FormControlLabel

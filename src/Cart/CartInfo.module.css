@@ -3,30 +3,42 @@
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
-  z-index: 300;
+  z-index: 50;
   background-color: white;
   height: 100vh;
   width: 27vw;
   top: 0;
   right: 0;
+  transition: all 1s;
 }
 
 header {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
+  position: relative;
   width: 100%;
 }
+
 header::-webkit-scrollbar {
   display: none;
 }
+.cartBody {
+  position: relative;
+  margin-top: 4.5rem;
+}
 
 .cartHead {
+  position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem;
   align-items: center;
+  width: 27vw;
+  z-index: 20;
+  background-color: white;
+  border-bottom: 0.1rem solid #2b344518;
 }
 .cartHead div {
   display: flex;
@@ -69,8 +81,8 @@ header::-webkit-scrollbar {
 
 .firstBtn {
   background-color: white;
-  border: #d32f2f 0.1rem solid;
-  color: #d32f2f;
+  border: #d23f57 0.1rem solid;
+  color: #d23f57;
 }
 .secondBtn {
   color: grey;
@@ -101,7 +113,7 @@ header::-webkit-scrollbar {
   gap: 0.5rem;
 }
 .details h2 {
-  color: #d32f2f;
+  color: #d23f57;
   font-size: 1.2rem;
 }
 footer {
@@ -124,7 +136,7 @@ footer a {
 }
 
 .checkout {
-  background-color: #d32f2f;
+  background-color: #d23f57;
   color: white;
 }
 .checkout:hover {
@@ -134,12 +146,12 @@ footer a {
 
 .viewCart {
   background-color: white;
-  color: #d32f2f;
-  border: #d32f2f solid 0.1rem;
+  color: #d23f57;
+  border: #d23f57 solid 0.1rem;
 }
 
 .viewCart:hover {
-  border: #d32f2f solid 0.1rem;
+  border: #d23f57 solid 0.1rem;
   transition: all 0.4s;
   background-color: #fef3f3;
 }

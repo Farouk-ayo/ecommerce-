@@ -15,14 +15,17 @@ import { GrFacebook } from "react-icons/gr";
 import { BsHandbagFill, BsTwitter } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 
+import ReactDOM from "react-dom";
 import classes from "./Header.module.css";
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Cart from "../../Cart/Cart";
 import CartCtx from "../../store/Cartctx";
 import { Badge } from "@mui/material";
 import Search from "../../components/Search";
 import { AllProducts } from "../Body/Gender/Store";
+import Backdrop from "../../components/Backdrop";
+import Modal from "../../components/Modal";
 
 const Header = (props) => {
   window.addEventListener("scroll", function () {
@@ -44,6 +47,7 @@ const Header = (props) => {
   ];
 
   const [cartVisibility, setCartVisibility] = useState(false);
+  const [modalShow, setModal] = useState(false);
 
   const [categories, setCategories] = useState(false);
   const changeCategory = () => {
@@ -59,11 +63,21 @@ const Header = (props) => {
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   };
 
+  const backDrop = document.getElementById("back--drop");
+  const cartInfo = document.getElementById("cart--info");
+  const modal = document.getElementById("modal--form");
+
   const cartBar = () => {
-    setCartVisibility(!cartVisibility);
+    setCartVisibility(true);
   };
   const closeCartBar = () => {
-    setCartVisibility(!cartVisibility);
+    setCartVisibility(false);
+  };
+  const showModal = () => {
+    setModal(true);
+  };
+  const closeModal = () => {
+    setModal(false);
   };
 
   return (
@@ -88,7 +102,6 @@ const Header = (props) => {
               <BsTwitter />
             </Link>
             <Link to="https://www.linkedin.com/in/mustapha-farouk-441a20214/">
-              {" "}
               <BsLinkedin />
             </Link>
 
@@ -105,13 +118,21 @@ const Header = (props) => {
         </Link>
         <Search data={AllProducts} />
         <div className={classes.loginDetails}>
-          <Link to="/authentication">
-            <IoPerson
-              size="3rem"
-              color="black"
-              className={classes.TiShoppingCart}
-            />
-          </Link>
+          <IoPerson
+            size="3rem"
+            color="black"
+            className={classes.TiShoppingCart}
+            onClick={showModal}
+          />
+          {modalShow ? (
+            <>
+              {ReactDOM.createPortal(<Modal />, modal)}
+              {ReactDOM.createPortal(
+                <Backdrop onClose={closeModal} />,
+                backDrop
+              )}
+            </>
+          ) : null}
 
           <div className={classes.cartDiv}>
             <Badge color="error" badgeContent={number} max={9}>
@@ -123,7 +144,15 @@ const Header = (props) => {
               />
             </Badge>
           </div>
-          {cartVisibility ? <Cart onClose={closeCartBar} /> : null}
+          {cartVisibility ? (
+            <>
+              {ReactDOM.createPortal(
+                <Backdrop onClose={closeCartBar} />,
+                backDrop
+              )}
+              {ReactDOM.createPortal(<Cart onClose={closeCartBar} />, cartInfo)}
+            </>
+          ) : null}
         </div>
       </div>
       <div className={classes.menu}>
