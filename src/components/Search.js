@@ -1,9 +1,7 @@
-// import { Store } from "../UI/Body/Gender/Store";
-import classes from "../UI/Header/Header.module.css";
+import classes from "./components.module.css";
 import { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { Link } from "react-router-dom";
-// import { IoCloseOutline } from "react-icons/io5";
 
 const Search = ({ data }) => {
   const [searchValue, setSearchValue] = useState();

@@ -116,3 +116,9 @@ a:active {
   opacity: 1;
   transition: all 2s;
 }
+
+.googleIcon {
+  padding: 0.2rem;
+  background-color: white;
+  border-radius: 50%;
+}

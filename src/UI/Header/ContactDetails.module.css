@@ -1,0 +1,47 @@
+.contactDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d7e9b9;
+  padding: 0.3rem 5rem;
+}
+
+.contact {
+  display: flex;
+  gap: 1rem;
+  text-decoration: none;
+  align-items: center;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #2b3445;
+}
+
+.contact > * {
+  text-decoration: none;
+  color: #2b3445;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+.details {
+  list-style: none;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.details li {
+  display: flex;
+  gap: 2rem;
+  color: #414f39;
+}
+.details li > * {
+  display: flex;
+  gap: 0.2rem;
+  color: #2b3445;
+  justify-content: center;
+  align-items: center;
+}

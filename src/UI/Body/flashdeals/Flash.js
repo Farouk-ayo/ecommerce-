@@ -1,4 +1,4 @@
-import classes from "./Flashsale.module.css";
+import classes from "./Flash.module.css";
 import CartCtx from "../../../store/Cartctx";
 import { useContext, useState } from "react";
 import { Button, Rating } from "@mui/material";

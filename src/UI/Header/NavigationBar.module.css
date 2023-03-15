@@ -1,0 +1,16 @@
+.loginDetails {
+  display: flex;
+  gap: 1rem;
+}
+.TiShoppingCart {
+    padding: 0.5rem;
+    background-color: #f6f9fc;
+    cursor: pointer;
+    border-radius: 0.3rem;
+  }
+  
+  .TiShoppingCart:hover {
+    transform: scale(1.05);
+    transition: all 0.2s;
+    box-shadow: rgb(43 52 69 / 10%) 0px 4px 3px;
+  }

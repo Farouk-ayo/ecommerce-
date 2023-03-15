@@ -1,5 +1,5 @@
 import CartLinks from "../../components/CartLinks";
-import classes from "../Page.module.css";
+import classes from "./CartPages.module.css"
 import CartCtx from "../../store/Cartctx";
 import { useContext, useState } from "react";
 

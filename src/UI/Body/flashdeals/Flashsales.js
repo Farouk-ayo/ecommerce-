@@ -1,5 +1,5 @@
 import { IoFlash } from "react-icons/io5";
-import classes from "./Flashsale.module.css";
+import classes from "./Flash.module.css";
 
 import SlidesFlashStore from "./SlidesFlashStore";
 

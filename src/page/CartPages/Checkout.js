@@ -6,7 +6,7 @@ import {
   ShippingAddress2,
   TotalAmount,
 } from "../../components/Form";
-import classes from "../Page.module.css";
+import classes from "./CartPages.module.css"
 import CartCtx from "../../store/Cartctx";
 import { useNavigate } from "react-router-dom";
 import CartLinks from "../../components/CartLinks";

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { RxCross2 } from "react-icons/rx";
 import CartCtx from "../../store/Cartctx";
-import classes from "../Page.module.css";
+import classes from "./CartPages.module.css";
 import Form from "../../components/Form";
 import CartLinks from "../../components/CartLinks";
 

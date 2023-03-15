@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import classes from "../page/Page.module.css";
+import classes from "./components.module.css";
 
 const CartLinks = () => {
   return (

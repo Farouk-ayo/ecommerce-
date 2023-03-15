@@ -251,6 +251,6 @@ export const states = [
   { code: 1, name: "NewYork" },
   {
     code: 2,
-    name: "Ajegunle 😂",
+    name: "Ajegunle",
   },
 ];
