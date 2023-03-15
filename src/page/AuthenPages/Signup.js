@@ -1,7 +1,7 @@
 import classes from "./AuthenPages.module.css";
 
 const Signup = () => {
-  return;
+  return <div>signup</div>;
 };
 
 export default Signup;
