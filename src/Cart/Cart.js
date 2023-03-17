@@ -30,6 +30,7 @@ const Cart = (props) => {
               {cartCtx.items.map((item) => {
                 return (
                   <CartInfo
+                    onClose={props.onClose}
                     key={item.id}
                     id={item.id}
                     productName={item.productName}
