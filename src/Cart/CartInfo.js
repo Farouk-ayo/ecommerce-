@@ -1,12 +1,10 @@
 import { useContext } from "react";
 import { RxCross2 } from "react-icons/rx";
-import { useNavigate } from "react-router-dom";
 import CartCtx from "../store/Cartctx";
 import classes from "./CartInfo.module.css";
 
 const CartInfo = (props) => {
   const cartCtx = useContext(CartCtx);
-  const navigate = useNavigate();
 
   const addToCart = () => {
     cartCtx.addItems({
@@ -26,11 +24,6 @@ const CartInfo = (props) => {
     cartCtx.clearItems(props.id);
   };
 
-  const navigateHandler = () => {
-    navigate(`/search/${props.id}`);
-    props.onClose();
-  };
-
   return (
     <section className={classes.cartInfo}>
       <div className={classes.eachInfo}>
@@ -43,9 +36,9 @@ const CartInfo = (props) => {
             -
           </button>
         </div>
-        <img onClick={navigateHandler} src={props.productImage} alt="" />
+        <img src={props.productImage} alt="" />
         <div className={classes.details}>
-          <h5 onClick={navigateHandler}>{props.productName}</h5>
+          <h5>{props.productName}</h5>
           <p>
             <span>${props.price}.00</span>x<span>{props.quantity}</span>
           </p>

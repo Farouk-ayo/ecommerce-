@@ -94,7 +94,6 @@ header::-webkit-scrollbar {
   height: 4.5rem;
   width: 4.5rem;
   border-radius: 50%;
-  cursor: pointer;
 }
 .details {
   display: flex;
@@ -105,7 +104,6 @@ header::-webkit-scrollbar {
 .details h5 {
   color: black;
   font-size: 1rem;
-  cursor: pointer;
 }
 
 .details p {

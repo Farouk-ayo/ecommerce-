@@ -8,7 +8,6 @@ import EachKid from "./EachKid";
 const KidsProducts = () => {
   return (
     <section className={classes.products}>
-      {console.log(allRandomKids)}
       {allRandomKids.map((random) => {
         return (
           <EachKid
