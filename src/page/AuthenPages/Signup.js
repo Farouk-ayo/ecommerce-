@@ -1,4 +1,4 @@
-import classes from "./AuthenPages.module.css";
+// import classes from "./AuthenPages.module.css";
 
 const Signup = () => {
   return <div>signup</div>;
