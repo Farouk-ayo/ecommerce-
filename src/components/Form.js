@@ -29,8 +29,6 @@ const theme = createTheme({
   },
 });
 
-// create a textfield for card number ,exp date and name on the card with mui using functional component?
-
 export const CreditCardDetails1 = () => {
   return (
     <Box

@@ -1,14 +1,11 @@
 import { NavLink } from "react-router-dom";
-import classes from "./components.module.css";
 
 const CartLinks = () => {
   return (
-    <div className={classes.links}>
+    <div className="links">
       <NavLink
         to="/cart"
-        className={({ isActive }) =>
-          isActive ? classes.active : classes.notActive
-        }
+        className={({ isActive }) => (isActive ? "active" : "notActive")}
         end
       >
         1. Cart
@@ -16,27 +13,21 @@ const CartLinks = () => {
       <hr />
       <NavLink
         to="/cart/checkout"
-        className={({ isActive }) =>
-          isActive ? classes.active : classes.notActive
-        }
+        className={({ isActive }) => (isActive ? "active" : "notActive")}
       >
         2. Details
       </NavLink>
       <hr />
       <NavLink
         to="/cart/payment"
-        className={({ isActive }) =>
-          isActive ? classes.active : classes.notActive
-        }
+        className={({ isActive }) => (isActive ? "active" : "notActive")}
       >
         3. Payment
       </NavLink>
       <hr />
       <NavLink
         to="/cart/review"
-        className={({ isActive }) =>
-          isActive ? classes.active : classes.notActive
-        }
+        className={({ isActive }) => (isActive ? "active" : "notActive")}
       >
         4. Review
       </NavLink>

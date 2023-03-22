@@ -1,4 +1,3 @@
-import classes from "./components.module.css";
 import { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -23,7 +22,7 @@ const Search = ({ data }) => {
   };
 
   return (
-    <div className={classes.searchMenu}>
+    <div className={"searchMenu"}>
       <input
         type="text"
         value={searchValue}
@@ -35,10 +34,10 @@ const Search = ({ data }) => {
         <AiOutlineSearch color="" />
       </button>
       {suggest && searchValue !== "" ? (
-        <ul className={classes.suggestion}>
+        <ul className={"suggestion"}>
           {filteredData.map((each) => (
             <Link
-              className={classes.alink}
+              className={"link"}
               to={`/search/${each[0]}`}
               onClick={submitLink.bind(null, each[2])}
             >

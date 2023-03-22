@@ -15,7 +15,6 @@ import { MdVisibility, MdVisibilityOff } from "react-icons/md";
 import { SiFacebook } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
-import classes from "./components.module.css";
 
 const theme = createTheme({
   palette: {
@@ -48,10 +47,10 @@ const Modal = (props) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className={classes.modal}>
-        <div className={classes.logoSection}>
+      <div className="modal">
+        <div className="logoSection">
           <p>Welcome back</p>
-          <Link to="/" className={`logo ${classes.logoform}`}>
+          <Link to="/" className="logo logoform">
             HuntStore
           </Link>
         </div>
@@ -104,7 +103,7 @@ const Modal = (props) => {
             Login
           </Button>
         </form>
-        <div className={classes.or}>
+        <div className="or">
           <hr />
           <p>or</p>
           <hr />
@@ -139,13 +138,13 @@ const Modal = (props) => {
             Continue With Google
           </Button>
         </Stack>
-        <div className={classes.accountReset}>
+        <div className="accountReset">
           <h2>Don't have account?</h2>
           <Link to="/sign-up" onClick={props.onClose}>
             Sign Up
           </Link>
         </div>
-        <div className={`${classes.accountReset} ${classes.reset}`}>
+        <div className="accountReset reset">
           <h2>Forgot your password?</h2>
           <Link to="/reset-password" onClick={props.onClose}>
             Reset It
