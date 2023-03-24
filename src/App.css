@@ -150,11 +150,6 @@ a:active {
   align-items: center;
 }
 
-.logoSection p {
-  font-size: 1rem;
-
-  font-weight: 500;
-}
 .logoform {
   font-size: 1.5rem;
 }
@@ -197,6 +192,10 @@ hr {
   background-color: #f3f5f9;
 }
 
+.formTitle {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
 /* CARTLINKS  */
 .links {
   display: flex;

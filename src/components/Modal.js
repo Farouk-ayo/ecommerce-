@@ -49,7 +49,7 @@ const Modal = (props) => {
     <ThemeProvider theme={theme}>
       <div className="modal">
         <div className="logoSection">
-          <p>Welcome back</p>
+          <p className="formTitle">Welcome back</p>
           <Link to="/" className="logo logoform">
             HuntStore
           </Link>

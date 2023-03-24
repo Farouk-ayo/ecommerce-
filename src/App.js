@@ -15,6 +15,7 @@ import Payment from "./page/CartPages/Payment";
 import Review from "./page/CartPages/Review";
 import Signup from "./page/AuthenPages/Signup";
 import ResetPassword from "./page/AuthenPages/ResetPassword";
+import Login from "./page/AuthenPages/Login";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,8 @@ const router = createBrowserRouter([
       { path: "/search/:product", element: <EachItem /> },
     ],
   },
-  { path: "/sign-up", element: <Signup /> },
+  { path: "sign-up", element: <Signup /> },
+  { path: "login", element: <Login /> },
   { path: "reset-password", element: <ResetPassword /> },
 ]);
 

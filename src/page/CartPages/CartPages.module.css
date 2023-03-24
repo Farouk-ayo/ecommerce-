@@ -139,12 +139,12 @@ form {
   width: 100%;
   position: relative;
 }
-form label {
+.comment {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
-form label span {
+.comment span {
   color: #d23f57;
   background-color: #feebeb;
   padding: 0.15rem 0.7rem;

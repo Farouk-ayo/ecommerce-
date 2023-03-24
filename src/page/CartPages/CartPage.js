@@ -85,7 +85,7 @@ const CartPage = () => {
             action="
             "
           >
-            <label htmlFor="comment">
+            <label htmlFor="comment" className={classes.comment}>
               Additional Comments <span>Note</span>
             </label>
             <textarea
