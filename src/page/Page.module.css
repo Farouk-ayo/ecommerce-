@@ -76,3 +76,7 @@
 .buttonComponent {
   position: relative;
 }
+
+.hint a {
+  color: #c62828;
+}

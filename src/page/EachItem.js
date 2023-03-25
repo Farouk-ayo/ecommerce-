@@ -1,6 +1,6 @@
 import { Rating } from "@mui/material";
 import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { AllProducts } from "../UI/Body/Gender/Store";
 import classes from "./Page.module.css";
 import CartCtx from "../store/Cartctx";
@@ -87,20 +87,20 @@ const EachItem = () => {
               Add To Cart
             </button>
           ) : (
-            <div className={classes.btnDiv}>
-              <button className={classes.firstBtn} onClick={addToCart}>
+            <div className="btnDiv">
+              <button className="firstBtn" onClick={addToCart}>
                 +
               </button>
               <p>{number}</p>
-              <button className={classes.secondBtn} onClick={removeCart}>
+              <button className="secondBtn" onClick={removeCart}>
                 -
               </button>
             </div>
           )}
         </div>
 
-        <p>
-          Sold By: <span>Hunt Store</span>
+        <p className={classes.hint}>
+          Sold By: <Link to="/">Hunt Store</Link>
         </p>
       </div>
     </section>

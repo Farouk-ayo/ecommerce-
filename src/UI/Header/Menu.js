@@ -3,6 +3,7 @@ import classes from "./Menu.module.css";
 import { MdCable, MdCheckroom, MdToys, MdWeekend } from "react-icons/md";
 import { GiGoldNuggets, GiRunningShoe } from "react-icons/gi";
 import { RiArrowDropDownFill } from "react-icons/ri";
+import { BiCategory } from "react-icons/bi";
 import { BsHandbagFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
@@ -35,6 +36,7 @@ const Menu = () => {
     <div className={classes.menu}>
       <div className={classes.categories}>
         <button onClick={changeCategory}>
+          <BiCategory />
           Categories
           <RiArrowDropDownFill
             className={categories ? classes.rotate : classes.normal}

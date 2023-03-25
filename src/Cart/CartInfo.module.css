@@ -156,6 +156,7 @@ footer a {
   background-color: #fef3f3;
 }
 hr {
+  width: 100%;
   border: none;
   border-bottom: 0.1rem solid #2b344518;
 }

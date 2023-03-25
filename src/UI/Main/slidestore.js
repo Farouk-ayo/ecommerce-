@@ -1,6 +1,6 @@
-import women from "../../assets/w11.png";
+import women from "../../assets/women.png";
 import men from "../../assets/men.png";
-import kids from "../../assets/kidslll.png";
+import kids from "../../assets/kid.png";
 
 const slidesData = [
   {

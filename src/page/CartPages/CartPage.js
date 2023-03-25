@@ -43,16 +43,16 @@ const CartPage = () => {
                           <h2>${item.totalPrice}.00</h2>
                         </span>
                       </div>
-                      <div className={classes.btnDiv}>
+                      <div className="btnDiv">
                         <button
-                          className={classes.secondBtn}
+                          className="secondBtn"
                           onClick={removeCart.bind(null, item.id)}
                         >
                           -
                         </button>
                         <p>{item.quantity}</p>
                         <button
-                          className={classes.firstBtn}
+                          className="firstBtn"
                           onClick={addToCart.bind(null, item)}
                         >
                           +
