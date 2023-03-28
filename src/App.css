@@ -68,6 +68,11 @@ a:active {
   align-items: center;
   padding: 0rem 5rem;
 }
+@media screen and (max-width: 1300px) {
+  .header {
+    padding: 0 2rem;
+  }
+}
 .fixed {
   position: fixed;
   top: 0;
@@ -101,6 +106,16 @@ a:active {
   color: #d23f57;
   text-transform: uppercase;
   font-style: italic;
+}
+@media screen and (max-width: 1000px) {
+  .logo {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .logo {
+    font-size: 1.5rem;
+  }
 }
 
 /* BACKROP  */
@@ -263,6 +278,12 @@ hr {
   border: 0.1rem solid #212a2f41;
   background-color: #f6f9fc;
 }
+@media screen and (max-width: 700px) {
+  .searchMenu button {
+    width: 3rem;
+  }
+}
+
 .searchMenu button > * {
   position: relative;
   width: 100%;
@@ -271,12 +292,22 @@ hr {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 700px) {
+  .searchMenu button > * {
+    font-size: 1rem;
+  }
+}
 .searchMenu input::placeholder {
   color: #4444;
   font-size: 1rem;
   letter-spacing: 0.2rem;
 }
-
+@media screen and (max-width: 700px) {
+  .searchMenu input::placeholder {
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+  }
+}
 .searchMenu input {
   position: relative;
   z-index: 5;
@@ -288,6 +319,30 @@ hr {
   border: 0.1rem solid #212a2f58;
   padding: 0.2rem 2rem;
   color: black;
+}
+@media screen and (max-width: 1150px) {
+  .searchMenu input {
+    width: 30rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .searchMenu input {
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .searchMenu input {
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .searchMenu input {
+    width: 15rem;
+    height: 2rem;
+    padding: 0.2rem 1rem;
+    font-size: 0.8rem;
+  }
 }
 .suggestion {
   position: absolute;

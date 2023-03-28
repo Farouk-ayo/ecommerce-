@@ -5,6 +5,11 @@
   background-color: #d7e9b9;
   padding: 0.3rem 5rem;
 }
+@media screen and (max-width: 1300px) {
+  .contactDetails {
+    padding: 0.3rem 2rem;
+  }
+}
 
 .contact {
   display: flex;
@@ -37,6 +42,11 @@
   display: flex;
   gap: 2rem;
   color: #414f39;
+}
+@media screen and (max-width: 1300px) {
+  .details li {
+    gap: 1rem;
+  }
 }
 .details li > * {
   display: flex;

@@ -47,7 +47,7 @@ const Menu = () => {
             {suggestionArray.map((each) => {
               return (
                 <li>
-                  <Link to={`/search/${each.type}`}> {each.type}</Link>
+                  <Link to={`#`}> {each.type}</Link>
                   {each.img}
                 </li>
               );

@@ -43,12 +43,7 @@ const NavigationBar = () => {
       </Link>
       <Search data={AllProducts} />
       <div className={classes.loginDetails}>
-        <IoPerson
-          size="3rem"
-          color="black"
-          className={classes.TiShoppingCart}
-          onClick={showModal}
-        />
+        <IoPerson className={classes.TiShoppingCart} onClick={showModal} />
         {modalShow ? (
           <>
             {ReactDOM.createPortal(<Modal onClose={closeModal} />, modal)}
@@ -59,8 +54,6 @@ const NavigationBar = () => {
         <div className={classes.cartDiv}>
           <Badge color="error" badgeContent={number} max={9}>
             <TiShoppingCart
-              size="3rem"
-              color="black"
               className={classes.TiShoppingCart}
               onClick={cartBar}
             />
