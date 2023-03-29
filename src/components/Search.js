@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-const Search = ({ data }) => {
+const Search = ({ data, className }) => {
   const [searchValue, setSearchValue] = useState();
   const [suggest, setSuggest] = useState(false);
   const [filteredData, setFilteredData] = useState([]);
@@ -22,7 +22,7 @@ const Search = ({ data }) => {
   };
 
   return (
-    <div className={"searchMenu"}>
+    <div className={className}>
       <input
         type="text"
         value={searchValue}

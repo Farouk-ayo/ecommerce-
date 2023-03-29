@@ -1,9 +1,9 @@
-import { IoPerson } from "react-icons/io5";
-import { TiShoppingCart } from "react-icons/ti";
+import PersonIcon from "@mui/icons-material/Person"; // import { TiShoppingCart } from "react-icons/ti";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
-import Cart from "../../Cart/Cart";
-import { Badge } from "@mui/material";
+// import Cart from "../../Cart/Cart";
+import { CartDrawer } from "../../components/Sidebar";
+import { Badge, IconButton } from "@mui/material";
 import Search from "../../components/Search";
 import { AllProducts } from "../Body/Gender/Store";
 import Backdrop from "../../components/Backdrop";
@@ -11,24 +11,25 @@ import Modal from "../../components/Modal";
 import React, { useContext, useState } from "react";
 import CartCtx from "../../store/Cartctx";
 import classes from "./NavigationBar.module.css";
+import { SwipeableTemporaryDrawer } from "../../components/Sidebar";
 
 const NavigationBar = () => {
   const Cartctx = useContext(CartCtx);
   const number = Cartctx.items.length;
 
-  const [cartVisibility, setCartVisibility] = useState(false);
+  // const [cartVisibility, setCartVisibility] = useState(false);
   const [modalShow, setModal] = useState(false);
 
   const backDrop = document.getElementById("back--drop");
-  const cartInfo = document.getElementById("cart--info");
+  // const cartInfo = document.getElementById("cart--info");
   const modal = document.getElementById("modal--form");
 
-  const cartBar = () => {
-    setCartVisibility(true);
-  };
-  const closeCartBar = () => {
-    setCartVisibility(false);
-  };
+  // const cartBar = () => {
+  //   setCartVisibility(true);
+  // };
+  // const closeCartBar = () => {
+  //   setCartVisibility(false);
+  // };
   const showModal = () => {
     setModal(true);
   };
@@ -38,12 +39,16 @@ const NavigationBar = () => {
 
   return (
     <div className="header">
+      <SwipeableTemporaryDrawer />
       <Link to="/" className="logo">
         HuntStore
       </Link>
-      <Search data={AllProducts} />
+      <Search data={AllProducts} className="searchMenu" />
       <div className={classes.loginDetails}>
-        <IoPerson className={classes.TiShoppingCart} onClick={showModal} />
+        <IconButton className="TiShoppingCart" onClick={showModal}>
+          <PersonIcon />
+        </IconButton>
+
         {modalShow ? (
           <>
             {ReactDOM.createPortal(<Modal onClose={closeModal} />, modal)}
@@ -53,13 +58,14 @@ const NavigationBar = () => {
 
         <div className={classes.cartDiv}>
           <Badge color="error" badgeContent={number} max={9}>
-            <TiShoppingCart
+            {/* <TiShoppingCart
               className={classes.TiShoppingCart}
               onClick={cartBar}
-            />
+            /> */}
+            <CartDrawer />
           </Badge>
         </div>
-        {cartVisibility ? (
+        {/* {cartVisibility ? (
           <>
             {ReactDOM.createPortal(
               <Backdrop onClose={closeCartBar} />,
@@ -67,7 +73,7 @@ const NavigationBar = () => {
             )}
             {ReactDOM.createPortal(<Cart onClose={closeCartBar} />, cartInfo)}
           </>
-        ) : null}
+        ) : null} */}
       </div>
     </div>
   );

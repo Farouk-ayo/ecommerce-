@@ -10,6 +10,11 @@
     padding: 0 2rem;
   }
 }
+@media screen and (max-width: 650px) {
+  .menu {
+    justify-content: center;
+  }
+}
 .categories button {
   font-size: 1.3em;
   padding: 0.5rem 1rem;
@@ -24,6 +29,12 @@
   color: #2b3445;
   background-color: #f6f9fc;
 }
+@media screen and (max-width: 650px) {
+  .categories button {
+    display: none;
+  }
+}
+
 .categoriesSug {
   display: flex;
   flex-direction: column;
@@ -37,6 +48,7 @@
   padding: 1rem 0rem;
   box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
 }
+
 .categoriesSug li {
   display: flex;
   flex-direction: row;
@@ -104,7 +116,11 @@
     gap: 1rem;
   }
 }
-
+@media screen and (max-width: 650px) {
+  .navBar {
+    gap: 1.5rem;
+  }
+}
 .navBar div {
   display: flex;
   gap: 0.2rem;

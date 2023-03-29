@@ -262,6 +262,11 @@ hr {
 .searchMenu {
   position: relative;
 }
+@media screen and (max-width: 650px) {
+  .searchMenu {
+    display: none;
+  }
+}
 
 .searchMenu button {
   position: absolute;
@@ -400,4 +405,20 @@ hr {
   color: grey;
   border: grey 0.1rem solid;
   background-color: white;
+}
+
+/* cart Button  */
+.TiShoppingCart {
+  /* padding: 0.5rem; */
+  background-color: #f6f9fc;
+  color: black;
+  font-size: large;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+@media screen and (max-width: 700px) {
+  .TiShoppingCart {
+    font-size: 2.5rem;
+  }
 }
