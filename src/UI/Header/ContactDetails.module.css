@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #d7e9b9;
+  background-color: #ede9d5;
   padding: 0.3rem 5rem;
 }
 @media screen and (max-width: 1300px) {
@@ -11,6 +11,14 @@
   }
 }
 
+@media screen and (max-width: 650px) {
+  .contactDetails {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.3rem 0rem;
+  }
+}
 .contact {
   display: flex;
   gap: 1rem;
@@ -48,6 +56,16 @@
     gap: 1rem;
   }
 }
+
+@media screen and (max-width: 650px) {
+  .details li div {
+    display: none;
+  }
+  .mail {
+    display: none;
+  }
+}
+
 .details li > * {
   display: flex;
   gap: 0.2rem;

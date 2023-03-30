@@ -12,9 +12,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { useState } from "react";
-import { createTheme, IconButton, ThemeProvider } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material";
 import Cart from "../Cart/Cart";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 const theme = createTheme({
   palette: {
     primary: {
@@ -76,7 +76,7 @@ export const SwipeableTemporaryDrawer = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Button onClick={toggleDrawer("left", true)}>
+      <Button onClick={toggleDrawer("left", true)} className="menu">
         <MenuIcon style={{ color: "primary" }} />
       </Button>
       <SwipeableDrawer
@@ -119,12 +119,11 @@ export const CartDrawer = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <IconButton
-        className="TiShoppingCart"
+      <AiOutlineShoppingCart
+        style={{ color: "primary" }}
+        className="shoppingCart"
         onClick={toggleDrawer("right", true)}
-      >
-        <ShoppingCartIcon />
-      </IconButton>
+      />
       <SwipeableDrawer
         anchor="right"
         open={states["right"]}

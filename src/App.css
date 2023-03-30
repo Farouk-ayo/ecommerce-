@@ -73,6 +73,11 @@ a:active {
     padding: 0 2rem;
   }
 }
+@media screen and (max-width: 650px) {
+  .header {
+    padding: 0 1.5rem 0 0.5rem;
+  }
+}
 .fixed {
   position: fixed;
   top: 0;
@@ -408,17 +413,29 @@ hr {
 }
 
 /* cart Button  */
-.TiShoppingCart {
-  /* padding: 0.5rem; */
+.shoppingCart {
+  padding: 0.5rem;
   background-color: #f6f9fc;
   color: black;
-  font-size: large;
+  font-size: 2.5rem;
   cursor: pointer;
   border-radius: 0.3rem;
 }
 
-@media screen and (max-width: 700px) {
-  .TiShoppingCart {
-    font-size: 2.5rem;
+@media screen and (max-width: 650px) {
+  .shoppingCart {
+    padding: 0rem;
+    background-color: white;
+    font-size: 1.5rem;
+  }
+}
+
+.menu {
+  display: none !important;
+}
+
+@media screen and (max-width: 650px) {
+  .menu {
+    display: inline-block !important;
   }
 }

@@ -1,9 +1,8 @@
-import PersonIcon from "@mui/icons-material/Person"; // import { TiShoppingCart } from "react-icons/ti";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 // import Cart from "../../Cart/Cart";
 import { CartDrawer } from "../../components/Sidebar";
-import { Badge, IconButton } from "@mui/material";
+import { Badge } from "@mui/material";
 import Search from "../../components/Search";
 import { AllProducts } from "../Body/Gender/Store";
 import Backdrop from "../../components/Backdrop";
@@ -12,6 +11,7 @@ import React, { useContext, useState } from "react";
 import CartCtx from "../../store/Cartctx";
 import classes from "./NavigationBar.module.css";
 import { SwipeableTemporaryDrawer } from "../../components/Sidebar";
+import { BsFillPersonFill } from "react-icons/bs";
 
 const NavigationBar = () => {
   const Cartctx = useContext(CartCtx);
@@ -45,9 +45,7 @@ const NavigationBar = () => {
       </Link>
       <Search data={AllProducts} className="searchMenu" />
       <div className={classes.loginDetails}>
-        <IconButton className="TiShoppingCart" onClick={showModal}>
-          <PersonIcon />
-        </IconButton>
+        <BsFillPersonFill className="shoppingCart" onClick={showModal} />
 
         {modalShow ? (
           <>
@@ -58,8 +56,8 @@ const NavigationBar = () => {
 
         <div className={classes.cartDiv}>
           <Badge color="error" badgeContent={number} max={9}>
-            {/* <TiShoppingCart
-              className={classes.TiShoppingCart}
+            {/* <BsFillPersonFill
+              className={classes.shoppingCart}
               onClick={cartBar}
             /> */}
             <CartDrawer />

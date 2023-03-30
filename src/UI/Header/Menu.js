@@ -83,7 +83,7 @@ const Menu = () => {
           Kids
         </Link>
 
-        <div onClick={changeDropdown}>
+        <div onClick={changeDropdown} className={classes.user}>
           <Link to="" className={classes.eachNav}>
             User Account
           </Link>

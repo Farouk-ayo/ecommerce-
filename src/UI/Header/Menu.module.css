@@ -2,12 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 5rem;
+  padding: 0.5rem 5rem;
   color: #414f39;
+  background-color: #ede9d5;
+  overflow: hidden;
 }
 @media screen and (max-width: 1300px) {
   .menu {
-    padding: 0 2rem;
+    padding: 0.5rem 2rem;
   }
 }
 @media screen and (max-width: 650px) {
@@ -15,6 +17,7 @@
     justify-content: center;
   }
 }
+
 .categories button {
   font-size: 1.3em;
   padding: 0.5rem 1rem;
@@ -27,7 +30,8 @@
   gap: 0.5rem;
   cursor: pointer;
   color: #2b3445;
-  background-color: #f6f9fc;
+  background-color: #ede9d5;
+  outline: 0.15rem solid #d23f5839;
 }
 @media screen and (max-width: 650px) {
   .categories button {
@@ -90,10 +94,24 @@
 .eachNav {
   display: flex;
   gap: 0.3rem;
+  padding: 0.5rem;
   align-items: flex-end;
   justify-content: center;
+
+  border-bottom: #d23f5800 0.1rem solid;
 }
 
+.eachNav:hover {
+  bottom: 0;
+  border-bottom: #d23f5839 0.1rem solid;
+  transition: all 1s;
+}
+
+@media screen and (max-width: 650px) {
+  .user {
+    display: none !important;
+  }
+}
 .rotate {
   transform: rotate(180deg);
   transition: all 0.3s;
@@ -119,6 +137,7 @@
 @media screen and (max-width: 650px) {
   .navBar {
     gap: 1.5rem;
+    justify-content: center;
   }
 }
 .navBar div {
