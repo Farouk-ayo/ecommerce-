@@ -12,6 +12,7 @@ import CartCtx from "../../store/Cartctx";
 import classes from "./NavigationBar.module.css";
 import { SwipeableTemporaryDrawer } from "../../components/Sidebar";
 import { BsFillPersonFill } from "react-icons/bs";
+import { BiSearch } from "react-icons/bi";
 
 const NavigationBar = () => {
   const Cartctx = useContext(CartCtx);
@@ -45,6 +46,9 @@ const NavigationBar = () => {
       </Link>
       <Search data={AllProducts} className="searchMenu" />
       <div className={classes.loginDetails}>
+        <div className={classes.search}>
+          <BiSearch size={20} />
+        </div>
         <BsFillPersonFill className="shoppingCart" onClick={showModal} />
 
         {modalShow ? (
