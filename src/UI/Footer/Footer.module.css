@@ -3,7 +3,7 @@
   flex-direction: row;
   gap: 1rem;
   align-items: center;
-  background-color: #143f6b;
+  background-color: #ede9d5;
   padding: 3rem 5rem;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .footer > * h2 {
-  color: white;
+  color: #2b3445;
 }
 .footer > * h2:hover {
   color: #092037;
@@ -26,13 +26,13 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  color: #f6f6f6b7;
+  color: #2b3445;
   list-style: none;
   text-decoration: none;
 }
 
 .brand article {
-  color: #f6f6f6b7;
+  color: #2b3445;
 }
 .stores {
   display: flex;
@@ -40,7 +40,7 @@
 
 .stores button {
   color: white;
-  background-color: #092037aa;
+  background-color: #d23f58c2;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -13,6 +13,7 @@ import classes from "./NavigationBar.module.css";
 import { SwipeableTemporaryDrawer } from "../../components/Sidebar";
 import { BsFillPersonFill } from "react-icons/bs";
 import { BiSearch } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 const NavigationBar = () => {
   const Cartctx = useContext(CartCtx);
@@ -24,6 +25,11 @@ const NavigationBar = () => {
   const backDrop = document.getElementById("back--drop");
   // const cartInfo = document.getElementById("cart--info");
   const modal = document.getElementById("modal--form");
+
+  const navigate = useNavigate();
+  const onNavigate = () => {
+    navigate("/search");
+  };
 
   // const cartBar = () => {
   //   setCartVisibility(true);
@@ -47,7 +53,7 @@ const NavigationBar = () => {
       <Search data={AllProducts} className="searchMenu" />
       <div className={classes.loginDetails}>
         <div className={classes.search}>
-          <BiSearch size={20} />
+          <BiSearch size={20} onClick={onNavigate} />
         </div>
         <BsFillPersonFill className="shoppingCart" onClick={showModal} />
 

@@ -292,6 +292,13 @@ hr {
   .searchMenu button {
     width: 3rem;
   }
+  .searchMenu button > * {
+    font-size: 1rem;
+  }
+  .searchMenu input::placeholder {
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+  }
 }
 
 .searchMenu button > * {
@@ -302,22 +309,13 @@ hr {
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 700px) {
-  .searchMenu button > * {
-    font-size: 1rem;
-  }
-}
+
 .searchMenu input::placeholder {
   color: #4444;
   font-size: 1rem;
   letter-spacing: 0.2rem;
 }
-@media screen and (max-width: 700px) {
-  .searchMenu input::placeholder {
-    font-size: 0.8rem;
-    letter-spacing: 0.1rem;
-  }
-}
+
 .searchMenu input {
   position: relative;
   z-index: 5;
@@ -372,7 +370,14 @@ hr {
   overflow-y: scroll;
   max-height: 20rem;
 }
-
+@media screen and (max-width: 700px) {
+  .suggestion {
+    position: absolute;
+    width: 63%;
+    top: 2rem;
+    z-index: 1;
+  }
+}
 .suggestion::-webkit-scrollbar {
   display: none;
 }

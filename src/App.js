@@ -7,7 +7,7 @@ import Menpage from "./page/GenderPages/Menpage";
 import Womenpage from "./page/GenderPages/Womenpage";
 import CartPage from "./page/CartPages/CartPage";
 import NewArrival from "./page/NewArrival";
-import Search from "./components/Search";
+
 import Error from "./page/Error";
 import EachItem from "./page/EachItem";
 import Checkout from "./page/CartPages/Checkout";
@@ -16,6 +16,7 @@ import Review from "./page/CartPages/Review";
 import Signup from "./page/AuthenPages/Signup";
 import ResetPassword from "./page/AuthenPages/ResetPassword";
 import Login from "./page/AuthenPages/Login";
+import SearchPage from "./page/SearchPage";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
       { path: "/cart/payment", element: <Payment /> },
       { path: "cart/review", element: <Review /> },
       { path: "/new-arrival", element: <NewArrival /> },
-      { path: "/search", element: <Search /> },
+      { path: "/search", element: <SearchPage /> },
       { path: "/search/:product", element: <EachItem /> },
     ],
   },
