@@ -13,8 +13,7 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { useState } from "react";
 import { createTheme, ThemeProvider } from "@mui/material";
-import Cart from "../Cart/Cart";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -23,7 +22,7 @@ const theme = createTheme({
   },
 });
 
-export const SwipeableTemporaryDrawer = () => {
+export const SideDrawer = () => {
   const [state, setState] = useState({
     left: false,
   });
@@ -85,51 +84,6 @@ export const SwipeableTemporaryDrawer = () => {
         onClose={toggleDrawer("left", false)}
       >
         {list("left")}
-      </SwipeableDrawer>
-    </ThemeProvider>
-  );
-};
-
-export const CartDrawer = () => {
-  const [states, setStates] = useState({
-    right: false,
-  });
-
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (
-      event &&
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-    setStates({ ...states, [anchor]: open });
-  };
-
-  const list = (anchor) => (
-    <Box
-      sx={{ width: 250 }}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <Cart />
-    </Box>
-  );
-
-  return (
-    <ThemeProvider theme={theme}>
-      <AiOutlineShoppingCart
-        style={{ color: "primary" }}
-        className="shoppingCart"
-        onClick={toggleDrawer("right", true)}
-      />
-      <SwipeableDrawer
-        anchor="right"
-        open={states["right"]}
-        onClose={toggleDrawer("right", false)}
-      >
-        {list("right")}
       </SwipeableDrawer>
     </ThemeProvider>
   );

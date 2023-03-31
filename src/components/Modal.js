@@ -15,6 +15,7 @@ import { MdVisibility, MdVisibilityOff } from "react-icons/md";
 import { SiFacebook } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { RxCross2 } from "react-icons/rx";
 
 const theme = createTheme({
   palette: {
@@ -53,6 +54,9 @@ const Modal = (props) => {
           <Link to="/" className="logo logoform">
             HuntStore
           </Link>
+        </div>
+        <div className="formCancel">
+          <RxCross2 className="RxCross2" onClick={props.onCancel} size={35} />
         </div>
 
         <form action="">

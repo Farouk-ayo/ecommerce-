@@ -1,11 +1,14 @@
 .catalogue {
   display: flex;
   flex-direction: column;
-
   padding: 2rem 5rem;
   background-color: #f6f9fc;
 }
-
+@media screen and (max-width: 1300px) {
+  .catalogue {
+    padding: 2rem 2rem;
+  }
+}
 .headCat h2 {
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -26,16 +29,25 @@
   border-radius: 0.5rem;
   box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
 }
-
+@media screen and (max-width: 1300px) {
+  .catSection {
+    flex-wrap: wrap;
+  }
+}
 .catSection > * {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  width: 20%;
+  width: 15rem;
   background-color: white;
   padding: 2.5rem 1rem;
+}
+@media screen and (max-width: 1300px) {
+  .catSection > * {
+    justify-content: flex-start;
+  }
 }
 .catSection > * img {
   height: 7rem;

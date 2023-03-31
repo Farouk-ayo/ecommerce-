@@ -31,7 +31,7 @@ const Sliders = () => {
                 <h3>lifestyle collection</h3>
                 <h1>{value.Gender}</h1>
                 <h2>
-                  sale up to
+                  sale up to &nbsp;
                   <span className={classes.reddie}>{value.salesDiscount}</span>
                 </h2>
                 <p>{value.shipping}</p>

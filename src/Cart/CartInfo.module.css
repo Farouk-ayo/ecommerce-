@@ -6,7 +6,7 @@
   z-index: 50;
   background-color: white;
   height: 100vh;
-  width: 30vw;
+  width: 20rem;
   top: 0;
   right: 0;
 }
@@ -34,7 +34,7 @@ header::-webkit-scrollbar {
   justify-content: space-between;
   padding: 1rem;
   align-items: center;
-  width: 27vw;
+  width: 20rem;
   z-index: 20;
   background-color: white;
   border-bottom: 0.1rem solid #2b344518;
