@@ -12,7 +12,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { useState } from "react";
-import { createTheme, ThemeProvider } from "@mui/material";
+import { Collapse, createTheme, ThemeProvider } from "@mui/material";
+import { Link } from "react-router-dom";
+import { ExpandLess, ExpandMore } from "@mui/icons-material";
+import { suggestionArray } from "../UI/Header/Menu";
 
 const theme = createTheme({
   palette: {
@@ -23,6 +26,19 @@ const theme = createTheme({
 });
 
 export const SideDrawer = () => {
+  const [openHome, setOpenHome] = useState(false);
+  const [openCat, setOpenCat] = useState(false);
+  const [openAcct, setOpenAcct] = useState(false);
+  const handleClickHome = () => {
+    setOpenHome(!openHome);
+  };
+  const handleClickCat = () => {
+    setOpenCat(!openCat);
+  };
+  const handleClickAcct = () => {
+    setOpenAcct(!openAcct);
+  };
+
   const [state, setState] = useState({
     left: false,
   });
@@ -39,36 +55,77 @@ export const SideDrawer = () => {
   };
 
   const list = (anchor) => (
-    <Box
-      sx={{ width: 250 }}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text}>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+    <Box sx={{ width: 250 }} role="presentation">
+      <List
+        sx={{
+          width: "100%",
+          maxWidth: 360,
+          bgcolor: "background.paper",
+          paddingTop: "2rem",
+        }}
+        component="nav"
+        aria-labelledby="nested-list-subheader"
+      >
+        <ListItemButton onClick={handleClickHome}>
+          <ListItemText primary="Home" />
+          {openHome ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Collapse in={openHome} timeout="auto" unmountOnExit>
+          <List
+            component="div"
+            disablePadding
+            onClick={toggleDrawer(anchor, false)}
+            onKeyDown={toggleDrawer(anchor, false)}
+          >
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemText primary="Men" />
             </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem key={text}>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemText primary="Women" />
+            </ListItemButton>{" "}
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemText primary="Kids" />
             </ListItemButton>
-          </ListItem>
-        ))}
+          </List>
+        </Collapse>
+        <ListItemButton onClick={handleClickCat}>
+          <ListItemText primary="Categories" />
+          {openCat ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Collapse in={openCat} timeout="auto" unmountOnExit>
+          <List
+            component="div"
+            disablePadding
+            onClick={toggleDrawer(anchor, false)}
+            onKeyDown={toggleDrawer(anchor, false)}
+          >
+            {suggestionArray.map((each) => (
+              <ListItemButton sx={{ pl: 4 }} id={each.id}>
+                <ListItemIcon>{each.img}</ListItemIcon>
+                <ListItemText primary={each.type} />
+              </ListItemButton>
+            ))}
+          </List>
+        </Collapse>
+        <ListItemButton onClick={handleClickAcct}>
+          <ListItemText primary="User Account" />
+          {openAcct ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Collapse in={openAcct} timeout="auto" unmountOnExit>
+          <List
+            component="div"
+            disablePadding
+            onClick={toggleDrawer(anchor, false)}
+            onKeyDown={toggleDrawer(anchor, false)}
+          >
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemText primary="Login" />
+            </ListItemButton>
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemText primary="Sign Up" />
+            </ListItemButton>
+          </List>
+        </Collapse>
       </List>
     </Box>
   );

@@ -7,7 +7,7 @@ import { BiCategory } from "react-icons/bi";
 import { BsHandbagFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-const suggestionArray = [
+export const suggestionArray = [
   { id: 1, type: "Clothes", img: <MdCheckroom size={40} /> },
   { id: 2, type: "Furniture", img: <MdWeekend size={40} /> },
   { id: 3, type: "Electronics", img: <MdCable size={40} /> },
