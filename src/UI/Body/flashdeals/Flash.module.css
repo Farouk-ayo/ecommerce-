@@ -6,7 +6,7 @@
 .flashHead {
   display: flex;
   gap: 0.5rem;
-  padding: 1rem 3rem;
+  padding: 1rem;
 }
 
 .flashsale h2 {

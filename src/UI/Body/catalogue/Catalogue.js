@@ -10,7 +10,7 @@ const Catalogue = () => {
   return (
     <section className={classes.catalogue}>
       <div className={classes.headCat}>
-        <GrCatalogOption color="#f55353" size={30} />
+        <GrCatalogOption className={classes.catalogIcon} />
 
         <h2>Catalogue</h2>
       </div>

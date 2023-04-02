@@ -9,31 +9,36 @@
     padding: 2rem 2rem;
   }
 }
+@media screen and (max-width: 700px) {
+  .catalogue {
+    padding: 2rem 1rem;
+  }
+}
 .headCat h2 {
   font-size: 1.5rem;
   text-transform: uppercase;
 }
 
+.catalogIcon {
+  font-size: 2rem;
+}
 .headCat {
   display: flex;
   gap: 0.5rem;
-  padding: 1rem 3rem;
+  padding: 1rem;
 }
 
 .catSection {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
   gap: 1rem;
-  justify-content: space-between;
   width: 100%;
   border-radius: 0.5rem;
   box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
 }
-@media screen and (max-width: 1300px) {
-  .catSection {
-    flex-wrap: wrap;
-  }
-}
+
 .catSection > * {
   display: flex;
   flex-direction: column;
@@ -44,14 +49,35 @@
   background-color: white;
   padding: 2.5rem 1rem;
 }
-@media screen and (max-width: 1300px) {
-  .catSection > * {
-    justify-content: flex-start;
-  }
-}
 .catSection > * img {
   height: 7rem;
   width: 100%;
+}
+@media screen and (max-width: 700px) {
+  .catSection > * {
+    justify-content: flex-start;
+    padding: 1rem;
+    width: 8rem;
+  }
+  .headCat h2 {
+    font-size: 1rem;
+  }
+
+  .catSection > * img {
+    height: 4rem;
+  }
+  .catalogIcon {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .catSection > * {
+    width: 100%;
+  }
+  .catSection > * img {
+    height: 6rem;
+  }
 }
 
 link {
