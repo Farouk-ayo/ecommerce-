@@ -55,7 +55,6 @@
 }
 @media screen and (max-width: 700px) {
   .catSection > * {
-    justify-content: flex-start;
     padding: 1rem;
     width: 8rem;
   }
@@ -71,12 +70,9 @@
   }
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 320px) {
   .catSection > * {
-    width: 100%;
-  }
-  .catSection > * img {
-    height: 6rem;
+    width: 70%;
   }
 }
 

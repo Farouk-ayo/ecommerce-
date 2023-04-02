@@ -20,7 +20,28 @@ const Flashsale = () => {
         <h2>Flash Sales</h2>
       </div>
       <div className={classes.container}>
-        <Swiper modules={[Navigation]} navigation loop={true} slidesPerView={4}>
+        <Swiper
+          breakpoints={{
+            600: {
+              slidesPerView: 2,
+            },
+
+            1000: {
+              slidesPerView: 3,
+            },
+            1300: {
+              slidesPerView: 4,
+            },
+            1700: {
+              slidesPerView: 5,
+            },
+          }}
+          modules={[Navigation]}
+          navigation
+          loop={true}
+          slidesPerView={1}
+          spaceBetween={15}
+        >
           {SlidesFlashStore.map((value) => {
             return (
               <SwiperSlide key={value.id}>
