@@ -18,6 +18,9 @@
   font-size: 1.5rem;
   text-transform: uppercase;
 }
+.flashIcon {
+  font-size: 2rem;
+}
 
 .flashcontainer {
   display: flex;
@@ -51,6 +54,12 @@
 @media screen and (max-width: 700px) {
   .image {
     height: 5rem;
+  }
+  .flashIcon {
+    font-size: 1rem;
+  }
+  .flashsale h2 {
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 365px) {
