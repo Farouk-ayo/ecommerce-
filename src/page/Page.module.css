@@ -7,6 +7,7 @@
   padding: 4rem 0;
   background-color: #f6f9fc;
 }
+
 .imgContainer {
   width: 50%;
   text-align: center;
@@ -27,12 +28,44 @@
   font-size: 3rem;
   color: #2b3445;
 }
+.priceInfo h3 {
+  color: #d23f57;
+  font-size: 2rem;
+}
+@media screen and (max-width: 900px) {
+  .eachItem {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .eachItem img {
+    width: 12rem;
+    height: 15rem;
+  }
+  .eachDetails {
+    align-self: flex-start;
+    padding-left: 1.5rem;
+    width: 80%;
+  }
+  .eachDetails h1 {
+    font-size: 2.5rem;
+  }
+  .priceInfo h3 {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .eachDetails h1 {
+    font-size: 2.2rem;
+  }
+}
 .ratQuantity {
   display: flex;
   gap: 0.5rem;
   align-items: center;
 }
-.ratQuantityp {
+.ratQuantity p {
   color: #2b3445;
   font-size: 1rem;
 }
@@ -40,11 +73,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-
-.priceInfo h3 {
-  color: #d23f57;
-  font-size: 2rem;
 }
 
 .description p {

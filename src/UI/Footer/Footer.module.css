@@ -24,16 +24,17 @@
   width: 18rem;
 }
 .stores button {
-  color: white;
-  background-color: #d23f58c2;
+  color: #d23f57;
+  background-color: #ede9d5;
+  outline: 0.15rem solid #d23f5839;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.3rem;
-  outline: none;
-  border: none;
   border-radius: 0.5rem;
   padding: 0.5rem;
+  cursor: pointer;
 }
 @media screen and (max-width: 1014px) {
   .footer > * {
@@ -47,7 +48,6 @@
 }
 .footer > * h2:hover {
   color: #092037;
-  cursor: pointer;
 }
 
 .footer > * ul {
