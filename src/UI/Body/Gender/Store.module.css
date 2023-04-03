@@ -218,11 +218,16 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  gap: 2rem;
+  gap: 1rem;
   flex-wrap: wrap;
   position: relative;
   overflow: hidden;
   justify-content: space-around;
-  padding: 4rem 5rem;
+  padding: 4rem 3rem;
   background-color: #f6f9fc;
+}
+@media screen and (max-width: 1300px) {
+  .productsPage {
+    padding: 4rem 1rem;
+  }
 }
