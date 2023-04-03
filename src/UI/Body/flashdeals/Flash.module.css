@@ -4,7 +4,7 @@
 }
 @media screen and (max-width: 1300px) {
   .flashsale {
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
   }
 }
 
@@ -62,7 +62,7 @@
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 365px) {
+@media screen and (max-width: 628px) {
   .details {
     display: flex;
     flex-direction: column;
@@ -91,7 +91,7 @@
 .productDetail h6 {
   font-size: 1.3rem;
   font-weight: 300;
-  width: 150%;
+  width: 200%;
   overflow: visible;
 }
 

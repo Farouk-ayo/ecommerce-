@@ -22,7 +22,7 @@ const Flashsale = () => {
       <div className={classes.container}>
         <Swiper
           breakpoints={{
-            600: {
+            500: {
               slidesPerView: 2,
             },
 

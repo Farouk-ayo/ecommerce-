@@ -22,11 +22,7 @@
   box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
   border-radius: 0.5rem;
 }
-@media screen and (max-width: 1000px) {
-  .sidebar {
-    display: none;
-  }
-}
+
 .fasCon {
   display: flex;
   justify-content: space-between;
@@ -57,6 +53,21 @@
   color: #2b3445;
   cursor: not-allowed;
 }
+@media screen and (max-width: 1000px) {
+  .sec {
+    display: none;
+  }
+  .section {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .sidebar {
+    padding: 0.5rem 1rem;
+    background-color: #f6f9fc;
+    width: 100%;
+  }
+}
+
 .eachSec {
   font-size: 1rem;
   color: #2b3445;
@@ -152,6 +163,18 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .detailCon {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    align-items: start;
+  }
+  button {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
   .imageContainer {
     width: 100%;
   }
