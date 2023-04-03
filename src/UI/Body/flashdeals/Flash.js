@@ -52,6 +52,7 @@ const Flash = (props) => {
           <p className="price"> ${props.price}.00</p>
         </div>
         <Button
+          className={classes.btn}
           variant="outlined"
           size="small"
           onClick={addToCart}

@@ -1,17 +1,45 @@
 .footer {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
   background-color: #ede9d5;
-  padding: 3rem 5rem;
+  padding: 3rem 4rem;
+  overflow: hidden;
+}
+@media screen and (max-width: 1300px) {
+  .footer {
+    padding: 2rem 2rem;
+    gap: 2rem;
+  }
 }
 
 .footer > * {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: calc(100% / 4);
+  width: 18rem;
+}
+.stores button {
+  color: white;
+  background-color: #d23f58c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+@media screen and (max-width: 1014px) {
+  .footer > * {
+    width: 47%;
+    gap: 0.5rem;
+  }
 }
 
 .footer > * h2 {
@@ -36,19 +64,24 @@
 }
 .stores {
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
 }
 
-.stores button {
-  color: white;
-  background-color: #d23f58c2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.3rem;
-  outline: none;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
+@media screen and (max-width: 680px) {
+  .stores {
+    gap: 0.5rem;
+    width: fit-content;
+  }
+  .stores button {
+    padding: 0.5rem 2rem;
+  }
+}
+@media screen and (max-width: 611px) {
+  .footer > * {
+    width: 98%;
+  }
 }
 
 .stores button h2 {
