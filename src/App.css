@@ -235,8 +235,9 @@ hr {
   display: flex;
   width: 100%;
   justify-content: center;
-  margin: 2rem;
   align-items: center;
+  padding: 2rem 0;
+  flex-wrap: wrap;
 }
 
 .links :last-child {
@@ -259,6 +260,7 @@ hr {
   cursor: pointer;
   font-weight: 800;
 }
+
 .notActive:hover {
   background-color: #d23f57;
   color: white;
@@ -272,6 +274,14 @@ hr {
   font-weight: 800;
   padding: 0.3rem 2rem;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 760px) {
+  .notActive,
+  .active,
+  hr {
+    margin: 0.4rem 0rem;
+  }
 }
 
 /* SEARCH BAR  */

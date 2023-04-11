@@ -1,4 +1,9 @@
-import { Box, createTheme, SwipeableDrawer, ThemeProvider } from "@mui/material";
+import {
+  Box,
+  createTheme,
+  SwipeableDrawer,
+  ThemeProvider,
+} from "@mui/material";
 import { useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Cart from "../Cart/Cart";
@@ -27,12 +32,8 @@ export const CartDrawer = () => {
   };
 
   const list = (anchor) => (
-    <Box
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <Cart />
+    <Box role="presentation">
+      <Cart onClose={toggleDrawer(anchor, false)} />
     </Box>
   );
 

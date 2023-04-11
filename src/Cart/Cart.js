@@ -45,7 +45,7 @@ const Cart = (props) => {
             </section>
           ) : (
             <section className={classes.null}>
-              <h1>Nothing dey here brother, try add something nigga😌😌</h1>
+              <h1>There's nothing here, pls add to cart😌😌</h1>
             </section>
           )}
         </section>

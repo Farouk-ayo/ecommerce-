@@ -30,7 +30,7 @@ const CartPage = () => {
             {cartCtx.items.map((item) => {
               return (
                 <section className={classes.cartInfo}>
-                  <div>
+                  <div className={classes.info}>
                     <img src={item.productImage} alt="" />
                     <div className={classes.eachInfo}>
                       <div className={classes.details}>
@@ -71,7 +71,7 @@ const CartPage = () => {
           </div>
         ) : (
           <section className={classes.null}>
-            <h1>Nothing dey here brother, try add something nigga😌😌</h1>
+            <h1>There's nothing here, pls add to cart😌😌</h1>
           </section>
         )}
 
