@@ -70,7 +70,7 @@
     gap: 0.5rem;
     align-items: flex-start;
   }
-  btn {
+  .btn {
     width: 100%;
   }
 }

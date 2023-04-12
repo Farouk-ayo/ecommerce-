@@ -177,6 +177,16 @@ a:active {
   border-radius: 1rem;
   transition: all 2s;
 }
+@media screen and (max-width: 500px) {
+  .modal {
+    min-width: 25rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .modal {
+    min-width: 100%;
+  }
+}
 .logoSection {
   display: flex;
   flex-direction: column;

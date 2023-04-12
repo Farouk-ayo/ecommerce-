@@ -11,7 +11,7 @@ const EachWomen = (props) => {
 
   const [favorite, setFavorite] = useState(true);
   const changeFavorite = (event) => {
-    event.stopPropagation()
+    event.stopPropagation();
     setFavorite(!favorite);
   };
 
@@ -49,7 +49,8 @@ const EachWomen = (props) => {
           </div>
           <Rating
             name="simple-controlled"
-            value={value}onClick={(event) => {
+            value={value}
+            onClick={(event) => {
               event.stopPropagation();
             }}
             onChange={(event, newValue) => {
@@ -60,6 +61,7 @@ const EachWomen = (props) => {
           <p className="price">${props.totalPrice}.00</p>
         </div>
         <Button
+          className={classes.btn}
           variant="outlined"
           size="small"
           onClick={addToCart}

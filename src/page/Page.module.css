@@ -15,7 +15,7 @@
 
 .eachItem img {
   width: 20rem;
-  height: 25rem;
+  height: 20rem;
 }
 
 .eachDetails {
@@ -40,7 +40,7 @@
   }
   .eachItem img {
     width: 12rem;
-    height: 15rem;
+    height: 10rem;
   }
   .eachDetails {
     align-self: flex-start;

@@ -32,7 +32,7 @@ export const CartDrawer = () => {
   };
 
   const list = (anchor) => (
-    <Box role="presentation">
+    <Box role="presentation" height="100vh">
       <Cart onClose={toggleDrawer(anchor, false)} />
     </Box>
   );

@@ -40,7 +40,7 @@ const theme = createTheme({
 });
 
 const Signup = (props) => {
-  const [showPassword, setShowPassword] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
   const [checked, setChecked] = useState(false);
 
   const handleChange = (event) => {
