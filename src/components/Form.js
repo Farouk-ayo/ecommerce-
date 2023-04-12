@@ -10,6 +10,7 @@ import {
   Stack,
   TextField,
   ThemeProvider,
+  useMediaQuery,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { countries } from "./Country";
@@ -30,14 +31,17 @@ const theme = createTheme({
 });
 
 export const CreditCardDetails1 = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
+
   return (
     <Box
       display={"flex"}
       alignItems="center"
       justifyContent={"space-between"}
-      gap="2rem"
       flexWrap={"nowrap"}
       width={"100%"}
+      flexDirection={isMobile ? "column" : "row"}
+      gap={isMobile ? "1rem" : "2rem"}
     >
       <ThemeProvider theme={theme}>
         <TextField
@@ -67,14 +71,17 @@ export const CreditCardDetails1 = () => {
 };
 
 export const CreditCardDetails2 = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
+
   return (
     <Box
       display={"flex"}
       alignItems="center"
       justifyContent={"space-between"}
-      gap="2rem"
       flexWrap={"nowrap"}
       width={"100%"}
+      flexDirection={isMobile ? "column" : "row"}
+      gap={isMobile ? "1rem" : "2rem"}
     >
       <ThemeProvider theme={theme}>
         <TextField

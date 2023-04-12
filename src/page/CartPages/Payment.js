@@ -1,5 +1,5 @@
 import CartLinks from "../../components/CartLinks";
-import classes from "./CartPages.module.css"
+import classes from "./CartPages.module.css";
 import CartCtx from "../../store/Cartctx";
 import { useContext, useState } from "react";
 
@@ -36,7 +36,7 @@ const Payment = () => {
   return (
     <section className={classes.CartPage}>
       <CartLinks />
-      <section className={classes.cart}>
+      <section className={`${classes.cart} ${classes.payment}`}>
         <div className={classes.carts}>
           <FormControl sx={{ width: "100%" }}>
             <RadioGroup
@@ -60,6 +60,8 @@ const Payment = () => {
                   borderTopRightRadius: "1rem",
                   borderTopLeftRadius: "1rem",
                   boxShadow: "rgb(3 0 71 / 9%) 0px 1px 3px",
+                  marginLeft: "0",
+                  marginRight: "0",
                 }}
               />
               {value === "firstID" ? (
@@ -78,6 +80,8 @@ const Payment = () => {
                   background: "white",
                   borderBottom: ".1rem solid #2b344533",
                   boxShadow: "rgb(3 0 71 / 9%) 0px 1px 3px",
+                  marginLeft: "0",
+                  marginRight: "0",
                 }}
               />
               {value === "secondID" ? (
@@ -96,6 +100,8 @@ const Payment = () => {
                   borderBottomRightRadius: "1rem",
                   borderBottomLeftRadius: "1rem",
                   boxShadow: "rgb(3 0 71 / 9%) 0px 1px 3px",
+                  marginLeft: "0",
+                  marginRight: "0",
                 }}
               />
             </RadioGroup>

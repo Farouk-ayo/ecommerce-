@@ -114,6 +114,11 @@
     flex-direction: column-reverse;
   }
 }
+@media screen and (max-width: 960px) {
+  .payment {
+    flex-direction: column-reverse;
+  }
+}
 
 .eachInfo {
   display: flex;
@@ -284,7 +289,5 @@ form textarea:hover {
   gap: 1rem;
   background-color: white;
   width: 100%;
-  margin-right: 1rem;
-  margin-left: -0.7rem;
   border-bottom: 0.1rem solid #2b344533;
 }
