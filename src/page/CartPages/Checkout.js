@@ -6,7 +6,7 @@ import {
   ShippingAddress2,
   TotalAmount,
 } from "../../components/Form";
-import classes from "./CartPages.module.css"
+import classes from "./CartPages.module.css";
 import CartCtx from "../../store/Cartctx";
 import { useNavigate } from "react-router-dom";
 import CartLinks from "../../components/CartLinks";
@@ -31,7 +31,7 @@ const Checkout = () => {
     <section className={classes.CartPage}>
       <CartLinks />
 
-      <section className={classes.cart}>
+      <section className={`${classes.cart} ${classes.checkout}`}>
         <div className={classes.carts}>
           <section className={classes.shippingInfo}>
             <p>Shipping Address</p>
