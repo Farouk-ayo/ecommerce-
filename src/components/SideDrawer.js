@@ -3,17 +3,13 @@ import Box from "@mui/material/Box";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import { useState } from "react";
 import { Collapse, createTheme, ThemeProvider } from "@mui/material";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import { suggestionArray } from "../UI/Header/Menu";
 
@@ -38,6 +34,7 @@ export const SideDrawer = () => {
   const handleClickAcct = () => {
     setOpenAcct(!openAcct);
   };
+  const navigate = useNavigate();
 
   const [state, setState] = useState({
     left: false,
@@ -77,13 +74,28 @@ export const SideDrawer = () => {
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
           >
-            <ListItemButton sx={{ pl: 4 }}>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={() => {
+                navigate("/men");
+              }}
+            >
               <ListItemText primary="Men" />
             </ListItemButton>
-            <ListItemButton sx={{ pl: 4 }}>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={() => {
+                navigate("/women");
+              }}
+            >
               <ListItemText primary="Women" />
-            </ListItemButton>{" "}
-            <ListItemButton sx={{ pl: 4 }}>
+            </ListItemButton>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={() => {
+                navigate("/kids");
+              }}
+            >
               <ListItemText primary="Kids" />
             </ListItemButton>
           </List>
@@ -119,10 +131,20 @@ export const SideDrawer = () => {
             onKeyDown={toggleDrawer(anchor, false)}
           >
             <ListItemButton sx={{ pl: 4 }}>
-              <ListItemText primary="Login" />
+              <ListItemText
+                primary="Login"
+                onClick={() => {
+                  navigate("/login");
+                }}
+              />
             </ListItemButton>
             <ListItemButton sx={{ pl: 4 }}>
-              <ListItemText primary="Sign Up" />
+              <ListItemText
+                primary="Signup"
+                onClick={() => {
+                  navigate("/sign-up");
+                }}
+              />
             </ListItemButton>
           </List>
         </Collapse>

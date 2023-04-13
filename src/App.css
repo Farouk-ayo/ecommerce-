@@ -475,3 +475,18 @@ hr {
     display: inline-block !important;
   }
 }
+
+.eachNav {
+  display: flex;
+  gap: 0.3rem;
+  padding: 0.5rem;
+  align-items: flex-end;
+  justify-content: center;
+  border-bottom: #d23f5800 0.1rem solid;
+}
+
+.eachNav:hover {
+  bottom: 0;
+  border-bottom: #d23f5839 0.1rem solid;
+  transition: all 1s;
+}

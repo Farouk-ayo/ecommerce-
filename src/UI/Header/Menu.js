@@ -8,13 +8,13 @@ import { BsHandbagFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 export const suggestionArray = [
-  { id: 1, type: "Clothes", img: <MdCheckroom size={40} /> },
-  { id: 2, type: "Furniture", img: <MdWeekend size={40} /> },
-  { id: 3, type: "Electronics", img: <MdCable size={40} /> },
-  { id: 4, type: "Shoes", img: <GiRunningShoe size={40} /> },
-  { id: 5, type: "Bags", img: <BsHandbagFill size={40} /> },
-  { id: 6, type: "Jewelry", img: <GiGoldNuggets size={40} /> },
-  { id: 7, type: "Toys", img: <MdToys size={40} /> },
+  { id: 1, type: "Clothes", img: <MdCheckroom size={30} /> },
+  { id: 2, type: "Furniture", img: <MdWeekend size={30} /> },
+  { id: 3, type: "Electronics", img: <MdCable size={30} /> },
+  { id: 4, type: "Shoes", img: <GiRunningShoe size={30} /> },
+  { id: 5, type: "Bags", img: <BsHandbagFill size={30} /> },
+  { id: 6, type: "Jewelry", img: <GiGoldNuggets size={30} /> },
+  { id: 7, type: "Toys", img: <MdToys size={30} /> },
 ];
 
 const Menu = () => {
@@ -56,12 +56,7 @@ const Menu = () => {
         ) : null}
       </div>
       <nav className={classes.navBar}>
-        <Link
-          to="/#men"
-          id="#men"
-          onClick={scrollFunction}
-          className={classes.eachNav}
-        >
+        <Link to="/#men" id="#men" onClick={scrollFunction} className="eachNav">
           Men
         </Link>
 
@@ -69,7 +64,7 @@ const Menu = () => {
           to="/#women"
           id="#women"
           onClick={scrollFunction}
-          className={classes.eachNav}
+          className="eachNav"
         >
           Women
         </Link>
@@ -78,7 +73,7 @@ const Menu = () => {
           to="/#kids"
           id="#kids"
           onClick={scrollFunction}
-          className={classes.eachNav}
+          className="eachNav"
         >
           Kids
         </Link>
