@@ -119,35 +119,23 @@ export const SideDrawer = () => {
             ))}
           </List>
         </Collapse>
-        <ListItemButton onClick={handleClickAcct}>
-          <ListItemText primary="User Account" />
-          {openAcct ? <ExpandLess /> : <ExpandMore />}
+
+        <ListItemButton>
+          <ListItemText
+            primary="Login"
+            onClick={() => {
+              navigate("/login");
+            }}
+          />
         </ListItemButton>
-        <Collapse in={openAcct} timeout="auto" unmountOnExit>
-          <List
-            component="div"
-            disablePadding
-            onClick={toggleDrawer(anchor, false)}
-            onKeyDown={toggleDrawer(anchor, false)}
-          >
-            <ListItemButton sx={{ pl: 4 }}>
-              <ListItemText
-                primary="Login"
-                onClick={() => {
-                  navigate("/login");
-                }}
-              />
-            </ListItemButton>
-            <ListItemButton sx={{ pl: 4 }}>
-              <ListItemText
-                primary="Signup"
-                onClick={() => {
-                  navigate("/sign-up");
-                }}
-              />
-            </ListItemButton>
-          </List>
-        </Collapse>
+        <ListItemButton>
+          <ListItemText
+            primary="Signup"
+            onClick={() => {
+              navigate("/sign-up");
+            }}
+          />
+        </ListItemButton>
       </List>
     </Box>
   );
