@@ -24,16 +24,13 @@ const theme = createTheme({
 export const SideDrawer = () => {
   const [openHome, setOpenHome] = useState(false);
   const [openCat, setOpenCat] = useState(false);
-  const [openAcct, setOpenAcct] = useState(false);
   const handleClickHome = () => {
     setOpenHome(!openHome);
   };
   const handleClickCat = () => {
     setOpenCat(!openCat);
   };
-  const handleClickAcct = () => {
-    setOpenAcct(!openAcct);
-  };
+
   const navigate = useNavigate();
 
   const [state, setState] = useState({

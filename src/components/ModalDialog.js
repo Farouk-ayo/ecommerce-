@@ -1,6 +1,6 @@
 import * as React from "react";
 import Dialog from "@mui/material/Dialog";
-import { BsFillPersonFill } from "react-icons/bs";
+import { IoPersonOutline } from "react-icons/io5";
 import Modal from "./Modal";
 
 export default function ModalDialog() {
@@ -16,7 +16,7 @@ export default function ModalDialog() {
 
   return (
     <div>
-      <BsFillPersonFill className="shoppingCart" onClick={handleClickOpen} />
+      <IoPersonOutline className="shoppingCart" onClick={handleClickOpen} />
       <Dialog open={open} onClose={handleClose}>
         <Modal onCancel={handleClose} />
       </Dialog>
