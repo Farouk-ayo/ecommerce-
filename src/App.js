@@ -17,7 +17,6 @@ import Signup from "./page/AuthenPages/Signup";
 import ResetPassword from "./page/AuthenPages/ResetPassword";
 import Login from "./page/AuthenPages/Login";
 import SearchPage from "./page/SearchPage";
-import ScrollToTop from "./authen/ScrollToTop";
 
 const router = createBrowserRouter([
   {
@@ -44,11 +43,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return (
-    <RouterProvider router={router}>
-      <ScrollToTop />
-    </RouterProvider>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
