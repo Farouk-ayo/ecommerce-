@@ -22,13 +22,13 @@ const ContactDetails = () => {
       </div>
       <ul className={classes.details}>
         <li>
-          <Link to="www.facebook">
+          <Link to="www.facebook/faroukayo">
             <GrFacebook />
           </Link>
           <Link to="https://twitter.com/Faroukayo24">
             <BsTwitter />
           </Link>
-          <Link to="https://www.linkedin.com/in/mustapha-farouk-441a20214/">
+          <Link to="https://www.linkedin.com/in/Faroukayo">
             <BsLinkedin />
           </Link>
 
