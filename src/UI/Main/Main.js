@@ -12,7 +12,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 
 const Main = () => {
   return (
-    <body className={classes.body}>
+    <section className={classes.body}>
       <main className={classes.main}>
         <section className={classes.collection}>
           <Sliders />
@@ -79,7 +79,7 @@ const Main = () => {
           </div>
         </div>
       </main>
-    </body>
+    </section>
   );
 };
 

@@ -12,7 +12,7 @@ const WomenSidebar = () => {
       <div className={classes.sec}>
         {Store.women.sections.map((eachSec) => {
           return (
-            <span>
+            <span key={eachSec.id}>
               <Link to={"/"} className={classes.eachSec}>
                 {eachSec.type}
               </Link>

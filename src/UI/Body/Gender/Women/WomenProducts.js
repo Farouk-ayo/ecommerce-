@@ -12,6 +12,7 @@ const WomenProducts = () => {
         return (
           <EachWomen
             id={random[0]}
+            key={random[0]}
             productName={random[2]}
             productImage={random[1]}
             percentOff={0}

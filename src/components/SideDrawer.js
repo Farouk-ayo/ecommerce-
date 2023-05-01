@@ -109,7 +109,7 @@ export const SideDrawer = () => {
             onKeyDown={toggleDrawer(anchor, false)}
           >
             {suggestionArray.map((each) => (
-              <ListItemButton sx={{ pl: 4 }} id={each.id}>
+              <ListItemButton key={each.id} sx={{ pl: 4 }} id={each.id}>
                 <ListItemIcon>{each.img}</ListItemIcon>
                 <ListItemText primary={each.type} />
               </ListItemButton>
