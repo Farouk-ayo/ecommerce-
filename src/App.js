@@ -1,6 +1,7 @@
 import "./App.css";
 import Ui from "./UI/ui";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import Root from "./page/Root";
 import Kidspage from "./page/GenderPages/Kidspage";
 import Menpage from "./page/GenderPages/Menpage";
