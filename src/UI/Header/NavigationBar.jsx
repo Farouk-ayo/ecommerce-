@@ -7,7 +7,7 @@ import Search from "../../components/Search";
 import { AllProducts } from "../Body/Gender/Store";
 // import Backdrop from "../../components/Backdrop";
 // import Modal from "../../components/Modal";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import CartCtx from "../../store/Cartctx";
 import classes from "./NavigationBar.module.css";
 import { SideDrawer } from "../../components/SideDrawer";

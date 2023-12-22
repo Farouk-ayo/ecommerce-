@@ -1,4 +1,3 @@
-import React from "react";
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import Footer from "../UI/Footer/Footer";
 import Header from "../UI/Header/Header";

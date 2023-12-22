@@ -44,9 +44,9 @@ const Menu = () => {
         </button>
         {categories ? (
           <ul className={classes.categoriesSug}>
-            {suggestionArray.map((each) => {
+            {suggestionArray.map((each, key) => {
               return (
-                <li>
+                <li key={key}>
                   <Link to={`#`}> {each.type}</Link>
                   {each.img}
                 </li>

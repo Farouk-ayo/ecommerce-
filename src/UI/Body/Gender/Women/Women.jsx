@@ -2,7 +2,7 @@ import WomenProducts from "./WomenProducts";
 import WomenSidebar from "./WomenSidebar";
 import classes from "../Store.module.css";
 
-const Women = (props) => {
+const Women = () => {
   return (
     <section className={classes.section} id="women">
       <WomenSidebar />
