@@ -37,10 +37,10 @@ const CartPage = () => {
                         <h5>{item.productName}</h5>
                         <span>
                           <p>
-                            <span>${item.price}.00</span>x
+                            <span>₦{item.price}.00</span>x
                             <span>{item.quantity}</span>
                           </p>
-                          <h2>${item.totalPrice}.00</h2>
+                          <h2>₦{item.totalPrice}.00</h2>
                         </span>
                       </div>
                       <div className="btnDiv">
@@ -78,7 +78,7 @@ const CartPage = () => {
         <section className={classes.totalAmount}>
           <h3>
             <span>Total:</span>
-            <span>${cartCtx.totalAmount}</span>
+            <span>₦{cartCtx.totalAmount}</span>
           </h3>
           <hr />
           <form

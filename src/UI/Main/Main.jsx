@@ -54,7 +54,7 @@ const Main = () => {
           <img src={bus} alt="" />
           <div className={classes.bottomText}>
             <h4>Fast Delivery</h4>
-            <p>Start from $10</p>
+            <p>Start from ₦10</p>
           </div>
         </div>
         <div className={classes.eachBottom}>

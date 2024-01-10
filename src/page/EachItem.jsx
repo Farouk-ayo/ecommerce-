@@ -67,7 +67,7 @@ const EachItem = () => {
           <p>({product[4]})</p>
         </div>
         <div className={classes.priceInfo}>
-          <h3>${product[3]}.00</h3>
+          <h3>₦{product[3]}.00</h3>
           <p>Stock Available</p>
         </div>
         <div className={classes.description}>

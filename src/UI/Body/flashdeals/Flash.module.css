@@ -28,6 +28,7 @@
   justify-content: space-between;
   align-items: flex-start;
   background-color: white;
+  cursor: pointer;
   padding: 1.5rem;
   gap: 1rem;
   border-radius: 0.8rem;
@@ -42,7 +43,7 @@
 
 .image {
   align-self: center;
-  height: 6rem;
+  height: 10rem;
 }
 .details {
   width: 100%;

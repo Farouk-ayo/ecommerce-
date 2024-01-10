@@ -132,20 +132,20 @@ const Payment = () => {
         <section className={classes.totalAmount}>
           <section className={classes.fees}>
             <h4>
-              <span>Subtotal:</span> <span>${cartCtx.totalAmount}</span>
+              <span>Subtotal:</span> <span>₦{cartCtx.totalAmount}</span>
             </h4>
             <h4>
               <span>Shipping:</span> <span></span>
             </h4>
             <h4>
-              <span>Tax:</span> <span>$40.00</span>
+              <span>Tax:</span> <span>₦40.00</span>
             </h4>
             <h4>
               <span>Discount:</span> <span></span>
             </h4>
           </section>
           <hr />
-          <h1>${cartCtx.totalAmount + 40}.00</h1>
+          <h1>₦{cartCtx.totalAmount + 40}.00</h1>
         </section>
       </section>
     </section>

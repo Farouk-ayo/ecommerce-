@@ -40,9 +40,9 @@ const CartInfo = (props) => {
         <div className={classes.details}>
           <h5>{props.productName}</h5>
           <p>
-            <span>${props.price}.00</span>x<span>{props.quantity}</span>
+            <span>₦{props.price}.00</span>x<span>{props.quantity}</span>
           </p>
-          <h2>${props.totalPrice}.00</h2>
+          <h2>₦{props.totalPrice}.00</h2>
         </div>
         <RxCross2 size={30} className="RxCross2" onClick={clearCart} />
       </div>
